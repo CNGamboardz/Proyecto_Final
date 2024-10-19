@@ -17,22 +17,22 @@
             <br><br>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+                    <a class="nav-link active" aria-current="page" href="view/indice.php">INICIO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">TOURS</a>
+                    <a class="nav-link" href="view/forms/tours.php">TOURS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">PAQUETES</a>
+                    <a class="nav-link" href="view/forms/paquetes.php">PAQUETES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CONTACTO</a>
+                    <a class="nav-link" href="view/forms/contacto.php">CONTACTO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> <img src="view/img/Icon Usuario.png" width="20px" height="20px">LOGIN/REGISTER</a>
+                    <a class="nav-link" href="view/forms/login.php"> <img src="view/img/IconUsuario.png" width="20px" height="20px">LOGIN/REGISTER</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> <img src="view/img/Carrito de compras.png" width="20px" height="20px"> CARRITO</a>
+                    <a class="nav-link" href="view/forms/carrito.php"> <img src="view/img/Carritocompras.png" width="20px" height="20px"> CARRITO</a>
                 </li>
             </ul>
         </nav>

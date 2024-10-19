@@ -12,7 +12,7 @@ class IndexController{
     }
     public static function index(){
 
-        require_once("view/index.php");
+        require_once("view/indice.php");
 
     }
 }
