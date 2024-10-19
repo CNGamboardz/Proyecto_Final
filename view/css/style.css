@@ -53,3 +53,37 @@ footer{
     padding: 0px;
     transform: translate(-15px, -15px);
 }
+
+.parrafo{
+    font-size: 15px;
+    color: #000;
+    padding: 0 200px;
+    margin-bottom: 20px;
+}
+
+.tabla_tours{
+    padding: 50px 160px ;
+    background-color: #ECF4F8;
+    border-collapse: separate; 
+    border-spacing: 25px;
+    display: flex; 
+}
+.tabla_tours img{
+    margin-bottom: 5px;
+    border-radius: 5%;
+}
+h1{
+    text-align: center;
+    color: #2AB7CA;
+}
+.tabla_paquetes{
+    padding: 50px 160px ;
+    background-color: #ECF4F8;
+    border-collapse: separate; 
+    border-spacing: 25px;
+    display: flex;
+}
+.tabla_paquetes img{
+    margin-bottom: 5px;
+    border-radius: 5%;
+}
