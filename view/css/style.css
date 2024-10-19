@@ -2,7 +2,7 @@
     color: rgb(0, 0, 0);
 }
 nav {
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(255, 255, 255);
     height: 60px;
 }
 .nav-link:hover{
@@ -17,4 +17,13 @@ footer{
     color: white;
     height: 80px;
     text-align: center;
+}
+
+#Logo{
+    background: white;
+    height: 240px;
+    text-align: center;
+    background-image: url(../img/logo_chiapasoculto.png);
+    background-repeat: no-repeat;
+    background-size: 250px 150px;
 }

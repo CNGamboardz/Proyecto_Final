@@ -11,7 +11,10 @@
 
 <body>
     <header>
+
         <nav>
+        <div id="Logo"> 
+            <br><br>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">INICIO</a>
@@ -26,11 +29,12 @@
                     <a class="nav-link" href="#">CONTACTO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">LOGIN/REGISTER</a>
+                    <a class="nav-link" href="#"> <img src="view/img/Icon Usuario.png" width="20px" height="20px">LOGIN/REGISTER</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CARRITO</a>
+                    <a class="nav-link" href="#"> <img src="view/img/Carrito de compras.png" width="20px" height="20px"> CARRITO</a>
                 </li>
             </ul>
         </nav>
+        </div>
     </header>
