@@ -50,5 +50,7 @@
             <td><img src="view/img/13.jpg" alt="" idth="360" height="370"></td>
         </tr>
     </table>
+
+    <?php require_once("./view/layout/footer.php");?>
 </body>
 </html>

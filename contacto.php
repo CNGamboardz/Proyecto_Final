@@ -18,6 +18,6 @@
 
 
 
-
+    <?php require_once("./view/layout/footer.php");?>
 </body>
 </html>
