@@ -38,11 +38,12 @@
             <td><img src="view/img/p2.png" alt="" width="360px" height="370px"></td>
             <td><img src="view/img/p3.png" alt="" width="360px" height="370px"></td>
         </tr>
+        <tr>
+            <td>
+              <a href="tours.php" class="boton"><b>VER TODOS LOS TOURS</b></a>
+            </td>
+        </tr>
     </table>
-        <div class="contenedor">
-            <button class="boton">VER TODOS LOS TOURS</button>
-
-        </div>
     <br>
     <br>
     <h1>Los mejores Paquetes por Chiapas</h1>
@@ -53,7 +54,13 @@
             <td><img src="view/img/19.png" alt="" width="360px" height="370px"></td>
             <td><img src="view/img/13.png" alt="" width="360px" height="370px"></td>
         </tr>
+        <tr>
+            <td>
+                 <a href="paquetes.php" class="boton"><b>VER TODOS LOS PAQUETES</b></a>
+            </td>
+        </tr>
     </table>
+    <br><br><br><br><br>
 
     <?php require_once("./view/layout/footer.php");?>
 </body>
