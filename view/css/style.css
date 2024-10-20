@@ -283,11 +283,17 @@ h1{
 }
     
 .rectangle {
-    background-color: #B9EFF7;
+    background-color: #b9eff79d;
     padding: 10px 20px; 
 }
 
 h2 {
     color: black;
     margin: 0; 
+}
+
+.justificado{
+    text-align: justify;
+    padding-left: 70px;
+    font-size: 17px;
 }
