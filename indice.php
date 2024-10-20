@@ -39,6 +39,10 @@
             <td><img src="view/img/p3.png" alt="" width="360px" height="370px"></td>
         </tr>
     </table>
+        <div class="contenedor">
+            <button class="boton">VER TODOS LOS TOURS</button>
+
+        </div>
     <br>
     <br>
     <h1>Los mejores Paquetes por Chiapas</h1>

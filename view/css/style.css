@@ -272,3 +272,14 @@ h1{
     height: 100px; /* Altura del contenedor */
 }
 
+.contenedor{
+    position: relative;
+    width: 65%;
+}
+
+.boton{
+    position: relative;
+    top: 10%;
+    left: 70%;
+    
+}
