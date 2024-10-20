@@ -56,8 +56,8 @@
         </td>
         <td width="22%">
             <center><h5>Servicio al Cliente</h5></center>
-            <a href=""><ul class="custom-bullets"><li>Contacto</li></ul></a>
-            <a href=""><ul class="custom-bullets"><li>Mi Cuenta</li></ul></a>
+            <a href="contacto.php"><ul class="custom-bullets"><li>Contacto</li></ul></a>
+            <a href="login.php"><ul class="custom-bullets"><li>Mi Cuenta</li></ul></a>
         </td>
         <td width="22%">
             <center><h5>Tours Destacados</h5></center>

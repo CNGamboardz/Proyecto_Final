@@ -263,13 +263,12 @@ h1{
     background-color: #7cc1f33e;
 }
 
-.repeated-image {
-    display: inline-block; /* Permite asignarle ancho y alto */
-    background-image: url('./view/img/separador_oculto.jpeg'); /* Ruta de la imagen */
-    background-repeat: repeat; /* Hace que la imagen se repita */
-    background-size: 7% 20%; /* Ajusta el tamaño de la imagen al 7% de ancho y 20% de alto */
-    width: 100%; /* Ancho donde la imagen se repetirá */
-    height: 100px; /* Altura del contenedor */
+.separador {
+    background-image: url('../img/separador_oculto.jpeg');
+    background-repeat: repeat-x;
+    background-size: contain; 
+    height: 35px; 
+    width: 100%; 
 }
 
 .contenedor{
@@ -281,5 +280,14 @@ h1{
     position: relative;
     top: 10%;
     left: 70%;
+}
     
+.rectangle {
+    background-color: #B9EFF7;
+    padding: 10px 20px; 
+}
+
+h2 {
+    color: black;
+    margin: 0; 
 }
