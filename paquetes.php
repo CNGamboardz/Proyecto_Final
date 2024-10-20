@@ -16,6 +16,37 @@
     <br><br>
 
     <img src="./view/img/paquetes.png" width="100%" height="100%">
+
+    <br> <br>
+
+    <div class="container">
+        <p class="text-border">Nuestra agencia Chispas Oculto te ofrece paquetes por días adaptados a tus necesidades. 
+            Disfruta de itinerarios diseñados para explorar lo mejor de cada destino, ya sea en escapadas cortas de 3 días o aventuras más largas de 7 días. 
+            ¡Elige el paquete ideal y vive una experiencia única!
+        </p>
+    </div>
     
+    <table class="paquetes2">
+        <tr>
+            <td><img src="./view/img/20.png" width="250px" height="250px"></td>
+            <td><img src="./view/img/13.png" width="250px" height="250px"></td>
+            <td><img src="./view/img/14.png" width="250px" height="250px"></td>
+        </tr>
+        <tr>
+            <td><img src="./view/img/16.png" width="250px" height="250px"></td>
+            <td><img src="./view/img/17.png" width="250px" height="250px"></td>
+            <td><img src="./view/img/18.png" width="250px" height="250px"></td>
+        </tr>
+    </table>
+    <br>
+    <table class="paquetes3">
+        <tr>
+            <td><img src="./view/img/15.png" width="250px" height="250px"></td>
+            <td><img src="./view/img/19.png" width="250px" height="250px"></td>
+        </tr>
+    </table>
+    <br><br><br><br><br><br><br>
+    
+    <?php require_once("./view/layout/footer.php");?>
 </body>
 </html>

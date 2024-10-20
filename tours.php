@@ -52,6 +52,7 @@
             <td><img src="./view/img/11.png" width="250px" height="250px"></td>
         </tr>
     </table>
+    
     <br><br><br><br><br><br><br>
     <table width =100%>
         

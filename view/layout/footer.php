@@ -1,6 +1,6 @@
-<footer>
-    <p>Derechos Reservados</p>
+<footer class="footer">
 </footer>
+
 
 </body>
 </html>

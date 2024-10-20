@@ -35,16 +35,20 @@ nav {
 .nav-link:hover{
     color: rgb(0, 0, 0);
 }
-footer{
+
+.footer {
     position: fixed;
-    left: 0;
     bottom: 0;
+    left: 0; 
     width: 100%;
-    background-color: #86C5CD;
-    color: white;
-    height: 80px;
-    text-align: center;
+    background-image: url('../img/separador_oculto.jpeg');
+    background-repeat: repeat-x; 
+    background-size: contain; 
+    height: 40px; 
+    z-index: 100; 
 }
+
+
 
 #Logo{
     background: white;
@@ -83,6 +87,40 @@ footer{
 }
 
 .paquetes1 img {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+}
+
+.paquetes2 {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.paquetes2 td {
+    padding: 1.5rem;
+}
+
+.paquetes2 img {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+}
+
+.paquetes3 {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.paquetes3 td {
+    padding: 1.5rem;
+}
+
+.paquetes3 img {
     display: block;
     margin: 0 auto;
     width: 250px;
