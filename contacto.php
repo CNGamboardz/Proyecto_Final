@@ -14,9 +14,55 @@
     <?php require_once("./view/layout/header.php");?>
 
     <br><br>
-    <span class="repeated-image"></span>
+    <div class="separador">
+    </div>
+
+    <div class="rectangle">
+        <center><br><br><h2>CONTACTO</h2></center>
+    </div>
 
 
+
+
+
+    <br><br><br><br>
+    <table class="piepagina" width =100%>
+    <tr>
+        <td width="15%">
+            <br><br><br>
+            <img src="./view/img/logo_chiapasoculto.png" width="100%">
+            <br><br>
+        </td>
+        <td width="22%">
+            <center><h5>Servicio al Cliente</h5></center>
+            <a href="contacto.php"><ul class="custom-bullets"><li>Contacto</li></ul></a>
+            <a href="login.php"><ul class="custom-bullets"><li>Mi Cuenta</li></ul></a>
+        </td>
+        <td width="22%">
+            <center><h5>Tours Destacados</h5></center>
+            <a href=""><ul class="custom-bullets2"><li>El Arcote</li></ul></a>
+            <a href=""><ul class="custom-bullets2"><li>Lagunas de Montebello</li></ul></a>
+            <a href=""><ul class="custom-bullets2"><li>Zona Arqueológica De Palenque</li></ul></a>
+            <a href=""><ul class="custom-bullets2"><li>Zona Arqueológica De Tonina</li></ul></a>
+        </td>
+        <td width="22%">
+            <center><h5>Paquetes Destacados</h5></center>
+            <a href=""><ul class="custom-bullets2"><li>Arqueología y Selva</li></ul></a>
+            <a href=""><ul class="custom-bullets2"><li>Paraíso en la Selva</li></ul></a>
+            <a href=""><ul class="custom-bullets2"><li>Expedición Chiapaneca</li></ul></a>
+            <a href=""><ul class="custom-bullets2"><li>Rutas Mágicas de Chiapas</li></ul></a>
+        </td>
+        <td width="22%">
+            <br><br><br>
+            <a class="normal" href="">
+             <img src="./view/img/geolocalizacion.png" width="20%" alt="Icono de geolocalización">
+              Ver Ubicación
+            </a>
+
+        </td>
+    </tr>
+
+    </table>
 
     <?php require_once("./view/layout/footer.php");?>
 </body>
