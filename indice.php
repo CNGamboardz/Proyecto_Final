@@ -22,14 +22,47 @@
     <br>
     <br>
     <h1>Nuestro objetivo</h1>
+    <br>
     <p class="parrafo">
         Nuestro objetivo es posicionar a Chiapas como un destino líder en turismo alternativo, ofreciendo experiencias únicas 
         que conecten a los viajeros con la riqueza natural, cultural y espiritual de la región. A través de nuestra plataforma 
         Chiapas Oculto, facilitaremos el acceso a rutas de lugares y actividades exclusivas, promoviendo un turismo sostenible 
         y responsable que beneficie tanto a las comunidades locales como al medio ambiente.
     </p>
+
+    <br>
+    <div class="separador">
+    </div>
+
+    <table width ="100%">
+        <tr>
+            <td width="50%">
+                <br><br><br>
+            <center><h1>Visión</h1></center>
+            <br>
+            <p class="parrafo">
+            Ser la agencia de viajes líder en ofrecer experiencias auténticas y personalizadas en los rincones más desconocidos y 
+            mágicos de Chiapas, conectando a los viajeros con la riqueza natural, 
+            cultural y ancestral de la región, y promoviendo el turismo responsable y sostenible.
+            </p>
+            </td>
+            <td width="55%">
+                <br><br>
+                <center><h1>Misión</h1></center>
+                <br>
+                <p class="parrafo3">
+                Brindar a nuestros clientes experiencias inolvidables al descubrir los tesoros ocultos de Chiapas, 
+                con servicios de alta calidad y guiados por expertos locales. Nos comprometemos a proteger el patrimonio cultural y natural, 
+                fomentar la economía local y garantizar que cada viaje contribuya al desarrollo <br> sostenible de las comunidades que visitamos.
+            </p>
+            </td>
+        </tr>
+    </table>
     <br>
     <br>
+    <div class="separador">
+    </div>
+    <br><br>
     <h1>Los mejores Tours por Chiapas</h1>
     <br>
     <table width="100%" class="tabla_tours">
