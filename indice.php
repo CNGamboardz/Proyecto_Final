@@ -19,5 +19,6 @@
     <br><br>
     <img src="./view/img/banner.png" width="100%" height="100%">
     
+    
 </body>
 </html>
