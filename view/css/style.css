@@ -44,10 +44,59 @@ nav {
     background-image: url('../img/separador_oculto.jpeg');
     background-repeat: repeat-x; 
     background-size: contain; 
-    height: 40px; 
+    height: 50px; 
     z-index: 100; 
 }
 
+.custom-bullets {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+    text-align: left; 
+}
+
+.custom-bullets li {
+    display: block; 
+    margin-bottom: 0px; 
+    position: relative; 
+}
+
+.custom-bullets li::before {
+    content: "-";
+    position: absolute; 
+    left: -20px; 
+    padding-right: 10px; 
+}
+
+a {
+    text-decoration: none; 
+    color: black; 
+    display: block; 
+    width: fit-content; 
+    margin: 0 auto;
+}
+
+.custom-bullets2 {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+    text-align: justify;
+    padding-left: 0px;
+}
+
+.custom-bullets2 li {
+    display: block;
+    margin-bottom: 10px; 
+    position: relative;
+    text-align: left; 
+}
+
+.custom-bullets2 li::before {
+    content: "-";
+    position: absolute; 
+    left: -10px; 
+    padding-right: 0px;
+}
 
 
 #Logo{
@@ -193,4 +242,9 @@ h1{
 .tabla_paquetes img{
     margin-bottom: 5px;
     border-radius: 6%;
+}
+
+
+.piepagina{
+    background-color: #7cc1f33e;
 }

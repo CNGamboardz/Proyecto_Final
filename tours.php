@@ -54,21 +54,38 @@
     </table>
     
     <br><br><br><br><br><br><br>
-    <table width =100%>
-        
-        <br>
 
-    <tr bgcolor="Gray">
-        <td>
-            <p>
-                <b>Universidad Autónoma de Chiapas</b> <br>Programacion de Aplicaciones Web
-            </p>
-            <p>
-                <b>Alumno:</b> Erick Anselmo Gamboa Rodriguez
-            </p>
+
+    <table class="piepagina" width =100%>
+    <tr>
+        <td width="15%">
+            <br><br><br>
+            <img src="./view/img/logo_chiapasoculto.png" width="100%">
+            <br><br>
+        </td>
+        <td width="22%">
+            <center><h5>Servicio al Cliente</h5></center>
+            <a href=""><ul class="custom-bullets"><li>Contacto</li></ul></a>
+            <a href=""><ul class="custom-bullets"><li>Mi Cuenta</li></ul></a>
+        </td>
+        <td width="22%">
+            <center><h5>Tours Destacados</h5></center>
+            <a href=""><ul class="custom-bullets2"><li>El Arcote</li></ul></a>
+            <a href=""><ul class="custom-bullets2"><li>Lagunas de Montebello</li></ul></a>
+            <a href=""><ul class="custom-bullets2"><li>Zona Arqueológica De Palenque</li></ul></a>
+            <a href=""><ul class="custom-bullets2"><li>Zona Arqueológica De Tonina</li></ul></a>
+        </td>
+        <td width="22%">
+            <center><h5>Paquetes Destacados</h5></center>
+            <br><br><br>
+        </td>
+        <td width="22%">
+            <br><br><br>
+
         </td>
     </tr>
-    
     </table>
+    <br><br>
+    <?php require_once("./view/layout/footer.php");?>
 </body>
 </html>
