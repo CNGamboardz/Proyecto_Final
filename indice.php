@@ -34,9 +34,9 @@
     <br>
     <table width="100%" class="tabla_tours">
         <tr> 
-            <td><img src="view/img/p1.jpg" alt="" idth="360" height="370"></td>
-            <td><img src="view/img/p2.jpg" alt="" idth="360" height="370"></td>
-            <td><img src="view/img/p3.jpg" alt="" idth="360" height="370"></td>
+            <td><img src="view/img/p1.png" alt="" width="360px" height="370px"></td>
+            <td><img src="view/img/p2.png" alt="" width="360px" height="370px"></td>
+            <td><img src="view/img/p3.png" alt="" width="360px" height="370px"></td>
         </tr>
     </table>
     <br>
@@ -45,9 +45,9 @@
     <br>
     <table width="100%" class="tabla_paquetes">
         <tr> 
-            <td><img src="view/img/20.jpg" alt="" idth="360" height="370"></td>
-            <td><img src="view/img/19.jpg" alt="" idth="360" height="370"></td>
-            <td><img src="view/img/13.jpg" alt="" idth="360" height="370"></td>
+            <td><img src="view/img/20.png" alt="" width="360px" height="370px"></td>
+            <td><img src="view/img/19.png" alt="" width="360px" height="370px"></td>
+            <td><img src="view/img/13.png" alt="" width="360px" height="370px"></td>
         </tr>
     </table>
 
