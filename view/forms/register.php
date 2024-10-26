@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -14,7 +15,7 @@
 </head>
 
 <body>
-    <?php require_once("./view/layout/header.php");?>
+    <?php require_once("./view/layout/header.php"); ?>
 
     <br><br>
     <div class="separador">
@@ -22,7 +23,9 @@
 
     <br><br>
 
-    <center><h2 class="patrona">REGISTRARSE</h2></center>
+    <center>
+        <h2 class="patrona">REGISTRARSE</h2>
+    </center>
     <br><br><br><br><br><br>
     <div class="inisec">
         <div class="borde">
@@ -30,75 +33,123 @@
                 <img src="view/img/img2.png" alt="Personaje" width="200">
                 <form>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Apellido Paterno</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="apellidoPaterno" class="form-label">Apellido Paterno</label>
+                        <input type="text" class="form-control" id="apellidoPaterno">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Apellido Materno</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="apellidoMaterno" class="form-label">Apellido Materno</label>
+                        <input type="text" class="form-control" id="apellidoMaterno">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Numero de Telefono</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="telefono" class="form-label">Número de Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="correo" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="contrasena" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="contrasena">
                     </div>
-                    <button type="submit" class="botton">Continuar</button>
+                    <button type="submit" class="btn btn-primary">Continuar</button>
                 </form>
+
                 <br>
             </div>
         </div>
     </div>
 
     <br><br><br><br><br><br><br>
-    <table class="piepagina" width =100%>
-    <tr>
-        <td width="15%">
-            <br><br><br>
-            <img src="./view/img/logo_chiapasoculto.png" width="100%">
-            <br><br>
-        </td>
-        <td width="22%">
-            <center><h5>Servicio al Cliente</h5></center>
-            <a href="contacto.php"><ul class="custom-bullets"><li>Contacto</li></ul></a>
-            <a href="login.php"><ul class="custom-bullets"><li>Mi Cuenta</li></ul></a>
-        </td>
-        <td width="22%">
-            <center><h5>Tours Destacados</h5></center>
-            <a href=""><ul class="custom-bullets2"><li>El Arcote</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Lagunas de Montebello</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Zona Arqueológica De Palenque</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Zona Arqueológica De Tonina</li></ul></a>
-        </td>
-        <td width="22%">
-            <center><h5>Paquetes Destacados</h5></center>
-            <a href=""><ul class="custom-bullets2"><li>Arqueología y Selva</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Paraíso en la Selva</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Expedición Chiapaneca</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Rutas Mágicas de Chiapas</li></ul></a>
-        </td>
-        <td width="22%">
-            <br><br><br>
-            <a class="normal" href="">
-             <img src="./view/img/geolocalizacion.png" width="20%" alt="Icono de geolocalización">
-              Ver Ubicación
-            </a>
+    <table class="piepagina" width=100%>
+        <tr>
+            <td width="15%">
+                <br><br><br>
+                <img src="./view/img/logo_chiapasoculto.png" width="100%">
+                <br><br>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Servicio al Cliente</h5>
+                </center>
+                <a href="contacto.php">
+                    <ul class="custom-bullets">
+                        <li>Contacto</li>
+                    </ul>
+                </a>
+                <a href="login.php">
+                    <ul class="custom-bullets">
+                        <li>Mi Cuenta</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Tours Destacados</h5>
+                </center>
+                <a href="">
+                    <ul class="custom-bullets2">
+                        <li>El Arcote</li>
+                    </ul>
+                </a>
+                <a href="">
+                    <ul class="custom-bullets2">
+                        <li>Lagunas de Montebello</li>
+                    </ul>
+                </a>
+                <a href="">
+                    <ul class="custom-bullets2">
+                        <li>Zona Arqueológica De Palenque</li>
+                    </ul>
+                </a>
+                <a href="">
+                    <ul class="custom-bullets2">
+                        <li>Zona Arqueológica De Tonina</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Paquetes Destacados</h5>
+                </center>
+                <a href="">
+                    <ul class="custom-bullets2">
+                        <li>Arqueología y Selva</li>
+                    </ul>
+                </a>
+                <a href="">
+                    <ul class="custom-bullets2">
+                        <li>Paraíso en la Selva</li>
+                    </ul>
+                </a>
+                <a href="">
+                    <ul class="custom-bullets2">
+                        <li>Expedición Chiapaneca</li>
+                    </ul>
+                </a>
+                <a href="">
+                    <ul class="custom-bullets2">
+                        <li>Rutas Mágicas de Chiapas</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <br><br><br>
+                <a class="normal" href="">
+                    <img src="./view/img/geolocalizacion.png" width="20%" alt="Icono de geolocalización">
+                    Ver Ubicación
+                </a>
 
-        </td>
-    </tr>
+            </td>
+        </tr>
 
     </table>
     <br><br>
-    <?php require_once("./view/layout/footer.php");?>
+    <?php require_once("./view/layout/footer.php"); ?>
 </body>
+
 </html>
