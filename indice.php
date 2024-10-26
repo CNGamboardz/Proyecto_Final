@@ -72,7 +72,7 @@
         </tr>
         <tr>
             <td>
-              <a href="tours.php" class="boton"><b>VER TODOS LOS TOURS</b></a>
+              <a href="index.php?u=tours" class="boton"><b>VER TODOS LOS TOURS</b></a>
             </td>
         </tr>
     </table>
@@ -88,7 +88,7 @@
         </tr>
         <tr>
             <td>
-                 <a href="paquetes.php" class="boton"><b>VER TODOS LOS PAQUETES</b></a>
+                 <a href="index.php?u=paquetes" class="boton"><b>VER TODOS LOS PAQUETES</b></a>
             </td>
         </tr>
     </table>
