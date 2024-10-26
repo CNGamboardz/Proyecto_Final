@@ -15,9 +15,6 @@ class IndexController{
         require_once("indice.php");
 
     }
-    public function tours(){
-        require_once("tours.php");
-    }
 }
 
 ?>

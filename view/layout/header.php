@@ -21,10 +21,10 @@
                     <a class="nav-link active" aria-current="page" href="index.php">INICIO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?i=tours">TOURS</a>
+                    <a class="nav-link" href="index.php?u=tours">TOURS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="paquetes.php">PAQUETES</a>
+                    <a class="nav-link" href="index.php?u=paquetes">PAQUETES</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contacto.php">CONTACTO</a>
