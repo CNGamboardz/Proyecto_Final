@@ -9,8 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Patrona&display=swap" rel="stylesheet">
 
-    <title>Iniciar Sesión</title>
-    <link rel="icon" href="/view/img/Icon_logo.png" type="image/x-icon">
+    <title>Contacto Chiapas Oculto</title>
 </head>
 
 <body>
@@ -23,39 +22,41 @@
     <br><br>
 
     <center><h2 class="patrona">INICIAR SESIÓN</h2></center>
-    <br>
+    <br><br><br>
+    <div class="inisec">
+        <div class="borde">
+            <div class="inicioBor">
+                <img src="view/img/img2.png" alt="Personaje" width="200"> 
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="botton">Continuar</button>
+                </form>
+                <br>
+                <p>Regístrate con</p>
 
-    <table width="100%">
-        <tr>
-            <td></td>
-            <td>
-            <div class="separador">
+                <div class="social-buttons">
+                    <a href="https://www.facebook.com/" class="social-button">
+                        <img src="view/img/img4.png" alt="Facebook Logo">
+                        Facebook
+                    </a>
+                    <a href="https://myaccount.google.com/?pli=1&nlr=1" class="social-button">
+                        <img src="view/img/img5.png" alt="Google Logo">
+                        Google
+                    </a>
+                </div>
             </div>
-            </td>
-            <td>
-            </td>
-        </tr>
+        </div>
+    </div>
 
-        <tr>
-            <td>
-
-            <div class="separador">
-            </div>
-
-            </td>
-
-            <td></td>
-            
-            <td>
-
-            <div class="separador">
-            </div>
-
-            </td>
-        </tr>
-    </table>
-
-    <br><br><br><br>
+    
+    <br><br><br><br><br><br>
     <table class="piepagina" width =100%>
     <tr>
         <td width="15%">
