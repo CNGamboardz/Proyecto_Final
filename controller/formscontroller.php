@@ -28,5 +28,8 @@ class FormsController {
     public static function carrito(){
         require_once('view/forms/carrito.php');
     }
+    public static function register(){
+        require_once('view/forms/register.php');
+    }
 }
 ?>

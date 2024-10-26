@@ -51,7 +51,7 @@
                             </td>
                             <td style="padding-left: 4px;">
                                 <p>
-                                   <a style="color: blue;" href="/view/forms/register.php">Registrarse</a>
+                                   <a style="color: blue;" href="index.php?u=register">Registrarse</a>
                                 </p>
                             </td>
                         </tr>
