@@ -23,21 +23,44 @@
     <br><br>
 
     <center><h2 class="patrona">REGISTRARSE</h2></center>
-    <br>
-
-    <table width="100%">
-        <tr>
-            <td></td>
-            <td>
-            <div class="separador">
+    <br><br><br><br><br><br>
+    <div class="inisec">
+        <div class="borde">
+            <div class="inicioBor">
+                <img src="view/img/img2.png" alt="Personaje" width="200">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Apellido Paterno</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Apellido Materno</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Numero de Telefono</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="botton">Continuar</button>
+                </form>
+                <br>
+            </div>
+        </div>
+    </div>
 
-            </td>
-            <td></td>
-        </tr>
-    </table>
-
-    <br><br><br><br>
+    <br><br><br><br><br><br><br>
     <table class="piepagina" width =100%>
     <tr>
         <td width="15%">
