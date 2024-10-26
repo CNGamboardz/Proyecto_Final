@@ -18,10 +18,10 @@
             <ul class="nav justify-content-center">
                 <li class="nav-item">
                     
-                    <a class="nav-link active" aria-current="page" href="indice.php">INICIO</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">INICIO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="tours.php">TOURS</a>
+                    <a class="nav-link" href="index.php?i=tours">TOURS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="paquetes.php">PAQUETES</a>
