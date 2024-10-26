@@ -302,3 +302,128 @@ h2 {
     padding-left: 70px;
     font-size: 17px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Patrona&display=swap');
+
+.patrona {
+    font-family: 'Patrona', sans-serif;
+    color: #003366; 
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+.separador3 {
+    background-image: url('../img/separador_oculto.jpeg');
+    background-repeat: repeat-y; /* Cambiado para que se repita verticalmente */
+    background-size: contain; 
+    width: 35px; /* Establece el ancho de la imagen */
+    height: 100%; /* Altura al 100% para que se repita a lo largo del contenedor */
+}
+
+.contenedor {
+  position: relative;
+  width: 300px; /* Ancho del contenedor */
+  height: 200px; /* Altura del contenedor */
+  background-color: #f0f0f0; /* Fondo del contenedor */
+}
+
+.margen-superior,
+.margen-inferior {
+  position: absolute;
+  height: 10px; /* Altura del margen superior/inferior */
+  width: 100%; /* Ocupa todo el ancho */
+  background-color: #ddd; /* Color del margen */
+}
+
+.margen-superior {
+  top: 0;
+  left: 0;
+}
+
+.margen-inferior {
+  bottom: 0;
+  left: 0;
+}
+
+.margen-izquierdo,
+.margen-derecho {
+  position: absolute;
+  width: 10px; /* Ancho del margen izquierdo/derecho */
+  height: calc(100% - 20px); /* Ajusta para no superponerse con márgenes superior e inferior */
+  background-color: #ddd; /* Color del margen */
+}
+
+.margen-izquierdo {
+  top: 10px;
+  left: 0;
+}
+
+.margen-derecho {
+  top: 10px;
+  right: 0;
+}
+
+.contenido {
+  position: absolute;
+  top: 10px; /* Separación del margen superior */
+  left: 10px; /* Separación del margen izquierdo */
+  right: 10px; /* Separación del margen derecho */
+  bottom: 10px; /* Separación del margen inferior */
+  background-color: #ffffff; /* Fondo del contenido */
+}
+
+
+
+
+
+.contenedor {
+    position: relative;
+    width: 300px; /* Ancho del contenedor */
+    height: 200px; /* Altura del contenedor */
+    background-color: #f0f0f0; /* Fondo del contenedor */
+  }
+  
+  .margen-superior,
+  .margen-inferior {
+    position: absolute;
+    height: 10px; /* Altura del margen superior/inferior */
+    width: 100%; /* Ocupa todo el ancho */
+    background-color: #ddd; /* Color del margen */
+  }
+  
+  .margen-superior {
+    top: 0;
+    left: 0;
+  }
+  
+  .margen-inferior {
+    bottom: 0;
+    left: 0;
+  }
+  
+  .margen-izquierdo,
+  .margen-derecho {
+    position: absolute;
+    width: 10px; /* Ancho del margen izquierdo/derecho */
+    height: calc(100% - 20px); /* Ajusta para no superponerse con márgenes superior e inferior */
+    background-color: #ddd; /* Color del margen */
+  }
+  
+  .margen-izquierdo {
+    top: 10px;
+    left: 0;
+  }
+  
+  .margen-derecho {
+    top: 10px;
+    right: 0;
+  }
+  
+  .contenido {
+    position: absolute;
+    top: 10px; /* Separación del margen superior */
+    left: 10px; /* Separación del margen izquierdo */
+    right: 10px; /* Separación del margen derecho */
+    bottom: 10px; /* Separación del margen inferior */
+    background-color: #ffffff; /* Fondo del contenido */
+  }
