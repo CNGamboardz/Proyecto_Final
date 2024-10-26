@@ -26,7 +26,7 @@
     <center>
         <h2 class="patrona">REGISTRARSE</h2>
     </center>
-    <br><br><br><br><br><br>
+    <br><br><br><br>
     <div class="inisec">
         <div class="borde">
             <div class="inicioBor">
@@ -37,12 +37,8 @@
                         <input type="text" class="form-control" id="nombre">
                     </div>
                     <div class="mb-3">
-                        <label for="apellidoPaterno" class="form-label">Apellido Paterno</label>
-                        <input type="text" class="form-control" id="apellidoPaterno">
-                    </div>
-                    <div class="mb-3">
-                        <label for="apellidoMaterno" class="form-label">Apellido Materno</label>
-                        <input type="text" class="form-control" id="apellidoMaterno">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos">
                     </div>
                     <div class="mb-3">
                         <label for="telefono" class="form-label">Número de Teléfono</label>
@@ -64,7 +60,7 @@
         </div>
     </div>
 
-    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
             <td width="15%">
