@@ -27,13 +27,13 @@
                     <a class="nav-link" href="index.php?u=paquetes">PAQUETES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contacto.php">CONTACTO</a>
+                    <a class="nav-link" href="index.php?u=contacto">CONTACTO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php"> <img src="view/img/IconUsuario.png" width="20px" height="20px">LOGIN/REGISTER</a>
+                    <a class="nav-link" href="index.php?u=login"> <img src="view/img/IconUsuario.png" width="20px" height="20px">LOGIN/REGISTER</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="carrito.php"> <img src="view/img/Carritocompras.png" width="20px" height="20px"> CARRITO</a>
+                    <a class="nav-link" href="index.php?u=carrito"> <img src="view/img/Carritocompras.png" width="20px" height="20px"> CARRITO</a>
                 </li>
             </ul>
         </nav>
