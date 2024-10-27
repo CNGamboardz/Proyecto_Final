@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Patrona&display=swap" rel="stylesheet">
 
-    <title>Contacto Chiapas Oculto</title>
+    <title>Iniciar Sesión</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                 <img src="view/img/img2.png" alt="Personaje" width="200">
                 <form>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+                        <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">

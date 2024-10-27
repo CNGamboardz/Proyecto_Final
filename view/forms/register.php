@@ -33,7 +33,7 @@
                 <img src="view/img/img2.png" alt="Personaje" width="200">
                 <form>
                     <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre</label>
+                        <label for="nombre" class="form-label">Nombres</label>
                         <input type="text" class="form-control" id="nombre">
                     </div>
                     <div class="mb-3">
