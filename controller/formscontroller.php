@@ -31,5 +31,9 @@ class FormsController {
     public static function register(){
         require_once('view/forms/register.php');
     }
+
+    public static function cascadas(){
+        require_once('view/forms/cascadas.php');
+    }
 }
 ?>

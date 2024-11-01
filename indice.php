@@ -66,7 +66,7 @@
     <br>
     <table width="100%" class="tabla_tours">
         <tr> 
-            <td><img src="view/img/p1.png" alt="" width="360px" height="370px"></td>
+           <a href=""> <td><img src="view/img/p1.png" alt="" width="360px" height="370px"></td></a>
             <td><img src="view/img/p2.png" alt="" width="360px" height="370px"></td>
             <td><img src="view/img/p3.png" alt="" width="360px" height="370px"></td>
         </tr>

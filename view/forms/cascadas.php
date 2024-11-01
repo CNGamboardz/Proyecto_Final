@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <title>Contacto Chiapas Oculto</title>
-    <link rel="icon" href="/view/img/Icon_logo.png" type="image/x-icon">
-
+    <title>Cascadas de Agua Azul</title>
 </head>
 
 <body>
@@ -21,34 +19,7 @@
     <div class="separador">
     </div>
 
-    <div class="rectangle">
-        <center><br><br>
-            <h2><b>CONTACTO</b></h2>
-        </center>
-    </div>
 
-    <br>
-
-    <table width="100%">
-        <tr>
-            <td width="50%">
-                <center>
-                    <h3><b>Comparte tus datos y te contactaremos pronto.</b></h3>
-                </center>
-                <br>
-                <center>
-                    <p class="justificado">Ofrecemos precios especiales para grupos.
-                        Si tienes alguna solicitud o requerimiento <br> especial para tu viaje, no dudes en contactarnos.</p>
-                </center>
-            </td>
-            <td width="50%">
-                <img src="./view/img/Contacto_img.png" width="90%">
-            </td>
-        </tr>
-        <tr>
-            <img src="./view/img/" alt="">
-        </tr>
-    </table>
 
     <br><br><br><br>
     <table class="piepagina" width=100%>
@@ -136,6 +107,9 @@
     </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
+</body>
+
+</html>
 </body>
 
 </html>
