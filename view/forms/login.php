@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Patrona&display=swap" rel="stylesheet">
 
     <title>Iniciar Sesión</title>
+    <link rel="icon" href="/view/img/Icon_logo.png" type="image/x-icon">
+
 </head>
 
 <body>

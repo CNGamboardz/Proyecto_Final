@@ -26,7 +26,7 @@
     <center>
         <h2 class="patrona">REGISTRARSE</h2>
     </center>
-    <br><br><br><br>
+    <br><br><br><br><br><br>
     <div class="inisec">
         <div class="borde">
             <div class="inicioBor">
@@ -60,7 +60,7 @@
         </div>
     </div>
 
-    <br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
             <td width="15%">
