@@ -13,6 +13,40 @@
     background-color: #86C5CD;
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .borde {
+        padding: 15px;
+    }
+
+    .text-border {
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .borde {
+        padding: 10px;
+    }
+
+    .text-border {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+}
+
+.text-border {
+    position: relative;
+    font-size: 15px;
+    color: #000000;
+    padding: 20px 30px;
+    line-height: 1.5;
+    line-break: strict;
+    z-index: 1;
+    background-color: #86C5CD;
+}
+
 .text-border::before {
     content: "";
     position: absolute;
@@ -28,74 +62,189 @@
 .nav-link {
     color: rgb(0, 0, 0);
 }
+
 nav {
     background-color: rgb(255, 255, 255);
     height: 60px;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: rgb(0, 0, 0);
 }
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .text-border {
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+
+    .text-border::before {
+        transform: translate(-10px, -10px);
+    }
+
+    nav {
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-border {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    .text-border::before {
+        transform: translate(-5px, -5px);
+    }
+
+    nav {
+        height: 45px;
+    }
+}
+
 
 .footer {
     position: fixed;
     bottom: 0;
-    left: 0; 
+    left: 0;
     width: 100%;
     background-image: url('../img/separador_oculto.jpeg');
-    background-repeat: repeat-x; 
-    background-size: contain; 
-    height: 50px; 
-    z-index: 100; 
+    background-repeat: repeat-x;
+    background-size: contain;
+    height: 50px;
+    z-index: 100;
 }
 
 .custom-bullets {
     list-style-type: none;
-    padding: 0; 
-    margin: 0; 
-    text-align: left; 
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .footer {
+        height: 40px; /* Reduce la altura en pantallas medianas */
+        background-size: cover; /* Ajusta el tamaño de fondo para ocupar todo el ancho */
+    }
+    
+    .custom-bullets {
+        padding-left: 10px; /* Añade un poco de padding en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        height: 35px; /* Reduce aún más la altura en pantallas pequeñas */
+        background-size: cover;
+    }
+
+    .custom-bullets {
+        padding-left: 5px; /* Menor padding para pantallas pequeñas */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+}
+
+.custom-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
 }
 
 .custom-bullets li {
-    display: block; 
-    margin-bottom: 0px; 
-    position: relative; 
+    display: block;
+    margin-bottom: 0px;
+    position: relative;
 }
 
 .custom-bullets li::before {
     content: "-";
-    position: absolute; 
-    left: -20px; 
-    padding-right: 10px; 
+    position: absolute;
+    left: -20px;
+    padding-right: 10px;
 }
 
 a {
-    text-decoration: none; 
-    color: black; 
-    display: block; 
-    width: fit-content; 
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: fit-content;
     margin: 0 auto;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .custom-bullets li::before {
+        left: -15px; /* Ajuste para pantallas medianas */
+    }
+
+    a {
+        font-size: 14px; /* Reduce el tamaño de fuente en pantallas medianas */
+        width: 100%; /* Ocupa todo el ancho en pantallas medianas */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-bullets li::before {
+        left: -10px; /* Ajuste para pantallas pequeñas */
+    }
+
+    a {
+        font-size: 13px; /* Reduce aún más el tamaño de fuente en pantallas pequeñas */
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        text-align: center;
+    }
 }
 
 .custom-bullets2 {
     list-style-type: none;
-    padding: 0; 
+    padding: 0;
     margin: 0;
     text-align: justify;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .custom-bullets2 li {
     display: block;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     position: relative;
-    text-align: left; 
+    text-align: left;
 }
 
 .custom-bullets2 li::before {
     content: "-";
-    position: absolute; 
-    left: -10px; 
-    padding-right: 0px;
+    position: absolute;
+    left: -10px;
+    padding-right: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .custom-bullets2 {
+        padding-left: 10px; /* Añade padding en pantallas medianas */
+    }
+
+    .custom-bullets2 li::before {
+        left: -8px; /* Ajusta la posición de la viñeta */
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-bullets2 {
+        padding-left: 5px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .custom-bullets2 li {
+        margin-bottom: 8px; /* Reduce el margen inferior */
+    }
+
+    .custom-bullets2 li::before {
+        left: -5px; /* Ajuste adicional para la viñeta en pantallas pequeñas */
+    }
 }
 
 a.normal {
@@ -109,18 +258,50 @@ a.normal {
 
 a.normal img {
     position: absolute;
-    right: 0; 
+    right: 0;
     top: 0;
-    height: 25px; 
+    height: 25px;
 }
 
-#Logo{
+#Logo {
     background: white;
     height: 240px;
     text-align: center;
     background-image: url(../img/logo_chiapasoculto.png);
     background-repeat: no-repeat;
     background-size: 250px 150px;
+    background-position: center;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    a.normal {
+        padding-right: 20px; /* Reduce el padding en pantallas medianas */
+    }
+
+    a.normal img {
+        height: 20px; /* Reduce el tamaño de la imagen en pantallas medianas */
+    }
+
+    #Logo {
+        height: 180px; /* Reduce la altura del contenedor en pantallas medianas */
+        background-size: 200px 120px; /* Ajusta el tamaño del logo */
+    }
+}
+
+@media (max-width: 480px) {
+    a.normal {
+        padding-right: 15px; /* Reduce aún más el padding en pantallas pequeñas */
+    }
+
+    a.normal img {
+        height: 18px; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    #Logo {
+        height: 150px; /* Reduce aún más la altura en pantallas pequeñas */
+        background-size: 150px 100px; /* Ajusta el tamaño del logo para pantallas pequeñas */
+    }
 }
 
 .paquetes {
@@ -148,6 +329,51 @@ a.normal img {
 
 .paquetes1 td {
     padding: 1.5rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .paquetes {
+        width: 100%; /* Expande al 100% en pantallas medianas */
+    }
+
+    .paquetes img {
+        width: 200px; /* Reduce el tamaño de las imágenes en pantallas medianas */
+        height: 200px;
+    }
+
+    .paquetes td, .paquetes1 td {
+        padding: 1rem; /* Reduce el padding en pantallas medianas */
+    }
+
+    .paquetes1 {
+        width: 90%; /* Expande la anchura de .paquetes1 en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .paquetes {
+        width: 100%; /* Mantiene el ancho al 100% en pantallas pequeñas */
+    }
+
+    .paquetes img {
+        width: 150px; /* Reduce aún más el tamaño de las imágenes */
+        height: 150px;
+    }
+
+    .paquetes td, .paquetes1 td {
+        padding: 0.5rem; /* Reduce el padding para optimizar el espacio */
+    }
+
+    .paquetes1 {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+}
+
+.paquetes1 {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .paquetes1 img {
@@ -180,6 +406,51 @@ a.normal img {
     margin: 0 auto;
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .paquetes1, .paquetes2 {
+        width: 90%; /* Expande el ancho al 90% en pantallas medianas */
+    }
+
+    .paquetes1 img, .paquetes2 img {
+        width: 200px; /* Reduce el tamaño de las imágenes */
+        height: 200px;
+    }
+
+    .paquetes2 td {
+        padding: 1rem; /* Reduce el padding en pantallas medianas */
+    }
+
+    .paquetes3 {
+        width: 80%; /* Ajusta el ancho para pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .paquetes1, .paquetes2 {
+        width: 100%; /* Expande al 100% en pantallas pequeñas */
+    }
+
+    .paquetes1 img, .paquetes2 img {
+        width: 150px; /* Reduce aún más el tamaño de las imágenes */
+        height: 150px;
+    }
+
+    .paquetes2 td {
+        padding: 0.5rem; /* Reduce el padding para aprovechar mejor el espacio */
+    }
+
+    .paquetes3 {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+}
+
+.paquetes3 {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
 .paquetes3 td {
     padding: 1.5rem;
 }
@@ -191,76 +462,173 @@ a.normal img {
     height: 250px;
 }
 
-.parrafo{
+.parrafo {
     font-size: 15px;
     color: #000;
-    padding: 0 200px;
+    padding: 0 200px; /* Aumentar el padding en dispositivos más grandes */
     margin-bottom: 20px;
 }
 
-.tabla_tours{
-    padding: 50px 160px ;
+.tabla_tours {
+    padding: 50px 160px;
     background-color: #ECF4F8;
-    border-collapse: separate; 
-    border-spacing: 25px;
-    display: flex; 
-}
-.tabla_tours img{
-    margin-bottom: 5px;
-    border-radius: 5%;
-}
-h1{
-    text-align: center;
-    color: #2AB7CA;
-}
-.tabla_paquetes{
-    padding: 50px 160px ;
-    background-color: #ECF4F8;
-    border-collapse: separate; 
+    border-collapse: separate;
     border-spacing: 25px;
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en líneas */
 }
-.tabla_paquetes img{
+
+.tabla_tours img {
     margin-bottom: 5px;
     border-radius: 5%;
 }
 
-.parrafo{
+h1 {
+    text-align: center;
+    color: #2AB7CA;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .paquetes3 {
+        width: 80%; /* Aumenta el ancho en pantallas medianas */
+    }
+
+    .paquetes3 img {
+        width: 200px; /* Reduce el tamaño de las imágenes */
+        height: 200px;
+    }
+
+    .parrafo {
+        padding: 0 20px; /* Reduce el padding en pantallas medianas */
+    }
+
+    .tabla_tours {
+        padding: 30px 20px; /* Ajusta el padding de la tabla */
+        border-spacing: 15px; /* Reduce el espacio entre elementos */
+    }
+}
+
+@media (max-width: 480px) {
+    .paquetes3 {
+        width: 100%; /* Expande al 100% en pantallas pequeñas */
+    }
+
+    .paquetes3 img {
+        width: 150px; /* Reduce aún más el tamaño de las imágenes */
+        height: 150px;
+    }
+
+    .parrafo {
+        font-size: 14px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+        padding: 0 10px; /* Ajusta el padding */
+    }
+
+    .tabla_tours {
+        padding: 20px 10px; /* Reduce el padding de la tabla en pantallas pequeñas */
+        border-spacing: 10px; /* Reduce el espacio entre elementos */
+    }
+}
+
+.tabla_paquetes {
+    padding: 50px 160px;
+    background-color: #ECF4F8;
+    border-collapse: separate;
+    border-spacing: 25px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+}
+
+.tabla_paquetes img {
+    margin-bottom: 5px;
+    border-radius: 5%;
+    width: 250px; /* Tamaño por defecto de las imágenes */
+    height: 250px; /* Tamaño por defecto de las imágenes */
+}
+
+.parrafo {
     font-size: 15px;
     color: #000;
-    padding: 0 200px;
+    padding: 0 200px; /* Padding por defecto */
     margin-bottom: 20px;
 }
 
-.tabla_tours{
-    padding: 50px 160px ;
+.tabla_tours {
+    padding: 50px 160px;
     background-color: #ECF4F8;
-    border-collapse: separate; 
-    border-spacing: 25px;
-    display: flex; 
-}
-.tabla_tours img{
-    margin-bottom: 5px;
-    border-radius: 5%;
-}
-h1{
-    text-align: center;
-    color: #2AB7CA;
-}
-.tabla_paquetes{
-    padding: 50px 160px ;
-    background-color: #ECF4F8;
-    border-collapse: separate; 
+    border-collapse: separate;
     border-spacing: 25px;
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
 }
-.tabla_paquetes img{
+
+.tabla_tours img {
     margin-bottom: 5px;
     border-radius: 5%;
 }
 
-.piepagina{
+h1 {
+    text-align: center;
+    color: #2AB7CA;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .tabla_paquetes,
+    .tabla_tours {
+        padding: 30px 20px; /* Reduce el padding en pantallas medianas */
+        border-spacing: 15px; /* Reduce el espacio entre elementos */
+    }
+
+    .parrafo {
+        padding: 0 20px; /* Reduce el padding en pantallas medianas */
+    }
+
+    .tabla_paquetes img,
+    .tabla_tours img {
+        width: 200px; /* Reduce el tamaño de las imágenes */
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabla_paquetes,
+    .tabla_tours {
+        padding: 20px 10px; /* Reduce el padding en pantallas pequeñas */
+        border-spacing: 10px; /* Reduce el espacio entre elementos */
+    }
+
+    .parrafo {
+        font-size: 14px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+        padding: 0 10px; /* Reduce el padding */
+    }
+
+    .tabla_paquetes img,
+    .tabla_tours img {
+        width: 150px; /* Reduce aún más el tamaño de las imágenes */
+        height: 150px;
+    }
+}
+
+.tabla_paquetes {
+    padding: 50px 160px;
+    background-color: #ECF4F8;
+    border-collapse: separate;
+    border-spacing: 25px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+}
+
+.tabla_paquetes img {
+    margin-bottom: 5px;
+    border-radius: 5%;
+    width: 250px; /* Tamaño por defecto de las imágenes */
+    height: 250px; /* Tamaño por defecto de las imágenes */
+}
+
+.piepagina {
     background-color: #7cc1f33e;
+    padding: 20px; /* Agrega padding para mejorar el espaciado interno */
 }
 
 .separador {
@@ -271,10 +639,10 @@ h1{
     width: 100%; 
 }
 
-.boton{
-    position: absolute;
-    left: 550px;
-    width: 419px;
+.boton {
+    position: relative; /* Cambiado de absolute a relative */
+    width: 80%; /* Cambia el ancho a un porcentaje para ser más responsivo */
+    max-width: 419px; /* Mantiene el ancho máximo para pantallas grandes */
     height: 70px;
     background-color: #86c5cd6c;
     border: 4px solid; 
@@ -282,14 +650,49 @@ h1{
     text-align: center;
     color: #4200FF;
     font-size: 25px;
-    cursor:pointer;
+    cursor: pointer;
     padding: 10px;
+    margin: 20px auto; /* Centra el botón en su contenedor */
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .tabla_paquetes {
+        padding: 30px 20px; /* Reduce el padding en pantallas medianas */
+        border-spacing: 15px; /* Reduce el espacio entre elementos */
+    }
+
+    .tabla_paquetes img {
+        width: 200px; /* Reduce el tamaño de las imágenes */
+        height: 200px;
+    }
+
+    .boton {
+        width: 90%; /* Aumenta el ancho en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .tabla_paquetes {
+        padding: 20px 10px; /* Reduce el padding en pantallas pequeñas */
+        border-spacing: 10px; /* Reduce el espacio entre elementos */
+    }
+
+    .tabla_paquetes img {
+        width: 150px; /* Reduce aún más el tamaño de las imágenes */
+        height: 150px;
+    }
+
+    .boton {
+        font-size: 20px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+        height: 60px; /* Ajusta la altura del botón */
+    }
+}
     
 .rectangle {
     background-color: #b9eff79d;
     padding: 10px 20px; 
+    border-radius: 5px; /* Agrega un borde redondeado */
 }
 
 h2 {
@@ -297,12 +700,13 @@ h2 {
     margin: 0; 
 }
 
-.justificado{
+.justificado {
     text-align: justify;
-    padding-left: 70px;
+    padding-left: 70px; /* Considera ajustar este valor en pantallas más pequeñas */
     font-size: 17px;
 }
 
+/* Importación de fuente */
 @import url('https://fonts.googleapis.com/css2?family=Patrona&display=swap');
 
 .patrona {
@@ -312,6 +716,7 @@ h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
 }
 
+/* Separador */
 .separador3 {
     background-image: url('../img/separador_oculto.jpeg');
     background-repeat: repeat-y; /* Cambiado para que se repita verticalmente */
@@ -320,11 +725,45 @@ h2 {
     height: 100%; /* Altura al 100% para que se repita a lo largo del contenedor */
 }
 
+/* Contenedor */
 .contenedor {
-  position: relative;
-  width: 300px; /* Ancho del contenedor */
-  height: 200px; /* Altura del contenedor */
-  background-color: #f0f0f0; /* Fondo del contenedor */
+    position: relative;
+    width: 100%; /* Cambia el ancho a 100% para que se ajuste al tamaño del contenedor padre */
+    max-width: 300px; /* Establece un ancho máximo */
+    height: auto; /* Cambia la altura a auto para adaptarse al contenido */
+    background-color: #f0f0f0; /* Fondo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .justificado {
+        padding-left: 30px; /* Reduce el padding en pantallas más pequeñas */
+        font-size: 16px; /* Reduce el tamaño de la fuente */
+    }
+
+    .patrona {
+        font-size: 30px; /* Reduce el tamaño de la fuente en pantallas más pequeñas */
+    }
+
+    .contenedor {
+        padding: 20px; /* Agrega un poco de padding para mejorar el espaciado interno */
+    }
+}
+
+@media (max-width: 480px) {
+    .justificado {
+        padding-left: 10px; /* Reduce aún más el padding */
+        font-size: 15px; /* Reduce el tamaño de la fuente */
+    }
+
+    .patrona {
+        font-size: 24px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
+    }
+
+    .contenedor {
+        max-width: 90%; /* Aumenta el ancho máximo en pantallas más pequeñas */
+    }
 }
 
 .margen-superior,
@@ -363,22 +802,52 @@ h2 {
   right: 0;
 }
 
-.contenido {
-  position: absolute;
-  top: 10px; /* Separación del margen superior */
-  left: 10px; /* Separación del margen izquierdo */
-  right: 10px; /* Separación del margen derecho */
-  bottom: 10px; /* Separación del margen inferior */
-  background-color: #ffffff; /* Fondo del contenido */
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .margen-superior,
+  .margen-inferior {
+    height: 5px; /* Reduce la altura de los márgenes en pantallas más pequeñas */
+  }
+
+  .margen-izquierdo,
+  .margen-derecho {
+    width: 5px; /* Reduce el ancho de los márgenes en pantallas más pequeñas */
+  }
 }
 
-.contenedor {
-    position: relative;
-    width: 300px; /* Ancho del contenedor */
-    height: 200px; /* Altura del contenedor */
-    background-color: #f0f0f0; /* Fondo del contenedor */
+@media (max-width: 480px) {
+  .margen-superior,
+  .margen-inferior {
+    height: 3px; /* Reduce aún más la altura de los márgenes en pantallas muy pequeñas */
+  }
+
+  .margen-izquierdo,
+  .margen-derecho {
+    width: 3px; /* Reduce aún más el ancho de los márgenes en pantallas muy pequeñas */
+  }
+}
+
+.contenido {
+    position: absolute;
+    top: 10px; /* Separación del margen superior */
+    left: 10px; /* Separación del margen izquierdo */
+    right: 10px; /* Separación del margen derecho */
+    bottom: 10px; /* Separación del margen inferior */
+    background-color: #ffffff; /* Fondo del contenido */
+    border-radius: 5px; /* Añade bordes redondeados para un mejor aspecto */
   }
   
+  .contenedor {
+    position: relative;
+    width: 100%; /* Cambia a 100% para ser responsivo */
+    max-width: 300px; /* Establece un ancho máximo */
+    height: auto; /* Cambia a auto para que la altura se ajuste al contenido */
+    background-color: #f0f0f0; /* Fondo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 10px; /* Añade padding para espacio interno */
+  }
+  
+  /* Márgenes superior e inferior */
   .margen-superior,
   .margen-inferior {
     position: absolute;
@@ -397,70 +866,133 @@ h2 {
     left: 0;
   }
   
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .contenedor {
+      max-width: 90%; /* Aumenta el ancho máximo para pantallas más pequeñas */
+    }
+  
+    .margen-superior,
+    .margen-inferior {
+      height: 5px; /* Reduce la altura de los márgenes en pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contenedor {
+      max-width: 100%; /* Aumenta el ancho máximo a 100% en pantallas pequeñas */
+      padding: 5px; /* Reduce el padding para ajustarse mejor */
+    }
+  
+    .margen-superior,
+    .margen-inferior {
+      height: 3px; /* Reduce aún más la altura de los márgenes en pantallas pequeñas */
+    }
+  }
+  
   .margen-izquierdo,
   .margen-derecho {
-    position: absolute;
-    width: 10px; /* Ancho del margen izquierdo/derecho */
-    height: calc(100% - 20px); /* Ajusta para no superponerse con márgenes superior e inferior */
-    background-color: #ddd; /* Color del margen */
+      position: absolute;
+      width: 10px; /* Ancho del margen izquierdo/derecho */
+      height: calc(100% - 20px); /* Ajusta para no superponerse con márgenes superior e inferior */
+      background-color: #ddd; /* Color del margen */
   }
   
   .margen-izquierdo {
-    top: 10px;
-    left: 0;
+      top: 10px;
+      left: 0;
   }
   
   .margen-derecho {
-    top: 10px;
-    right: 0;
+      top: 10px;
+      right: 0;
   }
   
   .contenido {
-    position: absolute;
-    top: 10px; /* Separación del margen superior */
-    left: 10px; /* Separación del margen izquierdo */
-    right: 10px; /* Separación del margen derecho */
-    bottom: 10px; /* Separación del margen inferior */
-    background-color: #ffffff; /* Fondo del contenido */
+      position: absolute;
+      top: 10px; /* Separación del margen superior */
+      left: 10px; /* Separación del margen izquierdo */
+      right: 10px; /* Separación del margen derecho */
+      bottom: 10px; /* Separación del margen inferior */
+      background-color: #ffffff; /* Fondo del contenido */
   }
-
-
+  
   .inisec {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-/* Contenedor principal con el borde */
-.borde {
-    width: 450px;
-    padding: 20px;
-    border: 10px solid transparent;
-    background-clip: padding-box;
-    position: relative;
-}
-
-/* Fondo decorativo en el margen */
-.borde::before {
-    content: "";
-    position: absolute;
-    top: -40px;
-    left: -50px;
-    right: -50px;
-    bottom: -40px;
-    background-image: url('../img/img6.png');
-    
-    z-index: -1;
-}
-
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh; /* Ajusta la altura al 90% de la altura de la ventana */
+      margin: 0;
+      font-family: Arial, sans-serif;
+  }
+  
+  /* Contenedor principal con el borde */
+  .borde {
+      width: 90%; /* Cambiar a 90% para que sea responsivo */
+      max-width: 450px; /* Establece un ancho máximo */
+      padding: 20px;
+      border: 10px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+      margin: 0 auto; /* Centrar el contenedor */
+  }
+  
+  /* Fondo decorativo en el margen */
+  .borde::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: -50px;
+      right: -50px;
+      bottom: -40px;
+      background-image: url('../img/img6.png');
+      z-index: -1;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+      .borde {
+          width: 95%; /* Aumenta el ancho en pantallas más pequeñas */
+      }
+  
+      .margen-izquierdo,
+      .margen-derecho {
+          width: 5px; /* Reduce el ancho de los márgenes en pantallas más pequeñas */
+      }
+  
+      .contenido {
+          top: 5px; /* Reduce el espacio en pantallas más pequeñas */
+          left: 5px;
+          right: 5px;
+          bottom: 5px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+      .borde {
+          padding: 10px; /* Reduce el padding para pantallas pequeñas */
+      }
+  
+      .margen-izquierdo,
+      .margen-derecho {
+          width: 3px; /* Reduce aún más el ancho de los márgenes en pantallas pequeñas */
+      }
+  
+      .contenido {
+          top: 3px; /* Ajusta las separaciones en pantallas pequeñas */
+          left: 3px;
+          right: 3px;
+          bottom: 3px;
+      }
+  }
+  
 /* Contenido dentro del margen */
-.inicioBor{
+.inicioBor {
     background: white;
     padding: 50px;
     text-align: center;
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añadir sombra para mejor visualización */
 }
 
 /* Botones de redes sociales */
@@ -469,6 +1001,7 @@ h2 {
     gap: 10px;
     justify-content: center;
     margin-top: 10px;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan en pantallas más pequeñas */
 }
 
 .social-button {
@@ -483,12 +1016,15 @@ h2 {
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
+    transition: background-color 0.3s; /* Suaviza el cambio de color */
 }
+
 .social-button img {
     width: 20px;
     height: 20px;
     margin-right: 8px;
 }
+
 .social-button:hover {
     background-color: #4a9ae3;
 }
@@ -502,4 +1038,35 @@ button {
     color: black;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s; /* Suaviza el cambio de color */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .inicioBor {
+        padding: 30px; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .social-button {
+        font-size: 14px; /* Disminuir el tamaño de fuente para pantallas más pequeñas */
+    }
+
+    button {
+        width: 100%; /* Hace que los botones ocupen todo el ancho en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .inicioBor {
+        padding: 20px; /* Reduce aún más el padding en pantallas muy pequeñas */
+    }
+
+    .social-button {
+        padding: 8px 10px; /* Ajusta el padding de los botones */
+        font-size: 12px; /* Reduce el tamaño de la fuente */
+    }
+
+    button {
+        padding: 8px 10px; /* Ajusta el padding del botón */
+    }
 }
