@@ -103,7 +103,6 @@ nav {
     }
 }
 
-
 .footer {
     position: fixed;
     bottom: 0;
@@ -627,6 +626,11 @@ h1 {
 }
 
 .piepagina {
+    background-color: #7cc1f33e;
+    padding: 20px; /* Agrega padding para mejorar el espaciado interno */
+}
+
+.table-responsive {
     background-color: #7cc1f33e;
     padding: 20px; /* Agrega padding para mejorar el espaciado interno */
 }

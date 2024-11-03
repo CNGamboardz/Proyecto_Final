@@ -14,9 +14,7 @@
 <body>
 
     <?php require_once("./view/layout/header.php");?>
-
-    <br><br>
-    <img src="./view/img/banner.png" width="100%" height="100%">
+    <img src="./view/img/banner.png" class="img-fluid" alt="Banner Chiapas Oculto">
 
     <br>
     <br>
@@ -30,68 +28,68 @@
     </p>
 
     <br>
-    <div class="separador">
-    </div>
+    <div class="separador"></div>
 
-    <table width ="100%">
-        <tr>
-            <td width="50%">
-                <br><br><br>
+    <div class="row">
+        <div class="col-md-6">
+            <br><br><br>
             <center><h1>Visión</h1></center>
             <br>
             <p class="parrafo">
-            Ser la agencia de viajes líder en ofrecer experiencias auténticas y personalizadas en los rincones más desconocidos y 
-            mágicos de Chiapas, conectando a los viajeros con la riqueza natural, 
-            cultural y ancestral de la región, y promoviendo el turismo responsable y sostenible.
+                Ser la agencia de viajes líder en ofrecer experiencias auténticas y personalizadas en los rincones más desconocidos y 
+                mágicos de Chiapas, conectando a los viajeros con la riqueza natural, 
+                cultural y ancestral de la región, y promoviendo el turismo responsable y sostenible.
             </p>
-            </td>
-            <td width="55%">
-                <br><br>
-                <center><h1>Misión</h1></center>
-                <br>
-                <p class="parrafo3">
+        </div>
+        <div class="col-md-6">
+            <br><br>
+            <center><h1>Misión</h1></center>
+            <br>
+            <p class="parrafo3">
                 Brindar a nuestros clientes experiencias inolvidables al descubrir los tesoros ocultos de Chiapas, 
                 con servicios de alta calidad y guiados por expertos locales. Nos comprometemos a proteger el patrimonio cultural y natural, 
-                fomentar la economía local y garantizar que cada viaje contribuya al desarrollo <br> sostenible de las comunidades que visitamos.
+                fomentar la economía local y garantizar que cada viaje contribuya al desarrollo sostenible de las comunidades que visitamos.
             </p>
-            </td>
-        </tr>
-    </table>
-    <br>
-    <br>
-    <div class="separador">
+        </div>
     </div>
+    <br>
+    <br>
+    <div class="separador"></div>
     <br><br>
     <h1>Los mejores Tours por Chiapas</h1>
     <br>
-    <table width="100%" class="tabla_tours">
-        <tr> 
-           <a href=""> <td><img src="view/img/p1.png" alt="" width="360px" height="370px"></td></a>
-            <td><img src="view/img/p2.png" alt="" width="360px" height="370px"></td>
-            <td><img src="view/img/p3.png" alt="" width="360px" height="370px"></td>
-        </tr>
-        <tr>
-            <td>
-              <a href="index.php?u=tours" class="boton"><b>VER TODOS LOS TOURS</b></a>
-            </td>
-        </tr>
-    </table>
+    <div class="table-responsive">
+        <table width="100%" class="tabla_tours">
+            <tr> 
+               <a href=""> <td><img src="view/img/p1.png" alt="" class="img-fluid" width="360px" height="370px"></td></a>
+                <td><img src="view/img/p2.png" alt="" class="img-fluid" width="360px" height="370px"></td>
+                <td><img src="view/img/p3.png" alt="" class="img-fluid" width="360px" height="370px"></td>
+            </tr>
+            <tr>
+                <td>
+                  <a href="index.php?u=tours" class="boton"><b>VER TODOS LOS TOURS</b></a>
+                </td>
+            </tr>
+        </table>
+    </div>
     <br>
     <br>
     <h1>Los mejores Paquetes por Chiapas</h1>
     <br>
-    <table width="100%" class="tabla_paquetes">
-        <tr> 
-            <td><img src="view/img/20.png" alt="" width="360px" height="370px"></td>
-            <td><img src="view/img/19.png" alt="" width="360px" height="370px"></td>
-            <td><img src="view/img/13.png" alt="" width="360px" height="370px"></td>
-        </tr>
-        <tr>
-            <td>
-                 <a href="index.php?u=paquetes" class="boton"><b>VER TODOS LOS PAQUETES</b></a>
-            </td>
-        </tr>
-    </table>
+    <div class="table-responsive">
+        <table width="100%" class="tabla_paquetes">
+            <tr> 
+                <td><img src="view/img/20.png" alt="" class="img-fluid" width="360px" height="370px"></td>
+                <td><img src="view/img/19.png" alt="" class="img-fluid" width="360px" height="370px"></td>
+                <td><img src="view/img/13.png" alt="" class="img-fluid" width="360px" height="370px"></td>
+            </tr>
+            <tr>
+                <td>
+                     <a href="index.php?u=paquetes" class="boton"><b>VER TODOS LOS PAQUETES</b></a>
+                </td>
+            </tr>
+        </table>
+    </div>
     <br><br><br><br><br>
 
     <?php require_once("./view/layout/footer.php");?>

@@ -16,7 +16,6 @@
 
 <body>
     <?php require_once("./view/layout/header.php"); ?>
-
     <br><br>
     <div class="separador">
     </div>

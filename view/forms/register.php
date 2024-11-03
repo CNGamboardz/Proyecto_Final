@@ -16,8 +16,8 @@
 
 <body>
     <?php require_once("./view/layout/header.php"); ?>
-
     <br><br>
+
     <div class="separador">
     </div>
 
@@ -31,29 +31,29 @@
         <div class="borde">
             <div class="inicioBor">
                 <img src="view/img/img2.png" alt="Personaje" width="200">
-                <form>
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombres</label>
-                        <input type="text" class="form-control" id="nombre">
-                    </div>
-                    <div class="mb-3">
-                        <label for="apellidos" class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" id="apellidos">
-                    </div>
-                    <div class="mb-3">
-                        <label for="telefono" class="form-label">Número de Teléfono</label>
-                        <input type="tel" class="form-control" id="telefono">
-                    </div>
-                    <div class="mb-3">
-                        <label for="correo" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="correo">
-                    </div>
-                    <div class="mb-3">
-                        <label for="contrasena" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="contrasena">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Continuar</button>
-                </form>
+                <form action="registrar.php" method="POST">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombres</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="apellidos" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                </div>
+                <div class="mb-3">
+                    <label for="telefono" class="form-label">Número de Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                </div>
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="correo" name="correo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contrasena" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="contrasena" name="contrasena" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Continuar</button>
+            </form>
 
                 <br>
             </div>

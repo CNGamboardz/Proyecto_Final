@@ -17,7 +17,7 @@
     <?php require_once("./view/layout/header.php");?>
     <br><br>
 
-    <img src="./view/img/tour.png" width="100%" height="100%">
+    <img src="./view/img/tour.png" class="img-fluid" alt="Tour Chiapas">
 
     <br><br>
 
@@ -25,75 +25,79 @@
         <p class="text-border">En estos tours, disfrutarás de una experiencia inolvidable con la agencia Chiapas Oculto. 
             Te ofrecemos aventuras únicas llenas de emoción, exploración y momentos inolvidables. 
             ¡Prepárate para descubrir lo mejor del destino con nosotros!
-
         </p>
     </div>
 
     <br><br>
 
-    <table class="paquetes">
-        <tr>
-            <td><img src="./view/img/p1.png" width="250px" height="250px"></td>
-            <td><img src="./view/img/p2.png" width="250px" height="250px"></td>
-            <td><img src="./view/img/p3.png" width="250px" height="250px"></td>
-            <td><img src="./view/img/p4.png" width="250px" height="250px"></td>
-        </tr>
-        <tr>
-            <td><img src="./view/img/5.png" width="250px" height="250px"></td>
-            <td><img src="./view/img/7.png" width="250px" height="250px"></td>
-            <td><img src="./view/img/6.png" width="250px" height="250px"></td>
-            <td><img src="./view/img/8.png" width="250px" height="250px"></td>
-        </tr>
-    </table>
+    <div class="table-responsive">
+        <table class="table paquetes">
+            <tr>
+                <td><img src="./view/img/p1.png" class="img-fluid" alt="Paquete 1"></td>
+                <td><img src="./view/img/p2.png" class="img-fluid" alt="Paquete 2"></td>
+                <td><img src="./view/img/p3.png" class="img-fluid" alt="Paquete 3"></td>
+                <td><img src="./view/img/p4.png" class="img-fluid" alt="Paquete 4"></td>
+            </tr>
+            <tr>
+                <td><img src="./view/img/5.png" class="img-fluid" alt="Paquete 5"></td>
+                <td><img src="./view/img/7.png" class="img-fluid" alt="Paquete 6"></td>
+                <td><img src="./view/img/6.png" class="img-fluid" alt="Paquete 7"></td>
+                <td><img src="./view/img/8.png" class="img-fluid" alt="Paquete 8"></td>
+            </tr>
+        </table>
+    </div>
+    
     <br>
-    <table class="paquetes1">
-        <tr>
-            <td><img src="./view/img/9.png" width="250px" height="250px"></td>
-            <td><img src="./view/img/10.png" width="250px" height="250px"></td>
-            <td><img src="./view/img/11.png" width="250px" height="250px"></td>
-        </tr>
-    </table>
+    
+    <div class="table-responsive">
+        <table class="table paquetes1">
+            <tr>
+                <td><img src="./view/img/9.png" class="img-fluid" alt="Paquete 9"></td>
+                <td><img src="./view/img/10.png" class="img-fluid" alt="Paquete 10"></td>
+                <td><img src="./view/img/11.png" class="img-fluid" alt="Paquete 11"></td>
+            </tr>
+        </table>
+    </div>
     
     <br><br><br><br><br><br><br>
 
-
-    <table class="piepagina" width =100%>
-    <tr>
-        <td width="15%">
-            <br><br><br>
-            <img src="./view/img/logo_chiapasoculto.png" width="100%">
-            <br><br>
-        </td>
-        <td width="22%">
-            <center><h5>Servicio al Cliente</h5></center>
-            <a href="contacto.php"><ul class="custom-bullets"><li>Contacto</li></ul></a>
-            <a href="login.php"><ul class="custom-bullets"><li>Mi Cuenta</li></ul></a>
-        </td>
-        <td width="22%">
-            <center><h5>Tours Destacados</h5></center>
-            <a href=""><ul class="custom-bullets2"><li>El Arcote</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Lagunas de Montebello</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Zona Arqueológica De Palenque</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Zona Arqueológica De Tonina</li></ul></a>
-        </td>
-        <td width="22%">
-            <center><h5>Paquetes Destacados</h5></center>
-            <a href=""><ul class="custom-bullets2"><li>Arqueología y Selva</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Paraíso en la Selva</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Expedición Chiapaneca</li></ul></a>
-            <a href=""><ul class="custom-bullets2"><li>Rutas Mágicas de Chiapas</li></ul></a>
-        </td>
-        <td width="22%">
-            <br><br><br>
-            <a class="normal" href="">
-             <img src="./view/img/geolocalizacion.png" width="20%" alt="Icono de geolocalización">
-              Ver Ubicación
-            </a>
-
-        </td>
-    </tr>
-
-    </table>
+    <div class="table-responsive">
+        <table class="piepagina" width="100%">
+            <tr>
+                <td width="15%">
+                    <br><br><br>
+                    <img src="./view/img/logo_chiapasoculto.png" class="img-fluid" alt="Logo Chiapas Oculto">
+                    <br><br>
+                </td>
+                <td width="22%">
+                    <center><h5>Servicio al Cliente</h5></center>
+                    <a href="contacto.php"><ul class="custom-bullets"><li>Contacto</li></ul></a>
+                    <a href="login.php"><ul class="custom-bullets"><li>Mi Cuenta</li></ul></a>
+                </td>
+                <td width="22%">
+                    <center><h5>Tours Destacados</h5></center>
+                    <a href=""><ul class="custom-bullets2"><li>El Arcote</li></ul></a>
+                    <a href=""><ul class="custom-bullets2"><li>Lagunas de Montebello</li></ul></a>
+                    <a href=""><ul class="custom-bullets2"><li>Zona Arqueológica De Palenque</li></ul></a>
+                    <a href=""><ul class="custom-bullets2"><li>Zona Arqueológica De Tonina</li></ul></a>
+                </td>
+                <td width="22%">
+                    <center><h5>Paquetes Destacados</h5></center>
+                    <a href=""><ul class="custom-bullets2"><li>Arqueología y Selva</li></ul></a>
+                    <a href=""><ul class="custom-bullets2"><li>Paraíso en la Selva</li></ul></a>
+                    <a href=""><ul class="custom-bullets2"><li>Expedición Chiapaneca</li></ul></a>
+                    <a href=""><ul class="custom-bullets2"><li>Rutas Mágicas de Chiapas</li></ul></a>
+                </td>
+                <td width="22%">
+                    <br><br><br>
+                    <a class="normal" href="">
+                        <img src="./view/img/geolocalizacion.png" width="20%" alt="Icono de geolocalización">
+                        Ver Ubicación
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
 
     <br><br>
     <?php require_once("./view/layout/footer.php");?>
