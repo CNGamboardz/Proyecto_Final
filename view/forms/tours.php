@@ -17,7 +17,7 @@
     <?php require_once("./view/layout/header.php");?>
     <br><br>
 
-    <img src="./view/img/tour.png" class="img-fluid" alt="Tour Chiapas">
+    <img src="./view/img/tour.png" class="img-fluid" alt="Tour Chiapas" width=100%>
 
     <br><br>
 
@@ -30,7 +30,6 @@
 
     <br><br>
 
-    <div class="table-responsive">
         <table class="table paquetes">
             <tr>
                 <td><img src="./view/img/p1.png" class="img-fluid" alt="Paquete 1"></td>
@@ -45,11 +44,9 @@
                 <td><img src="./view/img/8.png" class="img-fluid" alt="Paquete 8"></td>
             </tr>
         </table>
-    </div>
     
     <br>
     
-    <div class="table-responsive">
         <table class="table paquetes1">
             <tr>
                 <td><img src="./view/img/9.png" class="img-fluid" alt="Paquete 9"></td>
@@ -57,11 +54,9 @@
                 <td><img src="./view/img/11.png" class="img-fluid" alt="Paquete 11"></td>
             </tr>
         </table>
-    </div>
     
     <br><br><br><br><br><br><br>
 
-    <div class="table-responsive">
         <table class="piepagina" width="100%">
             <tr>
                 <td width="15%">
@@ -97,7 +92,6 @@
                 </td>
             </tr>
         </table>
-    </div>
 
     <br><br>
     <?php require_once("./view/layout/footer.php");?>

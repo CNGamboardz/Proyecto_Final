@@ -35,5 +35,7 @@ class FormsController {
     public static function cascadas(){
         require_once('view/forms/cascadas.php');
     }
+
+    
 }
 ?>
