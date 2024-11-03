@@ -14,7 +14,7 @@
 <body>
 
     <?php require_once("./view/layout/header.php");?>
-    <img src="./view/img/banner.png" class="img-fluid" alt="Banner Chiapas Oculto">
+    <img src="./view/img/banner.png" class="img-fluid" alt="Banner Chiapas Oculto" width=100%>
 
     <br>
     <br>
@@ -58,27 +58,28 @@
     <br><br>
     <h1>Los mejores Tours por Chiapas</h1>
     <br>
-    <div class="table-responsive">
-        <table width="100%" class="tabla_tours">
-            <tr> 
-               <td><a href="index.php?u=cascadas"><img src="view/img/p1.png" alt="" class="img-fluid" width="360px" height="370px"></a></td>
-                <td><img src="view/img/p2.png" alt="" class="img-fluid" width="360px" height="370px"></td>
-                <td><img src="view/img/p3.png" alt="" class="img-fluid" width="360px" height="370px"></td>
-            </tr>
-            <tr>
-                <td colspan="3" class="boton-container">
-                  <a href="index.php?u=tours" class="boton"><b>VER TODOS LOS TOURS</b></a>
-                </td>
-            </tr>
-        </table>
-    </div>
+
+    <table width="100%" class="tabla_tours">
+        <tr width=100%> 
+            <td width=33.33%><img src="view/img/p1.png" class="img-fluid"></td>
+            <td width=33.33%><img src="view/img/p2.png" alt="" class="img-fluid"></td>
+            <td width=33.33%><img src="view/img/p3.png" alt="" class="img-fluid"></td>
+        </tr>
+        <tr width=50%>
+            <td colspan="3" class="boton-container">
+                <a href="index.php?u=tours" class="boton"><b>VER TODOS LOS TOURS</b></a>
+            </td>
+        </tr>
+    </table>
     <br>
     <br>
     <h1>Los mejores Paquetes por Chiapas</h1>
     <br>
+    
+
     <table width="100%" class="tabla_tours">
         <tr width=100%> 
-            <td width=33.33%><img src="view/img/20.png" width=100% class="img-fluid"></td>
+            <td width=33.33%><img src="view/img/20.png" class="img-fluid"></td>
             <td width=33.33%><img src="view/img/19.png" alt="" class="img-fluid"></td>
             <td width=33.33%><img src="view/img/13.png" alt="" class="img-fluid"></td>
         </tr>
@@ -88,6 +89,7 @@
             </td>
         </tr>
     </table>
+
     <br><br><br><br><br>
 
     <?php require_once("./view/layout/footer.php");?>
