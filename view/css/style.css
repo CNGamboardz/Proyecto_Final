@@ -535,14 +535,14 @@ h1 {
     border-collapse: separate;
     border-spacing: 25px;
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en líneas */
 }
 
 .tabla_paquetes img {
     margin-bottom: 5px;
     border-radius: 5%;
-    width: 250px; /* Tamaño por defecto de las imágenes */
-    height: 250px; /* Tamaño por defecto de las imágenes */
+    width: 450px; /* Tamaño por defecto de las imágenes */
+    height: 550px; /* Tamaño por defecto de las imágenes */
 }
 
 .parrafo {
@@ -621,8 +621,6 @@ h1 {
 .tabla_paquetes img {
     margin-bottom: 5px;
     border-radius: 5%;
-    width: 250px; /* Tamaño por defecto de las imágenes */
-    height: 250px; /* Tamaño por defecto de las imágenes */
 }
 
 .piepagina {
@@ -630,9 +628,12 @@ h1 {
     padding: 20px; /* Agrega padding para mejorar el espaciado interno */
 }
 
-.table-responsive {
-    background-color: #7cc1f33e;
+div .table-responsive {
+    background-color: #ffffff;
     padding: 20px; /* Agrega padding para mejorar el espaciado interno */
+    border-radius: 5px; /* Agrega bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si el contenido es ancho */
 }
 
 .separador {
@@ -656,7 +657,7 @@ h1 {
     font-size: 25px;
     cursor: pointer;
     padding: 10px;
-    margin: 20px auto; /* Centra el botón en su contenedor */
+    margin: 70px auto; /* Centra el botón en su contenedor */
 }
 
 /* Estilos responsivos */
@@ -672,7 +673,7 @@ h1 {
     }
 
     .boton {
-        width: 90%; /* Aumenta el ancho en pantallas más pequeñas */
+        width: 100%; /* Aumenta el ancho en pantallas más pequeñas */
     }
 }
 

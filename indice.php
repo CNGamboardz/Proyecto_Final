@@ -66,7 +66,7 @@
                 <td><img src="view/img/p3.png" alt="" class="img-fluid" width="360px" height="370px"></td>
             </tr>
             <tr>
-                <td>
+                <td colspan="3" class="boton-container">
                   <a href="index.php?u=tours" class="boton"><b>VER TODOS LOS TOURS</b></a>
                 </td>
             </tr>
@@ -76,20 +76,18 @@
     <br>
     <h1>Los mejores Paquetes por Chiapas</h1>
     <br>
-    <div class="table-responsive">
-        <table width="100%" class="tabla_paquetes">
-            <tr> 
-                <td><img src="view/img/20.png" alt="" class="img-fluid" width="360px" height="370px"></td>
-                <td><img src="view/img/19.png" alt="" class="img-fluid" width="360px" height="370px"></td>
-                <td><img src="view/img/13.png" alt="" class="img-fluid" width="360px" height="370px"></td>
-            </tr>
-            <tr>
-                <td>
-                     <a href="index.php?u=paquetes" class="boton"><b>VER TODOS LOS PAQUETES</b></a>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <table width="100%" class="tabla_tours">
+        <tr width=100%> 
+            <td width=33.33%><img src="view/img/20.png" width=100% class="img-fluid"></td>
+            <td width=33.33%><img src="view/img/19.png" alt="" class="img-fluid"></td>
+            <td width=33.33%><img src="view/img/13.png" alt="" class="img-fluid"></td>
+        </tr>
+        <tr width=50%>
+            <td colspan="3" class="boton-container">
+                <a href="index.php?u=paquetes" class="boton"><b>VER TODOS LOS PAQUETES</b></a>
+            </td>
+        </tr>
+    </table>
     <br><br><br><br><br>
 
     <?php require_once("./view/layout/footer.php");?>

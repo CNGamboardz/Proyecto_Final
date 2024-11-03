@@ -25,7 +25,6 @@
         </p>
     </div>
     
-    <div class="table-responsive">
         <table class="table paquetes2">
             <tr>
                 <td><img src="./view/img/20.png" class="img-fluid" alt="Paquete 20"></td>
@@ -38,22 +37,18 @@
                 <td><img src="./view/img/18.png" class="img-fluid" alt="Paquete 18"></td>
             </tr>
         </table>
-    </div>
 
     <br>
 
-    <div class="table-responsive">
         <table class="table paquetes3">
             <tr>
                 <td><img src="./view/img/15.png" class="img-fluid" alt="Paquete 15"></td>
                 <td><img src="./view/img/19.png" class="img-fluid" alt="Paquete 19"></td>
             </tr>
         </table>
-    </div>
 
     <br><br><br><br><br><br><br>
     
-    <div class="table-responsive">
         <table class="piepagina" width="100%">
             <tr>
                 <td width="15%">
@@ -89,7 +84,6 @@
                 </td>
             </tr>
         </table>
-    </div>
 
     <br><br>
     <?php require_once("./view/layout/footer.php");?>
