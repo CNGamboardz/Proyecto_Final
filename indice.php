@@ -60,10 +60,9 @@
     <br>
         <table width="100%" class="tabla_tours">
             <tr width=100%> 
-               <a href=""> <td width=33.33%><img src="view/img/p1.png" alt="" class="img-fluid" width="360px" height="370px"></td></a>
+               <a href="index.php?u=cascadas"> <td width=33.33%><img src="view/img/p1.png" alt="" class="img-fluid" width="360px" height="370px"></td></a>
                 <td width=33.33%><img src="view/img/p2.png" alt="" class="img-fluid" width="360px" height="370px"></td>
                 <td width=33.33%><img src="view/img/p3.png" alt="" class="img-fluid" width="360px" height="370px"></td>
-            </tr>
             <tr width=50%>
                 <td colspan="3" class="boton-container">
                   <a href="index.php?u=tours" class="boton"><b>VER TODOS LOS TOURS</b></a>
