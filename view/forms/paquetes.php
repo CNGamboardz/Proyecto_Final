@@ -14,7 +14,7 @@
     <?php require_once("./view/layout/header.php");?>
     <br><br>
 
-    <img src="./view/img/paquetes.png" class="img-fluid" alt="Paquetes Chiapas Oculto">
+    <img src="./view/img/paquetes.png" class="img-fluid" alt="Paquetes Chiapas Oculto" width=100%>
 
     <br><br>
 
