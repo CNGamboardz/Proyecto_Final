@@ -58,20 +58,18 @@
     <br><br>
     <h1>Los mejores Tours por Chiapas</h1>
     <br>
-    <div class="table-responsive">
         <table width="100%" class="tabla_tours">
-            <tr> 
-               <a href=""> <td><img src="view/img/p1.png" alt="" class="img-fluid" width="360px" height="370px"></td></a>
-                <td><img src="view/img/p2.png" alt="" class="img-fluid" width="360px" height="370px"></td>
-                <td><img src="view/img/p3.png" alt="" class="img-fluid" width="360px" height="370px"></td>
+            <tr width=100%> 
+               <a href=""> <td width=33.33%><img src="view/img/p1.png" alt="" class="img-fluid" width="360px" height="370px"></td></a>
+                <td width=33.33%><img src="view/img/p2.png" alt="" class="img-fluid" width="360px" height="370px"></td>
+                <td width=33.33%><img src="view/img/p3.png" alt="" class="img-fluid" width="360px" height="370px"></td>
             </tr>
-            <tr>
+            <tr width=50%>
                 <td colspan="3" class="boton-container">
                   <a href="index.php?u=tours" class="boton"><b>VER TODOS LOS TOURS</b></a>
                 </td>
             </tr>
         </table>
-    </div>
     <br>
     <br>
     <h1>Los mejores Paquetes por Chiapas</h1>
