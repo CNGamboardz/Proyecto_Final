@@ -19,7 +19,13 @@
     <div class="separador">
     </div>
 
-
+    <div class="table-responsive">
+        <table width="100%" class="tabla_tours">
+            <tr> 
+               <td><img src="view/img/Cascadas.jpg" alt="" class="img-fluid" width="845px" height="525px"></td>
+               <td></td>
+            </tr>
+        </table>
 
     <br><br><br><br>
     <table class="piepagina" width=100%>

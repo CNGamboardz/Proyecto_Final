@@ -61,7 +61,7 @@
     <div class="table-responsive">
         <table width="100%" class="tabla_tours">
             <tr> 
-               <a href=""> <td><img src="view/img/p1.png" alt="" class="img-fluid" width="360px" height="370px"></td></a>
+               <td><a href="index.php?u=cascadas"><img src="view/img/p1.png" alt="" class="img-fluid" width="360px" height="370px"></a></td>
                 <td><img src="view/img/p2.png" alt="" class="img-fluid" width="360px" height="370px"></td>
                 <td><img src="view/img/p3.png" alt="" class="img-fluid" width="360px" height="370px"></td>
             </tr>
