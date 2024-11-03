@@ -61,7 +61,7 @@
 
     <table width="100%" class="tabla_tours">
         <tr width=100%> 
-            <td width=33.33%><img src="view/img/p1.png" class="img-fluid"></td>
+            <td width=33.33%><a href="index.php?u=cascadas"><img src="view/img/p1.png" class="img-fluid"></a></td>
             <td width=33.33%><img src="view/img/p2.png" alt="" class="img-fluid"></td>
             <td width=33.33%><img src="view/img/p3.png" alt="" class="img-fluid"></td>
         </tr>
