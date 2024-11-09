@@ -32,9 +32,9 @@
 
         <table class="table paquetes">
             <tr>
-                <td><img src="./view/img/p1.png" class="img-fluid" alt="Paquete 1"></td>
-                <td><img src="./view/img/p2.png" class="img-fluid" alt="Paquete 2"></td>
-                <td><img src="./view/img/p3.png" class="img-fluid" alt="Paquete 3"></td>
+                <td><a href="index.php?u=cascadas"><img src="./view/img/p1.png" class="img-fluid" alt="Paquete 1"></a></td>
+                <td><a href="index.php?u=cañon"><img src="./view/img/p2.png" class="img-fluid" alt="Paquete 2"></a></td>
+                <td><a href="index.php?u=simacotorras"><img src="./view/img/p3.png" class="img-fluid" alt="Paquete 3"></a></td>
                 <td><img src="./view/img/p4.png" class="img-fluid" alt="Paquete 4"></td>
             </tr>
             <tr>

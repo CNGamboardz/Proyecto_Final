@@ -35,7 +35,27 @@ class FormsController {
     public static function cascadas(){
         require_once('view/forms/cascadas.php');
     }
+    
+    public static function cañon(){
+        require_once('view/forms/cañon.php');
+    }
 
+    public static function simacotorras(){
+        require_once('view/forms/simacotorras.php');
+    }
+    
+    public static function arqueologiaselva(){
+        require_once('view/forms/arqueologiaselva.php');
+    }
+        
+    public static function paraisoselva(){
+        require_once('view/forms/paraisoselva.php');
+    }
+            
+    public static function esenciachiapaneca(){
+        require_once('view/forms/esenciachiapaneca.php');
+    }
+    
     
 }
 ?>

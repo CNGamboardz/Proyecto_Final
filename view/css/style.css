@@ -1168,3 +1168,13 @@ button {
     border-radius: 20px;           
     line-height: 2.5;  
 }
+
+.recuadro2_1 {
+    border: 5px solid #86c5cdc0;         
+    padding: 30px;                  
+    background-color: #f9f9f9;      
+    width: 550px; 
+    height: 540px;
+    border-radius: 20px;           
+    line-height: 2.5;  
+}

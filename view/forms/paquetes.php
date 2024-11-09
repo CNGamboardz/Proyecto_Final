@@ -27,9 +27,9 @@
     
         <table class="table paquetes2">
             <tr>
-                <td><img src="./view/img/20.png" class="img-fluid" alt="Paquete 20"></td>
-                <td><img src="./view/img/13.png" class="img-fluid" alt="Paquete 13"></td>
-                <td><img src="./view/img/14.png" class="img-fluid" alt="Paquete 14"></td>
+                <td><a href="index.php?u=arqueologiaselva"><img src="./view/img/20.png" class="img-fluid" alt="Paquete 20"></a></td>
+                <td><a href="index.php?u=paraisoselva"><img src="./view/img/13.png" class="img-fluid" alt="Paquete 13"></a></td>
+                <td><a href="index.php?u=esenciachiapaneca"><img src="./view/img/14.png" class="img-fluid" alt="Paquete 14"></a></td>
             </tr>
             <tr>
                 <td><img src="./view/img/16.png" class="img-fluid" alt="Paquete 16"></td>

@@ -62,8 +62,8 @@
     <table width="100%" class="tabla_tours">
         <tr width=100%> 
             <td width=33.33%><a href="index.php?u=cascadas"><img src="view/img/p1.png" class="img-fluid"></a></td>
-            <td width=33.33%><img src="view/img/p2.png" alt="" class="img-fluid"></td>
-            <td width=33.33%><img src="view/img/p3.png" alt="" class="img-fluid"></td>
+            <td width=33.33%><a href="index.php?u=cañon"><img src="view/img/p2.png" class="img-fluid"></a></td>
+            <td width=33.33%><a href="index.php?u=simacotorras"><img src="view/img/p3.png" alt="" class="img-fluid"></a></td>
         </tr>
         <tr width=50%>
             <td colspan="3" class="boton-container">
@@ -79,9 +79,9 @@
 
     <table width="100%" class="tabla_tours">
         <tr width=100%> 
-            <td width=33.33%><img src="view/img/20.png" class="img-fluid"></td>
-            <td width=33.33%><img src="view/img/19.png" alt="" class="img-fluid"></td>
-            <td width=33.33%><img src="view/img/13.png" alt="" class="img-fluid"></td>
+            <td width=33.33%><a href="index.php?u=arqueologiaselva"><img src="view/img/20.png" class="img-fluid"></a></td>
+            <td width=33.33%><a href="index.php?u=paraisoselva"><img src="view/img/19.png" alt="" class="img-fluid"></a></td>
+            <td width=33.33%><a href="index.php?u=esenciachiapaneca"><img src="view/img/13.png" alt="" class="img-fluid"></a></td>
         </tr>
         <tr width=50%>
             <td colspan="3" class="boton-container">
