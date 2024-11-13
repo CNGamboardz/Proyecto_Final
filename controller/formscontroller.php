@@ -87,7 +87,17 @@ class FormsController {
     public static function arcocintalapa(){
         require_once('view/forms/arcocintalapa.php');
     }
-    
-    
+                            
+    public static function maravillaschiapas(){
+        require_once('view/forms/maravillaschiapas.php');
+    }
+                                
+    public static function rutasmaya(){
+        require_once('view/forms/rutasmaya.php');
+    }
+                                    
+    public static function rutasmchiapas(){
+        require_once('view/forms/rutasmchiapas.php');
+    }
 }
 ?>
