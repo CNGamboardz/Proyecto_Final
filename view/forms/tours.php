@@ -35,13 +35,13 @@
                 <td><a href="index.php?u=cascadas"><img src="./view/img/p1.png" class="img-fluid" alt="Paquete 1"></a></td>
                 <td><a href="index.php?u=cañon"><img src="./view/img/p2.png" class="img-fluid" alt="Paquete 2"></a></td>
                 <td><a href="index.php?u=simacotorras"><img src="./view/img/p3.png" class="img-fluid" alt="Paquete 3"></a></td>
-                <td><img src="./view/img/p4.png" class="img-fluid" alt="Paquete 4"></td>
+                <td><a href="index.php?u=zonarqueologica"><img src="./view/img/p4.png" class="img-fluid" alt="Paquete 4"></a></td>
             </tr>
             <tr>
-                <td><img src="./view/img/5.png" class="img-fluid" alt="Paquete 5"></td>
-                <td><img src="./view/img/7.png" class="img-fluid" alt="Paquete 6"></td>
-                <td><img src="./view/img/6.png" class="img-fluid" alt="Paquete 7"></td>
-                <td><img src="./view/img/8.png" class="img-fluid" alt="Paquete 8"></td>
+                <td><a href="index.php?u=palenque"><img src="./view/img/5.png" class="img-fluid" alt="Paquete 5"></a></td>
+                <td><a href="index.php?u=bonampak"><img src="./view/img/7.png" class="img-fluid" alt="Paquete 6"></a></td>
+                <td><a href="index.php?u=lagunasmontebello"><img src="./view/img/6.png" class="img-fluid" alt="Paquete 7"></a></td>
+                <td><a href="index.php?u=cascadaschiflon"><img src="./view/img/8.png" class="img-fluid" alt="Paquete 8"></a></td>
             </tr>
         </table>
     
@@ -49,9 +49,9 @@
     
         <table class="table paquetes1">
             <tr>
-                <td><img src="./view/img/9.png" class="img-fluid" alt="Paquete 9"></td>
-                <td><img src="./view/img/10.png" class="img-fluid" alt="Paquete 10"></td>
-                <td><img src="./view/img/11.png" class="img-fluid" alt="Paquete 11"></td>
+                <td><a href="index.php?u=arcotete"><img src="./view/img/9.png" class="img-fluid" alt="Paquete 9"></a></td>
+                <td><a href="index.php?u=cascadaroberto"><img src="./view/img/10.png" class="img-fluid" alt="Paquete 10"></a></td>
+                <td><a href="index.php?u=arcocintalapa"><img src="./view/img/11.png" class="img-fluid" alt="Paquete 11"></a></td>
             </tr>
         </table>
     

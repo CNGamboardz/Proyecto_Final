@@ -55,6 +55,38 @@ class FormsController {
     public static function esenciachiapaneca(){
         require_once('view/forms/esenciachiapaneca.php');
     }
+                
+    public static function zonarqueologica(){
+        require_once('view/forms/zonarqueologica.php');
+    }
+
+    public static function palenque(){
+        require_once('view/forms/palenque.php');
+    }
+    
+    public static function bonampak(){
+        require_once('view/forms/bonampak.php');
+    }
+        
+    public static function lagunasmontebello(){
+        require_once('view/forms/lagunasmontebello.php');
+    }
+            
+    public static function cascadaschiflon(){
+        require_once('view/forms/cascadaschiflon.php');
+    }
+                
+    public static function arcotete(){
+        require_once('view/forms/arcotete.php');
+    }
+                    
+    public static function cascadaroberto(){
+        require_once('view/forms/cascadaroberto.php');
+    }
+                        
+    public static function arcocintalapa(){
+        require_once('view/forms/arcocintalapa.php');
+    }
     
     
 }
