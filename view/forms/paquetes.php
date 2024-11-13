@@ -34,7 +34,7 @@
             <tr>
                 <td><a href="index.php?u=maravillaschiapas"><img src="./view/img/16.png" class="img-fluid" alt="Paquete 16"></a></td>
                 <td><a href="index.php?u=rutasmchiapas"><img src="./view/img/17.png" class="img-fluid" alt="Paquete 17"></a></td>
-                <td><img src="./view/img/18.png" class="img-fluid" alt="Paquete 18"></td>
+                <td><a href="index.php?u=expedicionchiapaneca"><img src="./view/img/18.png" class="img-fluid" alt="Paquete 18"></a></td>
             </tr>
         </table>
 
@@ -42,7 +42,7 @@
 
         <table class="table paquetes3">
             <tr>
-                <td><img src="./view/img/15.png" class="img-fluid" alt="Paquete 15"></td>
+                <td><a href="index.php?u=exploradoresazul"><img src="./view/img/15.png" class="img-fluid" alt="Paquete 15"></a></td>
                 <td><a href="index.php?u=esenciachiapaneca"><img src="./view/img/19.png" class="img-fluid" alt="Paquete 19"></a></td>
             </tr>
         </table>

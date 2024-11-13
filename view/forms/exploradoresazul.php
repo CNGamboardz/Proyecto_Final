@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <title>Rutas Mayas</title>
+    <title>Exploradores De Agua Azul</title>
 </head>
 
 <script>
@@ -43,13 +43,13 @@
                     <div id="carouselExampleFade" class="carousel slide carousel-fade">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                            <img src="view/img/Bonampak.jpg" class="d-block w-100" alt="...">
+                            <img src="view/img/Lagunasmontebello.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                            <img src="view/img/Tonina.jpg" class="d-block w-100" alt="...">
+                            <img src="view/img/Cascadas.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                            <img src="view/img/Palenque.jpg" class="d-block w-100" alt="...">
+                            <img src="view/img/CacadaRoberto.webp" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -67,10 +67,10 @@
                     <div class="recuadro">
                         <div style="margin-left: 40px;">
                             <h6>Inicio/Tour por Chiapas</h6>
-                            <h2>Rutas Mayas</h2>
-                            <h5>$6,500.00</h5>
+                            <h2>Exploradores De Agua Azul</h2>
+                            <h5>$9,000.00</h5>
                             <h5>Por persona <br> Min. 2 personas 
-                            <h5>Numero de Días: 5 dia / 4 noches</h5>
+                            <h5>Numero de Días: 6 dia / 5 noches</h5>
                             <br>
                             <h5>Fecha a reservar</h5>
                         </div>
@@ -112,11 +112,13 @@
                         <center>
                             <h3 style="color: #2AB7CA;">Incluye</h3>
                         </center>
-                        <img src="view/img/flecha_verde.png" width="20px"> 3 noches de hospedaje en Palenque.
+                        <img src="view/img/flecha_verde.png" width="20px"> 2 noches de hospedaje en Palenque.
                         <br>
-                        <img src="view/img/flecha_verde.png" width="20px"> 1 noches de hospedaje en Ocosingo.
+                        <img src="view/img/flecha_verde.png" width="20px"> 2 noches de hospedaje en Comitan.
                         <br>
-                        <img src="view/img/flecha_verde.png" width="20px"> 5 desayunos típicos de la región por persona.
+                        <img src="view/img/flecha_verde.png" width="20px"> 2 noches de hospedaje en San Cristobal de las Casas.
+                        <br>
+                        <img src="view/img/flecha_verde.png" width="20px"> 6 desayunos típicos de la región por persona.
                         <br>
                         <img src="view/img/flecha_verde.png" width="20px"> Atención personalizada 24/7.
                         <br>

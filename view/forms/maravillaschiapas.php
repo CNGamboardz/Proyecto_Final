@@ -70,7 +70,7 @@
                             <h2>Maravillas de Chiapas</h2>
                             <h5>$5,000.00</h5>
                             <h5>Por persona <br> Min. 2 personas 
-                            <h5>Numero de Días: 4 dia / 3 noches</h5>
+                            <h5>Numero de Días: 3 dia / 2 noches</h5>
                             <br>
                             <h5>Fecha a reservar</h5>
                         </div>

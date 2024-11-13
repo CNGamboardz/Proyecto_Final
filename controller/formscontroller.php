@@ -99,5 +99,13 @@ class FormsController {
     public static function rutasmchiapas(){
         require_once('view/forms/rutasmchiapas.php');
     }
+                                        
+    public static function expedicionchiapaneca(){
+        require_once('view/forms/expedicionchiapaneca.php');
+    }
+                                            
+    public static function exploradoresazul(){
+        require_once('view/forms/exploradoresazul.php');
+    }
 }
 ?>
