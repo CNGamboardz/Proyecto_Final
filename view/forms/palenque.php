@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +87,31 @@
                         <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 4:00 am
                     </div>
                     <div class="itinerario">
-                        <p class="letras">Itinerario</p> 
+                        <p class="letras">Itinerario</p>
+                        <p><b>06:00 AM</b> - Recepción en el hotel de Tuxtla Gutiérrez<br>
+                            El conductor te recogerá en el hotel para comenzar el recorrido. Lleva ropa cómoda, calzado adecuado para caminar y suficiente agua para el día.</p>
+
+                        <p><b>06:30 AM</b> - Salida hacia Palenque<br>
+                            Iniciamos el viaje hacia Palenque, una de las ciudades mayas más importantes, ubicada en la selva chiapaneca. El trayecto tiene una duración aproximada de cinco horas, con paradas en el camino para descansar y disfrutar del paisaje.</p>
+
+                        <p><b>11:30 AM</b> - Llegada a la zona arqueológica de Palenque<br>
+                            Al llegar, recibirás una introducción sobre la historia del sitio, su descubrimiento y la relevancia de Palenque en el mundo maya. Este sitio es famoso por su arquitectura, inscripciones y el Templo de las Inscripciones, donde se encontró la tumba del rey Pakal.</p>
+
+                        <p><b>12:00 PM</b> - Recorrido guiado por la zona arqueológica<br>
+                            Explora el sitio junto a un guía experto que te llevará por los templos, plazas y palacios. Conocerás detalles sobre el Templo de la Cruz, el Palacio y otras estructuras que revelan la grandeza de la civilización maya.</p>
+
+                        <p><b>02:00 PM</b> - Tiempo libre para explorar y tomar fotos<br>
+                            Recorre el sitio a tu propio ritmo, toma fotografías y disfruta de las vistas únicas de las ruinas rodeadas por la exuberante selva. Podrás observar detalles de las inscripciones y explorar algunos senderos cercanos.</p>
+
+                        <p><b>03:00 PM</b> - Tiempo para el almuerzo (no incluido)<br>
+                            Disfruta de la gastronomía local en alguno de los restaurantes cercanos a la zona arqueológica o en el pueblo de Palenque.</p>
+
+                        <p><b>04:00 PM</b> - Salida de regreso a Tuxtla Gutiérrez<br>
+                            Reúnete con el grupo para iniciar el viaje de regreso. El camino de vuelta ofrece otra oportunidad para admirar el paisaje chiapaneco.</p>
+
+                        <p><b>09:00 PM</b> - Llegada a Tuxtla Gutiérrez<br>
+                            El conductor te dejará en tu hotel, donde podrás descansar después de un día lleno de historia y cultura maya.</p>
+
                     </div>
 
                 </td>
@@ -120,7 +145,7 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
@@ -205,6 +230,7 @@
     </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>

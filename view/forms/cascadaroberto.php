@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +87,34 @@
                         <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 4:00 am
                     </div>
                     <div class="itinerario">
-                        <p class="letras">Itinerario</p> 
+                        <p class="letras">Itinerario</p>
+                        <p><b>07:00 AM</b> - Recepción en el hotel de San Cristóbal de las Casas<br>
+                            El conductor te recogerá en tu hotel para comenzar el recorrido. Lleva ropa cómoda, calzado adecuado para caminar, bañador, protector solar y suficiente agua.</p>
+
+                        <p><b>07:30 AM</b> - Salida hacia las Cascadas Roberto Barrios<br>
+                            Partimos hacia las Cascadas Roberto Barrios, ubicadas a aproximadamente dos horas de San Cristóbal de las Casas. Durante el trayecto, disfrutarás de las vistas panorámicas de la selva chiapaneca y las montañas.</p>
+
+                        <p><b>09:30 AM</b> - Llegada a las Cascadas Roberto Barrios<br>
+                            Al llegar, recibirás una breve introducción sobre las cascadas y la zona. Las Cascadas Roberto Barrios son famosas por sus pozas de agua cristalina y sus diversas caídas de agua, que forman una serie de niveles ideales para nadar y relajarse.</p>
+
+                        <p><b>10:00 AM</b> - Caminata por las cascadas<br>
+                            Comienza el recorrido por el sendero que te llevará a las cascadas. Disfruta del paisaje de la selva y la belleza natural del lugar. Tendrás la oportunidad de explorar varios niveles de las cascadas, caminar por senderos rodeados de vegetación tropical y relajarte en las pozas.</p>
+
+                        <p><b>11:30 AM</b> - Tiempo libre para nadar y explorar<br>
+                            Disfruta de tiempo libre para nadar en las pozas de agua cristalina o simplemente relajarte en el entorno natural. La zona es perfecta para tomar fotos, disfrutar de la tranquilidad y conectar con la naturaleza.</p>
+
+                        <p><b>01:00 PM</b> - Almuerzo (no incluido)<br>
+                            Podrás disfrutar de un almuerzo en la zona, ya sea llevando comida empacada o comprando en los establecimientos locales. Aprovecha para descansar y disfrutar del paisaje.</p>
+
+                        <p><b>02:00 PM</b> - Más tiempo para explorar las cascadas<br>
+                            Continúa explorando el área y disfruta de las vistas adicionales de las cascadas y las pozas. Puedes recorrer otros senderos, tomar más fotos o simplemente relajarte en este impresionante entorno natural.</p>
+
+                        <p><b>03:00 PM</b> - Salida de regreso a San Cristóbal de las Casas<br>
+                            Reúnete con el grupo para regresar a San Cristóbal, después de un día lleno de naturaleza, aventura y paisajes espectaculares.</p>
+
+                        <p><b>05:30 PM</b> - Llegada a San Cristóbal de las Casas<br>
+                            El conductor te dejará en tu hotel para que puedas descansar y reflexionar sobre la belleza y la tranquilidad de las Cascadas Roberto Barrios.</p>
+
                     </div>
 
                 </td>
@@ -118,7 +146,7 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
@@ -203,6 +231,7 @@
     </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>

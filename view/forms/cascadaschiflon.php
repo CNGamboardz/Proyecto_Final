@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +87,38 @@
                         <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 6:00 am
                     </div>
                     <div class="itinerario">
-                        <p class="letras">Itinerario</p> 
+                        <p class="letras">Itinerario</p>
+                        <p><b>07:00 AM</b> - Recepción en el hotel de San Cristóbal de las Casas<br>
+                            El conductor te recogerá en tu hotel para iniciar el recorrido. Lleva ropa cómoda, zapatos adecuados para caminar, protector solar, repelente para insectos y suficiente agua.</p>
+
+                        <p><b>07:30 AM</b> - Salida hacia El Chiflón<br>
+                            Iniciamos el viaje hacia el Centro Ecoturístico Cascadas El Chiflón, ubicado en el municipio de Tzimol, Chiapas. Durante el trayecto, disfruta de las vistas de montañas y vegetación de la región.</p>
+
+                        <p><b>10:00 AM</b> - Llegada a las Cascadas El Chiflón<br>
+                            Al llegar, recibirás una breve introducción sobre el lugar y las distintas cascadas que podrás visitar. El sitio cuenta con senderos bien señalizados que te guiarán hasta las cascadas principales.</p>
+
+                        <p><b>10:30 AM</b> - Caminata hacia las cascadas<br>
+                            Comienza la caminata por el sendero que lleva a las distintas cascadas, pasando por "El Suspiro", "Ala de Ángel", y "Arcoíris". El camino te llevará hasta la impresionante cascada principal, "Velo de Novia", una caída de agua de más de 120 metros.</p>
+
+                        <p><b>11:30 AM</b> - Tiempo libre en la cascada Velo de Novia<br>
+                            Tómate un momento para admirar la majestuosidad de la cascada Velo de Novia. Puedes relajarte en la orilla, disfrutar de la brisa refrescante, y tomar fotos de las vistas panorámicas.</p>
+
+                        <p><b>12:00 PM</b> - Opcional: Actividades de aventura<br>
+                            Para quienes buscan algo de aventura, hay actividades adicionales como tirolesa y renta de balsas en ciertas áreas del centro ecoturístico (costo adicional). La tirolesa ofrece una vista única de las cascadas y el río.</p>
+
+                        <p><b>01:00 PM</b> - Almuerzo (no incluido)<br>
+                            Disfruta de un almuerzo en alguno de los restaurantes locales dentro del centro ecoturístico o en las áreas de picnic, si decides llevar comida empacada. Aprovecha para relajarte antes de continuar explorando.</p>
+
+                        <p><b>02:00 PM</b> - Tiempo libre para explorar y tomar fotos<br>
+                            Recorre a tu propio ritmo el resto del centro ecoturístico. Podrás visitar áreas de miradores, tomar fotos, o descansar junto a las pozas de agua cristalina del río.</p>
+
+                        <p><b>03:00 PM</b> - Salida de regreso a San Cristóbal de las Casas<br>
+                            Reúnete con el grupo para iniciar el regreso a San Cristóbal, después de un día lleno de naturaleza y aventura en El Chiflón.</p>
+
+                        <p><b>06:00 PM</b> - Llegada a San Cristóbal de las Casas<br>
+                            El conductor te dejará en tu hotel, donde podrás descansar y recordar las vistas y experiencias vividas en este increíble lugar natural.</p>
+
+
                     </div>
 
                 </td>
@@ -118,7 +150,7 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
@@ -203,6 +235,7 @@
     </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>

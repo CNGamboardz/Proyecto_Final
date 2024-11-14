@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +87,37 @@
                         <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 8:00 am
                     </div>
                     <div class="itinerario">
-                        <p class="letras">Itinerario</p> 
+                        <p class="letras">Itinerario</p>
+                        <p><b>09:00 AM</b> - Recepción en el hotel de San Cristóbal de las Casas<br>
+                            El conductor te recogerá en tu hotel para comenzar el recorrido. Lleva ropa cómoda, zapatos adecuados para caminar, una chamarra ligera y protector solar.</p>
+
+                        <p><b>09:30 AM</b> - Salida hacia El Arcotete<br>
+                            Partimos hacia el Parque Ecoturístico El Arcotete, ubicado a unos 15 minutos de San Cristóbal de las Casas. Durante el corto trayecto, podrás disfrutar del paisaje montañoso de los alrededores.</p>
+
+                        <p><b>10:00 AM</b> - Llegada a El Arcotete y bienvenida<br>
+                            Al llegar, recibirás una breve introducción sobre el parque y sus atracciones principales, incluyendo el arco de piedra natural y las actividades de ecoturismo disponibles en el lugar.</p>
+
+                        <p><b>10:30 AM</b> - Caminata y exploración del puente natural El Arcotete<br>
+                            Comienza la caminata hacia el puente natural de piedra caliza que forma un arco sobre el río. Este arco es el principal atractivo del parque y cuenta con senderos y miradores para observarlo desde diferentes ángulos.</p>
+
+                        <p><b>11:00 AM</b> - Exploración de las grutas y cuevas<br>
+                            Opcionalmente, puedes explorar las pequeñas grutas y cuevas del parque con la ayuda de un guía local (con costo adicional). Estas formaciones ofrecen una vista única de la geología de la región y permiten una experiencia más profunda del lugar.</p>
+
+                        <p><b>12:00 PM</b> - Tiempo libre para actividades de aventura<br>
+                            Disfruta de actividades adicionales como la tirolesa que cruza el parque o el alquiler de bicicletas para recorrer los senderos (actividades con costo adicional). Estas opciones te permitirán disfrutar del paisaje y la naturaleza de una manera divertida.</p>
+
+                        <p><b>01:00 PM</b> - Almuerzo (no incluido)<br>
+                            Disfruta de un almuerzo en la zona de picnic del parque, si llevas comida empacada, o en alguno de los establecimientos locales dentro del parque donde podrás probar platillos de la región.</p>
+
+                        <p><b>02:00 PM</b> - Tiempo libre para fotos y relajación<br>
+                            Aprovecha el tiempo para relajarte junto al río, caminar por los senderos o tomar fotografías de las formaciones naturales y el paisaje montañoso.</p>
+
+                        <p><b>03:00 PM</b> - Salida de regreso a San Cristóbal de las Casas<br>
+                            Reúnete con el grupo para iniciar el regreso después de un día rodeado de naturaleza y aventura en El Arcotete.</p>
+
+                        <p><b>03:30 PM</b> - Llegada a San Cristóbal de las Casas<br>
+                            El conductor te dejará en tu hotel para que puedas descansar y recordar la experiencia vivida en este hermoso parque ecoturístico.</p>
+
                     </div>
 
                 </td>
@@ -118,7 +149,7 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
@@ -203,6 +234,7 @@
     </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>

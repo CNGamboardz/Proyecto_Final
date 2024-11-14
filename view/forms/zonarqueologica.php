@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +87,31 @@
                         <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 5:00 am
                     </div>
                     <div class="itinerario">
-                        <p class="letras">Itinerario</p> 
+                        <p class="letras">Itinerario</p>
+                        <p><b>07:00 AM</b> - Recepción en el hotel de Tuxtla Gutiérrez<br>
+                            El conductor te recogerá en el hotel. Es recomendable llevar ropa cómoda, zapatos para caminata y una botella de agua.</p>
+
+                        <p><b>07:30 AM</b> - Salida hacia Ocosingo<br>
+                            Iniciamos el viaje hacia Ocosingo, el municipio donde se encuentra la zona arqueológica de Toniná. Disfruta de las vistas de la región montañosa de Chiapas durante el trayecto.</p>
+
+                        <p><b>10:00 AM</b> - Llegada a la zona arqueológica de Toniná<br>
+                            Al llegar, recibirás una breve introducción sobre la historia del sitio y su importancia en la cultura maya. Toniná es famosa por su gran acrópolis y sus impresionantes estructuras escalonadas.</p>
+
+                        <p><b>10:30 AM</b> - Recorrido guiado por la zona arqueológica<br>
+                            Explora el sitio junto a un guía experto que te llevará por los distintos templos, plazas y estructuras. Conocerás más sobre las esculturas de piedra, relieves, y el sistema de terrazas que caracteriza a Toniná.</p>
+
+                        <p><b>12:30 PM</b> - Tiempo libre para explorar y tomar fotos<br>
+                            Disfruta de tiempo para recorrer la zona a tu propio ritmo, tomar fotografías y admirar las vistas desde la cima de la acrópolis, una de las más altas de Mesoamérica.</p>
+
+                        <p><b>01:30 PM</b> - Tiempo para el almuerzo (no incluido)<br>
+                            Aprovecha para disfrutar de la comida en un restaurante local en Ocosingo, o bien, puedes llevar un almuerzo empacado.</p>
+
+                        <p><b>02:30 PM</b> - Salida de regreso a Tuxtla Gutiérrez<br>
+                            Reúnete con el grupo para emprender el viaje de regreso a Tuxtla Gutiérrez, después de un día lleno de historia y cultura.</p>
+
+                        <p><b>05:00 PM</b> - Llegada a Tuxtla Gutiérrez<br>
+                            El conductor te dejará en tu hotel, donde podrás descansar y reflexionar sobre tu visita a este fascinante sitio arqueológico.</p>
+
                     </div>
 
                 </td>
@@ -118,7 +143,7 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
@@ -203,6 +228,7 @@
     </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>

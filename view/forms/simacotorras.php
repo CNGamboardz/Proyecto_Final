@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,16 +82,39 @@
                 <td>
                     <p class="letras">Descipción</p>
                     <div class="textos">
-                        <img src="view/img/icono-mapa.png" width="70px"> Ubicación de salida: Tuxtla Gutiérrez Chiapas 
+                        <img src="view/img/icono-mapa.png" width="70px"> Ubicación de salida: Tuxtla Gutiérrez Chiapas
                         <br>
-                        <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 4:30 am para disfrutar del amanecer antes de que las cotorras empiecen a salir 
+                        <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 4:30 am para disfrutar del amanecer antes de que las cotorras empiecen a salir
                     </div>
                     <div class="itinerario">
-                        <p class="letras">Itinerario</p> 
-                            <p>
-                                <b>07:30 AM</b> - Recepción en el hotel de Tuxtla Gutiérrez
-                                El conductor experimentado te recogerá en tu hotel. Asegúrate de estar listo para salir a tiempo.
-                            </p>
+                        <p class="letras">Itinerario</p>
+                        <p><b>07:00 AM</b> - Recepción en el hotel de Tuxtla Gutiérrez<br>
+                            El conductor te recogerá en el hotel. Es recomendable llevar ropa cómoda, zapatos para caminata y una botella de agua.</p>
+
+                        <p><b>07:30 AM</b> - Salida hacia las Cimas de las Cotorras<br>
+                            Partimos en un transporte turístico hacia el destino, ubicado a aproximadamente una hora de Tuxtla Gutiérrez. Disfruta de las vistas de la selva chiapaneca mientras te diriges hacia las cimas.</p>
+
+                        <p><b>08:30 AM</b> - Llegada a las Cimas de las Cotorras<br>
+                            Al llegar, recibirás una breve introducción sobre el lugar. Aquí podrás observar el gran sumidero rodeado de selva y vegetación, donde anidan y vuelan las cotorras verdes, creando un espectáculo natural único.</p>
+
+                        <p><b>09:00 AM</b> - Caminata guiada alrededor del sumidero<br>
+                            Un guía local te llevará por los senderos para explorar las cimas. Durante el recorrido, podrás ver antiguas pinturas rupestres que narran la historia de los antiguos habitantes de la región.</p>
+
+                        <p><b>10:30 AM</b> - Tiempo para observar a las cotorras en su entorno natural<br>
+                            Tómate un momento para observar las cotorras volando dentro y fuera del sumidero. Este espectáculo es especialmente impresionante por la cantidad de aves y la acústica natural del lugar.</p>
+
+                        <p><b>11:30 AM</b> - Tiempo libre para fotos y exploración<br>
+                            Tendrás tiempo para explorar el lugar a tu propio ritmo y tomar fotos de las increíbles vistas y la flora local.</p>
+
+                        <p><b>12:30 PM</b> - Tiempo libre para el almuerzo (no incluido)<br>
+                            Aprovecha para disfrutar de un almuerzo. Puedes llevar tu comida o probar la gastronomía local en algún establecimiento cercano.</p>
+
+                        <p><b>02:00 PM</b> - Salida de regreso a Tuxtla Gutiérrez<br>
+                            Reúnete con el grupo para regresar a Tuxtla Gutiérrez, después de un día de aventura.</p>
+
+                        <p><b>03:00 PM</b> - Llegada a Tuxtla Gutiérrez<br>
+                            El conductor te dejará en tu hotel, donde podrás descansar y recordar la experiencia en este místico lugar.</p>
+
                     </div>
 
                 </td>
@@ -122,7 +146,7 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
@@ -207,6 +231,7 @@
     </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>

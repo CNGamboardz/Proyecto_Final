@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +87,37 @@
                         <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 6:00 am
                     </div>
                     <div class="itinerario">
-                        <p class="letras">Itinerario</p> 
+                        <p class="letras">Itinerario</p>
+                        <p><b>06:00 AM</b> - Recepción en el hotel de San Cristóbal de las Casas<br>
+                            El conductor te recogerá en tu hotel para iniciar el recorrido. Lleva ropa cómoda, calzado adecuado para caminar, protector solar y suficiente agua.</p>
+
+                        <p><b>06:30 AM</b> - Salida hacia el Parque Nacional Lagunas de Montebello<br>
+                            Iniciamos el viaje hacia el parque, ubicado al sur de Chiapas, en la frontera con Guatemala. Durante el trayecto, disfruta de las vistas de la selva y montañas de la región.</p>
+
+                        <p><b>10:00 AM</b> - Llegada a las Lagunas de Montebello<br>
+                            Al llegar, recibirás una breve introducción sobre el parque y su diversidad natural. Este lugar cuenta con más de 50 lagunas de diferentes colores, que van desde el azul turquesa hasta el verde esmeralda.</p>
+
+                        <p><b>10:30 AM</b> - Recorrido por las principales lagunas<br>
+                            Explora las lagunas más famosas, como Laguna Encantada, Laguna Esmeralda y Laguna Bosque Azul. Un guía te llevará a los puntos de observación, donde podrás admirar los colores únicos de cada lago y la vegetación circundante.</p>
+
+                        <p><b>12:30 PM</b> - Tiempo libre para explorar y tomar fotos<br>
+                            Disfruta de tiempo para recorrer el lugar a tu propio ritmo, tomar fotografías y explorar los senderos. Si lo deseas, puedes alquilar una balsa artesanal en algunas de las lagunas para tener una experiencia más cercana al agua.</p>
+
+                        <p><b>01:30 PM</b> - Almuerzo (no incluido)<br>
+                            Aprovecha para disfrutar de un almuerzo en alguno de los restaurantes locales dentro del parque o en los alrededores. También puedes llevar un almuerzo empacado para disfrutarlo en el área de picnic.</p>
+
+                        <p><b>02:30 PM</b> - Visita a la Laguna Internacional<br>
+                            Dirígete a la Laguna Internacional, una laguna que se encuentra en la frontera entre México y Guatemala. Podrás observar el límite entre los dos países y apreciar la belleza natural que comparten.</p>
+
+                        <p><b>03:30 PM</b> - Tiempo para relajarse y última oportunidad de fotos<br>
+                            Tómate un momento para relajarte y disfrutar del paisaje antes de regresar. Esta es una buena oportunidad para tomar fotos finales de las lagunas y del entorno natural.</p>
+
+                        <p><b>04:00 PM</b> - Salida de regreso a San Cristóbal de las Casas<br>
+                            Reúnete con el grupo para comenzar el viaje de regreso, después de un día lleno de paisajes impresionantes y momentos de tranquilidad en la naturaleza.</p>
+
+                        <p><b>08:00 PM</b> - Llegada a San Cristóbal de las Casas<br>
+                            El conductor te dejará en tu hotel para que puedas descansar y reflexionar sobre la belleza de las lagunas que visitaste.</p>
+
                     </div>
 
                 </td>
@@ -118,7 +149,7 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
@@ -203,6 +234,7 @@
     </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>

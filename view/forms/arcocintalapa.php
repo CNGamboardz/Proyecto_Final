@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +87,37 @@
                         <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 8:00 am
                     </div>
                     <div class="itinerario">
-                        <p class="letras">Itinerario</p> 
+                        <p class="letras">Itinerario</p>
+                        <p><b>07:00 AM</b> - Recepción en el hotel de Tuxtla Gutiérrez<br>
+                            El conductor te recogerá en tu hotel para iniciar el recorrido. Lleva ropa cómoda, calzado adecuado para caminar y protector solar. Prepárate para una aventura de ecoturismo y exploración.</p>
+
+                        <p><b>07:30 AM</b> - Salida hacia el Arco del Tiempo<br>
+                            Iniciamos el viaje hacia Cintalapa, Chiapas, donde se encuentra el Arco del Tiempo. El trayecto dura aproximadamente 1 hora y 30 minutos. Durante el camino, podrás disfrutar del paisaje montañoso y rural de la región.</p>
+
+                        <p><b>09:00 AM</b> - Llegada al Arco del Tiempo<br>
+                            Al llegar, recibirás una breve introducción sobre el lugar y su formación geológica. El Arco del Tiempo es un puente natural formado por la erosión del agua a lo largo de millones de años, creando un fenómeno natural único en la zona.</p>
+
+                        <p><b>09:30 AM</b> - Caminata y exploración del Arco del Tiempo<br>
+                            Comienza el recorrido por el sendero que te llevará hasta el impresionante Arco del Tiempo. Explora los alrededores y admira la majestuosidad de la roca que ha sido moldeada por el paso del tiempo. Podrás caminar bajo el arco y tomar fotos espectaculares.</p>
+
+                        <p><b>10:30 AM</b> - Observación del paisaje natural<br>
+                            Disfruta de la vista panorámica desde el arco y explora los alrededores. El área está rodeada de vegetación tropical y montañas, lo que hace de este lugar un excelente sitio para la observación de la naturaleza y la fotografía.</p>
+
+                        <p><b>11:00 AM</b> - Tiempo libre para explorar más del área<br>
+                            Tendrás tiempo libre para caminar por los senderos cercanos, observar la fauna local, o relajarte en el entorno natural. Este es el momento perfecto para conectar con la naturaleza y disfrutar de la tranquilidad del lugar.</p>
+
+                        <p><b>12:00 PM</b> - Almuerzo (no incluido)<br>
+                            Aprovecha para disfrutar de un almuerzo en un restaurante local de Cintalapa o en un área de picnic cercana. Puedes llevar tu comida o probar platillos tradicionales chiapanecos.</p>
+
+                        <p><b>01:00 PM</b> - Regreso al Arco del Tiempo para fotos adicionales<br>
+                            Antes de regresar, tendrás la oportunidad de tomar más fotos y explorar nuevamente la zona del Arco. Este es el último momento para capturar la belleza de este fenómeno geológico.</p>
+
+                        <p><b>02:00 PM</b> - Salida de regreso a Tuxtla Gutiérrez<br>
+                            Reúnete con el grupo para iniciar el viaje de regreso a Tuxtla Gutiérrez. Disfruta del paisaje durante el trayecto y relájate tras un día lleno de aventuras.</p>
+
+                        <p><b>03:30 PM</b> - Llegada a Tuxtla Gutiérrez<br>
+                            El conductor te dejará en tu hotel para que puedas descansar y reflexionar sobre la experiencia vivida en este increíble lugar natural.</p>
+
                     </div>
 
                 </td>
@@ -118,7 +149,7 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
@@ -203,6 +234,7 @@
     </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>
