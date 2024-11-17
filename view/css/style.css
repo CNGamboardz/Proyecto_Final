@@ -44,7 +44,7 @@
     padding: 1.875rem; /* 30px / 16 = 1.875rem */
     background-color: #f9f9f9;
     width: 34.375rem; /* 550px / 16 = 34.375rem */
-    height: 60.75rem; /* 300px / 16 = 18.75rem */
+    height: 65.75rem; /* 300px / 16 = 18.75rem */
     border-radius: 1.25rem; /* 20px / 16 = 1.25rem */
 }
 
@@ -1417,4 +1417,77 @@ button {
     height: 540px;
     border-radius: 20px;           
     line-height: 2.5;  
+}
+
+.politica_privacidad{
+    margin-left: 40px;
+    margin-top: -40px;
+}
+
+/* Estilo para la caja del checkbox */
+.checkbox-2 {
+    align-items: center; /* Centra verticalmente el checkbox y el texto */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Oculta el checkbox estándar */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Crea una caja personalizada para el checkbox */
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    color: #007bff;
+    line-height: 1.5;
+}
+
+/* Diseño del cuadro del checkbox */
+input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    transition: all 0.2s;
+}
+
+/* Flecha que aparece al seleccionar */
+input[type="checkbox"]:checked + label::before {
+    background-color: #007bff;
+    border-color: #007bff;
+    content: "✔";
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+/* Enlace de términos y condiciones */
+.link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para el asterisco rojo */
+.astedisco {
+    color: red;
+    margin-left: 3px;
+}
+
+.ajuste{
+    margin-left: 12px;
+    display: flex; /* Alinea los elementos en una sola línea */
 }

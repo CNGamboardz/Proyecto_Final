@@ -14,19 +14,18 @@
 
 </head>
 
-    <script>
-       let cantidadProductos = 0;
+<script>
+    let cantidadProductos = 0;
 
-        function agregarProducto() {
-            cantidadProductos++;
-            document.getElementById("cantidad").textContent = cantidadProductos;
+    function agregarProducto() {
+        cantidadProductos++;
+        document.getElementById("cantidad").textContent = cantidadProductos;
 
-            // Calcula el nuevo tamaño del recuadro según la cantidad de productos
-            let nuevoAlto = 18.75 + (cantidadProductos * 1.5); // Aumenta la altura de 1.5rem por cada producto
-            document.getElementById("carrito").style.height = `${nuevoAlto}rem`;
-        }
-
-    </script>
+        // Calcula el nuevo tamaño del recuadro según la cantidad de productos
+        let nuevoAlto = 18.75 + (cantidadProductos * 1.5); // Aumenta la altura de 1.5rem por cada producto
+        document.getElementById("carrito").style.height = `${nuevoAlto}rem`;
+    }
+</script>
 
 <body>
 
@@ -37,76 +36,120 @@
     <br>
     <div class="rectangle">
         <center><br>
-            <h3><b>CARRITO &rarr;  <span class="subrayado"> PAGAR </span> &rarr;   PEDIDO REALIZADO</b></h3>
+            <h3><b>CARRITO &rarr; <span class="subrayado"> PAGAR </span> &rarr; PEDIDO REALIZADO</b></h3>
         </center><br>
     </div>
 
     <br>
     <div class="table-responsive">
-    <center><table width=95%>
-        <tr width ="50%">
-            <td width="50%">
-                <br><br>
-                <h4>DETALLES DE FACTURACIÓN</h4>
-                <br>
-                <p>NOMBRE <b class="obligado" style="color: red;">*</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; APELLIDOS <b class="obligado" style="color: red;">*</b> </p>
-                <input type="text" class="textbox" name ="nombre" placeholder="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="textbox" name ="apellido" placeholder="">
-                <br><br>
-                <p>REGIÓN/PROVINCIA <b class="obligado" style="color: red;">*</b></p>
-                <input type="text" class="textbox2" name ="provincia" placeholder="">
-                <br><br>
-                <p>TELÉFONO<b class="obligado" style="color: red;">*</b></p>
-                <input type="text" class="textbox2" name ="telefono" placeholder="">
-                <br><br>
-                <p>DIRECCIÓN DE CORREO ELECTRONICO<b class="obligado" style="color: red;">*</b></p>
-                <input type="text" class="textbox2" name ="correo" placeholder="">
-                <br><br><br>
-                <p>INFORMACIÓN ADICIONAL</p>
-                <br>
-                <p class="pequeno"><b>Proporciona más información sobre tu llegada a Chiapas (opcional)</b></p>
-                <textarea class="textbox3" name="direccion" placeholder="" id="mensaje"></textarea>
-                <br><br><br><br><br><br><br><br><br><br>
-            </td>
-
-            <td width="20%">
-            <div class="recuadrocarrito2">
-
-                <div style="margin-left: 40px;">
-                <div class="rectangle10">
-
-                            <center><h2>TU PEDIDO</h2></center>
-                            <br><br>
-                            <p><b>PRODUCTO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUBTOTAL</b></p>
-                            <hr>
-                            <p><b>IVA 16%:</b></p>
-                            <hr>
-                            <p><b>TOTAL: </b></p>
-                        </div>
+        <center>
+            <table width=95%>
+                <tr width="50%">
+                    <td width="50%">
+                        <br><br>
+                        <h4>DETALLES DE FACTURACIÓN</h4>
                         <br>
-                        <b><h9>TARJETA DE DEBITO/CRÉDITO</h9></b><br><br>
+                        <p>NOMBRE <b class="obligado" style="color: red;">*</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; APELLIDOS <b class="obligado" style="color: red;">*</b> </p>
+                        <input type="text" class="textbox" name="nombre" placeholder="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="textbox" name="apellido" placeholder="">
+                        <br><br>
+                        <p>REGIÓN/PROVINCIA <b class="obligado" style="color: red;">*</b></p>
+                        <input type="text" class="textbox2" name="provincia" placeholder="">
+                        <br><br>
+                        <p>TELÉFONO<b class="obligado" style="color: red;">*</b></p>
+                        <input type="text" class="textbox2" name="telefono" placeholder="">
+                        <br><br>
+                        <p>DIRECCIÓN DE CORREO ELECTRONICO<b class="obligado" style="color: red;">*</b></p>
+                        <input type="text" class="textbox2" name="correo" placeholder="">
+                        <br><br><br>
+                        <p>INFORMACIÓN ADICIONAL</p>
+                        <br>
+                        <p class="pequeno"><b>Proporciona más información sobre tu llegada a Chiapas (opcional)</b></p>
+                        <textarea class="textbox3" name="direccion" placeholder="" id="mensaje"></textarea>
+                        <br><br><br><br><br><br><br><br><br><br>
+                    </td>
 
-                        <div class="rectangle10">
-                         <p>NUMERO DE TARJETA<b class="obligado" style="color: red;">*</b></p>
-                         <input type="text" class="textbox" name ="tarjeta" placeholder=" 0000 0000 0000 0000 0000">       
-                         <br><br>
-                         <p>Titular de la Tarjeta<b class="obligado" style="color: red;">*</b></p>
-                         <input type="text" class="textbox" name ="nombre_completo" placeholder=" Ex: Pedro Peréz">       
-                         <br><br>
-                         <p>Fecha de vencimiento <b class="obligado" style="color: red;">*</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CVV <b class="obligado" style="color: red;">*</b> </p>
-                        <input type="text" class="textbox4" name ="vencimiento" placeholder="mm/aa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="textbox4" name ="ccv" placeholder="123">
+                    <td width="20%">
+                        <div class="recuadrocarrito2">
+
+                            <div style="margin-left: 40px;">
+                                <div class="rectangle10">
+
+                                    <center>
+                                        <h2>TU PEDIDO</h2>
+                                    </center>
+                                    <br><br>
+                                    <p><b>PRODUCTO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUBTOTAL</b></p>
+                                    <hr>
+                                    <p><b>IVA 16%:</b></p>
+                                    <hr>
+                                    <p><b>TOTAL: </b></p>
+                                </div>
+                                <br>
+                                <b>
+                                    <h9>TARJETA DE DEBITO/CRÉDITO</h9>
+                                </b><br><br>
+
+                                <div class="rectangle10">
+                                    <p>NUMERO DE TARJETA<b class="obligado" style="color: red;">*</b></p>
+                                    <input type="text" class="textbox" name="tarjeta" placeholder=" 0000 0000 0000 0000 0000">
+                                    <br><br>
+                                    <p>Titular de la Tarjeta<b class="obligado" style="color: red;">*</b></p>
+                                    <input type="text" class="textbox" name="nombre_completo" placeholder=" Ex: Pedro Peréz">
+                                    <br><br>
+                                    <p>Fecha de vencimiento <b class="obligado" style="color: red;">*</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CVV <b class="obligado" style="color: red;">*</b> </p>
+                                    <input type="text" class="textbox4" name="vencimiento" placeholder="mm/aa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="textbox4" name="ccv" placeholder="123">
+                                    <center>
+                                        <br>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        Al continuar aceptas nuestros
+                                                    </p>
+                                                </td>
+                                                <td style="padding-left: 4px;">
+                                                    <p>
+                                                        <a style="color: blue;" href=" " class="link">Terminos y condiciones</a>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </center>
+                                </div>
+                            </div>
+                            <hr>
+                            <p style="line-height: 1.5;">
+                                Sus datos personales se utilizarán para respaldar su experiencia en este sitio web, para administrar el acceso a su cuenta
+                                y para otros fines descritos en nuestra
+                            </p>
+                            <div class="politica_privacidad">
+                                <a href=" " class="link" style="color: blue;">política de privacidad</a>
+                            </div>
+                            <hr>
+
+                            <center>
+                                <br>
+                                <div class="checkbox-2">
+                                    <input type="checkbox" id="terms" />
+                                    <label for="terms" class="ajuste">
+                                        He leído y estoy de acuerdo con los <a href="#" class="link">Términos y condiciones</a> de la web<span class="astedisco">*</span>
+                                    </label>
+                                </div>
+                            </center>
+
+
+                            <div class="counter-container">
+                                <button class="btn4">
+                                    <center>
+                                        <p style="color: white;">REALIZAR PEDIDO</p>
+                                    </center>
+                                </button>
+                            </div>
                         </div>
-                        </div>
-
-                        <div class="counter-container">
-                           <button class="btn4">
-                                <center><p style="color: white;">REALIZAR PEDIDO</p></center>
-                            </button>
-                        </div> 
-                        
-
-            </td>
-        </tr>
-    </table></center>
+                    </td>
+                </tr>
+            </table>
+        </center>
     </div>
 
 
@@ -116,37 +159,53 @@
 
     <div class="rectangle2">
         <center>
-        <table width= 90%>
-            <tr width = 80%>
-                <td width = "25%">
-                    <center><img src="view/img/carrito_escudo.png" width="25%"></center>
-                    <center><h5>COMPRA SEGURA</h5></center>
-                    <center><h7>Con Licencia de <br>Seguridad</h7></center>
+            <table width=90%>
+                <tr width=80%>
+                    <td width="25%">
+                        <center><img src="view/img/carrito_escudo.png" width="25%"></center>
+                        <center>
+                            <h5>COMPRA SEGURA</h5>
+                        </center>
+                        <center>
+                            <h7>Con Licencia de <br>Seguridad</h7>
+                        </center>
 
-                </td>
+                    </td>
 
-                <td width = "25%">
-                <center><img src="view/img/compras_linea.png" width="25%"></center><br>
-                <center><h5>COMPRA EN LÍNEA</h5></center>
-                <center><h7>Reserva Segura</h7></center>
-                </td>
+                    <td width="25%">
+                        <center><img src="view/img/compras_linea.png" width="25%"></center><br>
+                        <center>
+                            <h5>COMPRA EN LÍNEA</h5>
+                        </center>
+                        <center>
+                            <h7>Reserva Segura</h7>
+                        </center>
+                    </td>
 
-                <td width = "25%">
-                <center><img src="view/img/maleta.png" width="25%"></center>
-                <center><h5>LOS MEJORES LUGARES <br>
-                DE CHIAPAS</h5></center>
-                <center><h7>Conoce lo mejor <br>
-                de Chiapas</h7></center>
-                </td>
+                    <td width="25%">
+                        <center><img src="view/img/maleta.png" width="25%"></center>
+                        <center>
+                            <h5>LOS MEJORES LUGARES <br>
+                                DE CHIAPAS</h5>
+                        </center>
+                        <center>
+                            <h7>Conoce lo mejor <br>
+                                de Chiapas</h7>
+                        </center>
+                    </td>
 
-                <td width = "25%">
-                <center><img src="view/img/atencion247.png" width="25%"></center>
-                <center><h5>24/7 ASISTENCIA</h5></center>
-                <center><h7>Durante todo tu <br>      
-                viaje</h7></center>
-                </td>
-            </tr>
-        </table>
+                    <td width="25%">
+                        <center><img src="view/img/atencion247.png" width="25%"></center>
+                        <center>
+                            <h5>24/7 ASISTENCIA</h5>
+                        </center>
+                        <center>
+                            <h7>Durante todo tu <br>
+                                viaje</h7>
+                        </center>
+                    </td>
+                </tr>
+            </table>
         </center>
     </div>
 
