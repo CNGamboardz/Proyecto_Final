@@ -64,7 +64,7 @@
                 <p>INFORMACIÓN ADICIONAL</p>
                 <br>
                 <p class="pequeno"><b>Proporciona más información sobre tu llegada a Chiapas (opcional)</b></p>
-                <input type="text" class="textbox3" name ="direccion" placeholder="">
+                <textarea class="textbox3" name="direccion" placeholder="" id="mensaje"></textarea>
                 <br><br><br><br><br><br><br><br><br><br>
             </td>
 
@@ -92,16 +92,16 @@
                          <p>Titular de la Tarjeta<b class="obligado" style="color: red;">*</b></p>
                          <input type="text" class="textbox" name ="nombre_completo" placeholder=" Ex: Pedro Peréz">       
                          <br><br>
-                <p>Fecha de vencimiento <b class="obligado" style="color: red;">*</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CVV <b class="obligado" style="color: red;">*</b> </p>
-                <input type="text" class="textbox4" name ="vencimiento" placeholder="mm/aa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="textbox4" name ="ccv" placeholder="123">
+                         <p>Fecha de vencimiento <b class="obligado" style="color: red;">*</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CVV <b class="obligado" style="color: red;">*</b> </p>
+                        <input type="text" class="textbox4" name ="vencimiento" placeholder="mm/aa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="textbox4" name ="ccv" placeholder="123">
                         </div>
                         </div>
 
                         <div class="counter-container">
-                            <button class="btn4">
+                           <button class="btn4">
                                 <center><p style="color: white;">REALIZAR PEDIDO</p></center>
                             </button>
-                        </div>
+                        </div> 
                         
 
             </td>

@@ -12,6 +12,24 @@
     background-color: #08A9BF;
 }
 
+.btn9 {
+    width: 12.5rem;
+    height: 3.125rem;
+    margin-left: 0; 
+    text-align: center;
+    border-radius: 1.875rem;
+    background-color: #08A9BF;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+.preferencia { 
+    position: relative;
+    left: 80%;
+    font-family: 'Lobster Two', cursive;
+}
+
+
 .recuadrocarrito {
     border: 0.3125rem solid #86c5cdc0; /* 5px / 16 = 0.3125rem */
     padding: 1.875rem; /* 30px / 16 = 1.875rem */
@@ -67,6 +85,14 @@
     color: #555; /* Color opcional para hacerlo más sutil */
     line-height: 1.2; /* Ajusta la altura de línea */
     margin-top: 0.5rem; /* Espaciado superior opcional */
+}
+
+.pequeno2 {
+    font-size: 0.8rem; /* Tamaño pequeño (equivalente a 14px) */
+    color: #555; /* Color opcional para hacerlo más sutil */
+    line-height: 1.2; /* Ajusta la altura de línea */
+    position: relative;
+    left: 25%;
 }
 
 .textbox {
@@ -172,11 +198,48 @@
     left: -10%; /* Mueve el rectángulo un poco hacia la izquierda */
 }
 
+.normalp{
+    margin: 0.5rem;
+    text-align: justify;
+    position: relative; /* Necesario para usar "left" */
+    left: 20%;
+}
+
+.rectangle11 {
+    background-color: #b9eff743;
+    padding: 0.625rem 1.25rem; /* Espaciado interno */
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    position: relative; /* Necesario para usar "left" */
+    left: 11%; /* Mueve el rectángulo un poco hacia la izquierda */
+
+}
+
 
 .subrayado {
     text-decoration: underline;
 }
 
+.medianas {
+    font-size: 1.4rem; /* Ajusta el tamaño del texto */
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Espaciado entre el icono y el texto */
+    }
+
+    .medianas2 {
+        font-size: 1.2rem; /* Ajusta el tamaño del texto */
+        align-items: center;
+        display: flex;
+        text-decoration: underline;
+        gap: 40px; /* Espaciado entre el icono y el texto */
+        }
+
+    .subrayado2 {
+    text-decoration: underline;
+    margin-top: -40px;
+    margin-left: 135px; /* Mueve todo el contenido hacia la izquierda */
+    }
 
 /* hasta aqui */
 .text-border {

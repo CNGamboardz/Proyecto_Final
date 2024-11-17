@@ -39,15 +39,54 @@
                     <p class="justificado">Ofrecemos precios especiales para grupos.
                         Si tienes alguna solicitud o requerimiento <br> especial para tu viaje, no dudes en contactarnos.</p>
                 </center>
+                <br>
+                <center><table width =70%>
+                    <tr width= 10%>
+                        <td width= "20%">
+                        <p class="medianas"><img src="./view/img/contacto_telefono.png" width="15%"> 961 470 62 90</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p> <br><img src="./view/img/ubicacion.png" width="12%"><a class="subrayado2" href="https://www.google.com/maps/place/Salon+Gema/@16.7725603,-93.0872266,463m/data=!3m1!1e3!4m6!3m5!1s0x85ed275d3b624c83:0x4d25f42cb24d00ed!8m2!3d16.77325!4d-93.0885407!16s%2Fg%2F11gh0511bn?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D">VER UBICACIÓN</a></p>
+                            <br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="medianas2"><img src="./view/img/correo.png" width="12%">ChiapasOculto@gmail.com</p>
+                        </td>
+                    </tr>
+                </table></center>
             </td>
             <td width="50%">
                 <img src="./view/img/Contacto_img.png" width="90%">
             </td>
         </tr>
         <tr>
-            <img src="./view/img/" alt="">
         </tr>
     </table>
+    <br><br><br>
+        
+        <div class="rectangle11">
+            <br>
+            <center>
+                <p class="normalp">NOMBRE<b class="obligado" style="color: red;">*</b></p>
+                <input type="text" class="textbox2" name ="nombre_contacto" placeholder="">
+                <p class="normalp">CORREO ELECTRONICO<b class="obligado" style="color: red;">*</b></p>
+                <input type="text" class="textbox2" name ="correo_contacto" placeholder="">
+                <p class="normalp">MENSAJE<b class="obligado" style="color: red;">*</b></p>
+                <textarea class="textbox3" name="mensaje" placeholder="Introduce tu mensaje..." id="mensaje"></textarea>
+                <p class="pequeno2" id="word-count">0/180 palabras</p>
+                
+            </center>
+
+                <center><button class="btn9">
+                <center><p style="color: white;">ENVIAR MENSAJE</p></center>
+                </button></center>
+                <p class="preferencia"><b>Gracias por su preferencia</b></p>
+         </div>
+        
 
     <br><br><br><br>
     <table class="piepagina" width=100%>
@@ -136,5 +175,21 @@
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
 </body>
+
+<script>
+    const textarea = document.getElementById('mensaje');
+   const wordCountDisplay = document.getElementById('word-count');
+ 
+    textarea.addEventListener('input', () => {
+        const words = textarea.value.split(/\s+/).filter(word => word.length > 0); // Divide en palabras y elimina vacíos
+        const wordCount = words.length;
+
+        if (wordCount > 180) {
+            textarea.value = words.slice(0, 180).join(' '); // Limita a 180 palabras
+        }
+
+        wordCountDisplay.textContent = `${words.length}/180 palabras`;
+    });
+</script>
 
 </html>
