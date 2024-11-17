@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -86,7 +87,32 @@
                         <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 9:30 am
                     </div>
                     <div class="itinerario">
-                        <p class="letras">Itinerario</p> 
+                        <p class="letras">Itinerario</p>
+                        <p><b>07:30 AM</b>- Recepción en el hotel de Tuxtla Gutiérrez
+                            El conductor te recogerá en el hotel. Asegúrate de estar listo y con tus pertenencias necesarias para el día.</p>
+
+                        <p><b>08:00 AM</b> - Salida hacia el embarcadero en Chiapa de Corzo
+                            Emprende el viaje hacia Chiapa de Corzo, donde inicia la travesía al Cañón del Sumidero. Durante el camino, podrás disfrutar del hermoso paisaje.</p>
+
+                        <p><b>08:30 AM</b> - Llegada a Chiapa de Corzo y embarque
+                            Una vez en el embarcadero, recibirás instrucciones de seguridad. Después, abordarás la lancha para comenzar el recorrido por el Cañón del Sumidero.</p>
+
+                        <p><b>09:00 AM</b>- Recorrido en lancha por el Cañón del Sumidero
+                            Surca las aguas del río Grijalva y admira las imponentes paredes del cañón, que alcanzan hasta mil metros de altura. Durante el recorrido, podrás observar flora, fauna (como cocodrilos y aves), y formaciones naturales impresionantes como la "Cueva de Colores" y el "Árbol de Navidad".</p>
+
+                        <p><b>11:00 AM</b>- Fin del recorrido en lancha y tiempo libre en Chiapa de Corzo
+                            Una vez finalizado el paseo, tendrás tiempo para explorar el pintoresco pueblo de Chiapa de Corzo. Puedes visitar el centro histórico, tomar fotos en la fuente colonial o comprar artesanías locales.</p>
+
+                        <p><b>12:30 PM</b>- Tiempo libre para el almuerzo (no incluido)
+                            Disfruta de la comida típica chiapaneca en los restaurantes del centro de Chiapa de Corzo.</p>
+
+                        <p><b>02:00 PM</b>- Salida de regreso a Tuxtla Gutiérrez
+                            Reúnete con el grupo para regresar a Tuxtla Gutiérrez.</p>
+
+                        <p><b>02:30 PM</b>- Llegada a Tuxtla Gutiérrez
+                            El conductor te dejará en tu hotel para que puedas descansar después de un día lleno de descubrimientos.</p>
+
+
                     </div>
 
                 </td>
@@ -120,7 +146,7 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
@@ -205,6 +231,7 @@
     </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,7 +87,37 @@
                         <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 3:00 am
                     </div>
                     <div class="itinerario">
-                        <p class="letras">Itinerario</p> 
+                        <p class="letras">Itinerario</p>
+                        <p><b>05:00 AM</b> - Recepción en el hotel de Palenque<br>
+                            El conductor te recogerá en el hotel para iniciar el recorrido hacia Bonampak. Se recomienda llevar ropa cómoda, calzado resistente, repelente para insectos y suficiente agua.</p>
+
+                        <p><b>05:30 AM</b> - Salida hacia la Selva Lacandona<br>
+                            Iniciamos el viaje hacia la Selva Lacandona, hogar de las ruinas de Bonampak. El trayecto es de aproximadamente tres horas, tiempo en el que disfrutarás del amanecer sobre el paisaje selvático de Chiapas.</p>
+
+                        <p><b>08:30 AM</b> - Llegada a la comunidad Lacandona de Lacanjá<br>
+                            Antes de entrar a Bonampak, llegaremos a la comunidad lacandona. Aquí conocerás un poco sobre la cultura lacandona y sus tradiciones. Un guía local te acompañará hacia la zona arqueológica.</p>
+
+                        <p><b>09:00 AM</b> - Entrada a la zona arqueológica de Bonampak<br>
+                            Recibirás una introducción sobre la historia de Bonampak, un sitio conocido por sus extraordinarios murales que narran escenas de la vida cotidiana, rituales y ceremonias de la antigua civilización maya.</p>
+
+                        <p><b>09:30 AM</b> - Recorrido guiado por los murales de Bonampak<br>
+                            Explora el sitio junto a un guía que te llevará al Templo de los Murales, donde se encuentran las pinturas murales más famosas de la cultura maya, perfectamente conservadas. Aquí podrás apreciar escenas de rituales, batallas y ceremonias pintadas con colores vivos.</p>
+
+                        <p><b>11:00 AM</b> - Tiempo libre para explorar y tomar fotos<br>
+                            Tendrás tiempo para explorar el sitio a tu propio ritmo y tomar fotografías de los templos y la arquitectura. La zona es pequeña pero está rodeada de selva, ofreciendo una atmósfera única para el visitante.</p>
+
+                        <p><b>12:00 PM</b> - Salida hacia el almuerzo (incluido en el tour)<br>
+                            Regresamos a la comunidad lacandona, donde disfrutarás de un almuerzo tradicional (incluido en el tour), y podrás interactuar con los habitantes locales para conocer más sobre su vida en la selva.</p>
+
+                        <p><b>01:30 PM</b> - Tiempo libre para recorrer la comunidad de Lacanjá<br>
+                            Después del almuerzo, tendrás tiempo para recorrer la comunidad lacandona de Lacanjá, donde podrás comprar artesanías y productos locales o hacer una breve caminata por los senderos de la selva.</p>
+
+                        <p><b>02:30 PM</b> - Salida de regreso a Palenque<br>
+                            Reúnete con el grupo para iniciar el viaje de regreso a Palenque. El camino de vuelta te permitirá admirar una vez más el paisaje natural de Chiapas.</p>
+
+                        <p><b>05:30 PM</b> - Llegada a Palenque<br>
+                            El conductor te dejará en tu hotel para que puedas descansar después de un día lleno de historia y cultura maya.</p>
+
                     </div>
 
                 </td>
@@ -118,7 +149,7 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width=100%>
         <tr>
@@ -203,6 +234,7 @@
     </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>
