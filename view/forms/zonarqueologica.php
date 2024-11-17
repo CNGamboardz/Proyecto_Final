@@ -131,7 +131,7 @@
                 <center>
                     <h5>Servicio al Cliente</h5>
                 </center>
-                <a href="contacto.php">
+                <a href="index.php?u=contacto">
                     <ul class="custom-bullets">
                         <li>Contacto</li>
                     </ul>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <title>Carrito Chiapas Oculto</title>
+    <title>Pago Chiapas Oculto</title>
     <link rel="icon" href="/view/img/Icon_logo.png" type="image/x-icon">
 
 </head>
@@ -28,8 +28,8 @@
 
     </script>
 
-
 <body>
+
     <?php require_once("./view/layout/header.php"); ?>
     <br><br>
     <div class="separador">
@@ -37,7 +37,7 @@
     <br>
     <div class="rectangle">
         <center><br>
-            <h3><b><span class="subrayado">CARRITO</span> &rarr;   PAGAR  &rarr;   PEDIDO REALIZADO</b></h3>
+            <h3><b>CARRITO &rarr;  <span class="subrayado"> PAGAR </span> &rarr;   PEDIDO REALIZADO</b></h3>
         </center><br>
     </div>
 
@@ -46,31 +46,63 @@
     <center><table width=95%>
         <tr width ="50%">
             <td width="50%">
-            <p><b>PRODUCTO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRECIO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CANTIDAD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUBTOTAL</b></p>
-            <hr width ="95%">
-            <p>hola</p>
-            <hr width ="95%">
-            <br><br><br><br><br><br><br><br><br>
+                <br><br>
+                <h4>DETALLES DE FACTURACIÓN</h4>
+                <br>
+                <p>NOMBRE <b class="obligado" style="color: red;">*</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; APELLIDOS <b class="obligado" style="color: red;">*</b> </p>
+                <input type="text" class="textbox" name ="nombre" placeholder="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="textbox" name ="apellido" placeholder="">
+                <br><br>
+                <p>REGIÓN/PROVINCIA <b class="obligado" style="color: red;">*</b></p>
+                <input type="text" class="textbox2" name ="provincia" placeholder="">
+                <br><br>
+                <p>TELÉFONO<b class="obligado" style="color: red;">*</b></p>
+                <input type="text" class="textbox2" name ="telefono" placeholder="">
+                <br><br>
+                <p>DIRECCIÓN DE CORREO ELECTRONICO<b class="obligado" style="color: red;">*</b></p>
+                <input type="text" class="textbox2" name ="correo" placeholder="">
+                <br><br><br>
+                <p>INFORMACIÓN ADICIONAL</p>
+                <br>
+                <p class="pequeno"><b>Proporciona más información sobre tu llegada a Chiapas (opcional)</b></p>
+                <input type="text" class="textbox3" name ="direccion" placeholder="">
+                <br><br><br><br><br><br><br><br><br><br>
             </td>
 
             <td width="20%">
-            <div class="recuadrocarrito">
-                        <div style="margin-left: 40px;">
-                            <center><h2>TOTAL DE CARRITO</h2></center>
+            <div class="recuadrocarrito2">
+
+                <div style="margin-left: 40px;">
+                <div class="rectangle10">
+
+                            <center><h2>TU PEDIDO</h2></center>
                             <br><br>
-                            <p><b>SUBTOTAL: </b></p>
+                            <p><b>PRODUCTO &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUBTOTAL</b></p>
+                            <hr>
                             <p><b>IVA 16%:</b></p>
                             <hr>
                             <p><b>TOTAL: </b></p>
                         </div>
-                        
+                        <br>
+                        <b><h9>TARJETA DE DEBITO/CRÉDITO</h9></b><br><br>
+
+                        <div class="rectangle10">
+                         <p>NUMERO DE TARJETA<b class="obligado" style="color: red;">*</b></p>
+                         <input type="text" class="textbox" name ="tarjeta" placeholder=" 0000 0000 0000 0000 0000">       
+                         <br><br>
+                         <p>Titular de la Tarjeta<b class="obligado" style="color: red;">*</b></p>
+                         <input type="text" class="textbox" name ="nombre_completo" placeholder=" Ex: Pedro Peréz">       
+                         <br><br>
+                <p>Fecha de vencimiento <b class="obligado" style="color: red;">*</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CVV <b class="obligado" style="color: red;">*</b> </p>
+                <input type="text" class="textbox4" name ="vencimiento" placeholder="mm/aa">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="textbox4" name ="ccv" placeholder="123">
+                        </div>
+                        </div>
+
                         <div class="counter-container">
                             <button class="btn4">
-                            <a href="index.php?u=pago">
-                                <center><p style="color: white;">FINALIZAR COMPRA</p></center>
+                                <center><p style="color: white;">REALIZAR PEDIDO</p></center>
                             </button>
-                        </a>
                         </div>
+                        
 
             </td>
         </tr>

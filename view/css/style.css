@@ -1,7 +1,184 @@
 .borde {
     padding: 20px;
 }
+/* esto copiare */
 
+.btn4 {
+    width: 12.5rem;
+    height: 3.125rem;
+    margin-left: 8.5625rem; 
+    text-align: center;
+    border-radius: 1.875rem;
+    background-color: #08A9BF;
+}
+
+.recuadrocarrito {
+    border: 0.3125rem solid #86c5cdc0; /* 5px / 16 = 0.3125rem */
+    padding: 1.875rem; /* 30px / 16 = 1.875rem */
+    background-color: #f9f9f9;
+    width: 34.375rem; /* 550px / 16 = 34.375rem */
+    height: 25.75rem; /* 300px / 16 = 18.75rem */
+    border-radius: 1.25rem; /* 20px / 16 = 1.25rem */
+}
+
+.recuadrocarrito2 {
+    border: 0.3125rem solid #86c5cdc0; /* 5px / 16 = 0.3125rem */
+    padding: 1.875rem; /* 30px / 16 = 1.875rem */
+    background-color: #f9f9f9;
+    width: 34.375rem; /* 550px / 16 = 34.375rem */
+    height: 60.75rem; /* 300px / 16 = 18.75rem */
+    border-radius: 1.25rem; /* 20px / 16 = 1.25rem */
+}
+
+.obligado {
+    color: red;
+    position: relative;
+    cursor: pointer; /* Indica que es interactivo */
+}
+
+/* Estilo para el mensaje emergente */
+.obligado::after {
+    content: "Campo obligatorio*";
+    position: absolute;
+    color: red;
+    bottom: 100%; /* Muestra el mensaje arriba del símbolo */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 0.3rem 0.5rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 0.75rem; /* Texto más pequeño */
+    white-space: nowrap; /* Evita que el texto se quiebre */
+    opacity: 0; /* Oculta el mensaje por defecto */
+    visibility: hidden; /* Lo hace invisible */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+/* Muestra el mensaje al pasar el cursor */
+.obligado:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.pequeno {
+    font-size: 0.7rem; /* Tamaño pequeño (equivalente a 14px) */
+    color: #555; /* Color opcional para hacerlo más sutil */
+    line-height: 1.2; /* Ajusta la altura de línea */
+    margin-top: 0.5rem; /* Espaciado superior opcional */
+}
+
+.textbox {
+    width: 18.75rem; /* Ancho del textbox (300px ÷ 16 = 18.75rem) */
+    height: 2.5rem; /* Altura del textbox (40px ÷ 16 = 2.5rem) */
+    padding: 0.625rem; /* Espaciado interno (10px ÷ 16 = 0.625rem) */
+    border: 0.125rem solid blue; /* Contorno azul (2px ÷ 16 = 0.125rem) */
+    border-radius: 0.4375rem; /* Bordes redondeados (7px ÷ 16 = 0.4375rem) */
+    font-size: 1rem; /* Tamaño de letra (16px ÷ 16 = 1rem) */
+    outline: none; /* Quita el borde extra al enfocar */
+}
+
+/* Cambiar el contorno al enfocar */
+.textbox:focus {
+    border-color: darkblue; /* Cambia a azul oscuro al enfocar */
+    box-shadow: 0 0 0.3125rem lightblue; /* Resplandor (5px ÷ 16 = 0.3125rem) */
+}
+
+.textbox2 {
+    width: 43rem; /* Ancho del textbox (300px ÷ 16 = 18.75rem) */
+    height: 2.5rem; /* Altura del textbox (40px ÷ 16 = 2.5rem) */
+    padding: 0.625rem; /* Espaciado interno (10px ÷ 16 = 0.625rem) */
+    border: 0.125rem solid blue; /* Contorno azul (2px ÷ 16 = 0.125rem) */
+    border-radius: 0.4375rem; /* Bordes redondeados (7px ÷ 16 = 0.4375rem) */
+    font-size: 1rem; /* Tamaño de letra (16px ÷ 16 = 1rem) */
+    outline: none; /* Quita el borde extra al enfocar */
+}
+
+/* Cambiar el contorno al enfocar */
+.textbox2:focus {
+    border-color: darkblue; /* Cambia a azul oscuro al enfocar */
+    box-shadow: 0 0 0.3125rem lightblue; /* Resplandor (5px ÷ 16 = 0.3125rem) */
+}
+
+.textbox3 {
+    width: 43rem; /* Ancho del textbox (300px ÷ 16 = 18.75rem) */
+    height: 9.5rem; /* Altura del textbox (40px ÷ 16 = 2.5rem) */
+    padding: 0.625rem; /* Espaciado interno (10px ÷ 16 = 0.625rem) */
+    border: 0.125rem solid blue; /* Contorno azul (2px ÷ 16 = 0.125rem) */
+    border-radius: 0.4375rem; /* Bordes redondeados (7px ÷ 16 = 0.4375rem) */
+    font-size: 1rem; /* Tamaño de letra (16px ÷ 16 = 1rem) */
+    outline: none; /* Quita el borde extra al enfocar */
+}
+
+/* Cambiar el contorno al enfocar */
+.textbox3:focus {
+    border-color: darkblue; /* Cambia a azul oscuro al enfocar */
+    box-shadow: 0 0 0.3125rem lightblue; /* Resplandor (5px ÷ 16 = 0.3125rem) */
+}
+
+.textbox4 {
+    width: 9rem; /* Ancho del textbox (300px ÷ 16 = 18.75rem) */
+    height: 2.5rem; /* Altura del textbox (40px ÷ 16 = 2.5rem) */
+    padding: 0.625rem; /* Espaciado interno (10px ÷ 16 = 0.625rem) */
+    border: 0.125rem solid blue; /* Contorno azul (2px ÷ 16 = 0.125rem) */
+    border-radius: 0.4375rem; /* Bordes redondeados (7px ÷ 16 = 0.4375rem) */
+    font-size: 1rem; /* Tamaño de letra (16px ÷ 16 = 1rem) */
+    outline: none; /* Quita el borde extra al enfocar */
+}
+
+/* Cambiar el contorno al enfocar */
+.textbox4:focus {
+    border-color: darkblue; /* Cambia a azul oscuro al enfocar */
+    box-shadow: 0 0 0.3125rem lightblue; /* Resplandor (5px ÷ 16 = 0.3125rem) */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.navbar-nav .nav-item.text-start {
+    text-align: right;
+    font-size: 0.875rem; 
+}
+
+.navbar-nav .nav-item .nav-link strong {
+    font-size: 0.9375rem;
+    color: #479aa5;
+}
+
+.nav-link21 {
+    color: #e74c3c; 
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+.rectangle2 {
+    background-color: #b9eff756;
+    text-align: center;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.3125rem; 
+}
+
+.rectangle10 {
+    background-color: #b9eff741;
+    padding: 0.625rem 1.25rem; /* Espaciado interno */
+    border-radius: 0.3125rem; /* Bordes redondeados */
+    width: 112%; /* Ajusta el ancho según sea necesario */
+    margin: 0 auto; /* Centra el elemento inicialmente */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    position: relative; /* Necesario para usar "left" */
+    left: -10%; /* Mueve el rectángulo un poco hacia la izquierda */
+}
+
+
+.subrayado {
+    text-decoration: underline;
+}
+
+
+/* hasta aqui */
 .text-border {
     position: relative;
     font-size: 15px;
@@ -1081,9 +1258,9 @@ button {
     padding: 30px;                  
     background-color: #f9f9f9;      
     width: 550px; 
-    height: 600px;
+   height: 600px;
     border-radius: 20px;             
-}
+} 
 
  .counter-container {
     display: flex;

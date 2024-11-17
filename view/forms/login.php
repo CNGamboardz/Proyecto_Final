@@ -27,22 +27,28 @@
         <h2 class="patrona">INICIAR SESIÓN</h2>
     </center>
     <br><br><br>
+
+
     <div class="inisec">
         <div class="borde">
             <div class="inicioBor">
                 <img src="view/img/img2.png" alt="Personaje" width="200">
-                <form>
-                    <div class="mb-3">
+
+
+                <form action="index.php?u=validar" method="POST">
+                <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="correo" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <input type="password" class="form-control" name="contrasena" id="exampleInputPassword1">
                     </div>
                     <button type="submit" class="botton">Continuar</button>
                 </form>
                 <br>
+
+
                 <center>
                     <table>
                         <tr>

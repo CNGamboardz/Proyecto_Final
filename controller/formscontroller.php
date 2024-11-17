@@ -107,5 +107,51 @@ class FormsController {
     public static function exploradoresazul(){
         require_once('view/forms/exploradoresazul.php');
     }
+
+    public static function pago(){
+        require_once('view/forms/pago.php');
+    }
+
+
+    public static function registrar(){
+        $nombre=$_POST['nombres'];
+        $apellidos=$_POST['apellido'];
+        $telefono=$_POST['telefono'];
+        $correo=$_POST['correo'];
+        $contrasena=$_POST['contrasena'];
+        // echo $nombre.$apellidos.$telefono.$correo.$contrasena;
+        $formsmodel= new FormsModel();
+
+        $resultado=$formsmodel->GuardarUsuario($nombre, $apellidos, $telefono, $correo, $contrasena);
+        header("location:".urlsite."index.php?u=login");
+    }
+    
+    public static function validar() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $correo = filter_input(INPUT_POST, 'correo', FILTER_SANITIZE_EMAIL);
+            $contrasena = $_POST['contrasena'];
+
+            $usuario = (new FormsModel())->ValidarUsuario($correo, $contrasena);
+
+            if ($usuario) {
+                $_SESSION['usuario_id'] = $usuario['ID_usuario'];
+                $_SESSION['usuario_nombre'] = $usuario['NombreUsuario'];
+                $_SESSION['usuario_apellido'] = $usuario['Apellido'];
+                header("Location: index.php");
+                exit;
+            } else {
+                $error = "Correo o contraseña incorrectos.";
+                header("Location: index.php?u=login");
+            }
+        }
+    }
+
+    public static function logout() {
+        session_start();
+        session_unset();
+        session_destroy();
+        header("Location: index.php");
+        exit;
+    }
 }
 ?>

@@ -75,6 +75,7 @@
             </tr>
         </table>
     </div>
+    
     <div class="tabla_contenido">
         <table width="90%">
             <tr>

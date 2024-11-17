@@ -14,40 +14,46 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">
-                <img src="view/img/logo_chiapasoculto.png" alt="Logo Chiapas Oculto" class="logo"> <!-- Ajusta el tamaño aquí -->
+                <img src="view/img/logo_chiapasoculto.png" alt="Logo Chiapas Oculto" class="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">INICIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php?u=tours">TOURS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php?u=paquetes">PAQUETES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php?u=contacto">CONTACTO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php?u=login">
-                            <img src="view/img/IconUsuario.png" width="24" height="24" alt="Icono Usuario"> LOGIN/REGISTER
-                        </a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.php">INICIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?u=tours">TOURS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?u=paquetes">PAQUETES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?u=contacto">CONTACTO</a></li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?u=carrito">
                             <img src="view/img/Carritocompras.png" width="24" height="24" alt="Carrito"> CARRITO
                         </a>
                     </li>
                 </ul>
+                <!-- Sección a la derecha -->
+                <ul class="navbar-nav align-items-end">
+                    <?php if (isset($_SESSION['usuario_nombre'], $_SESSION['usuario_apellido'])): ?>
+                        <li class="nav-item text-start" style="white-space: normal; text-align: center;">
+                            <span class="nav-link">
+                                <strong>BIENVENIDO:</strong><br>
+                                <?php echo htmlspecialchars($_SESSION['usuario_nombre'] . ' ' . $_SESSION['usuario_apellido']); ?>
+                                <br>
+                                <a class="nav-link21" href="index.php?u=logout">CERRAR SESIÓN</a>
+                            </span>
+                        </li>
+                    <?php else: ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?u=login">
+                                <img src="view/img/IconUsuario.png" width="24" height="24" alt="Icono Usuario"> LOGIN/REGISTER
+                            </a>
+                        </li>
+                    <?php endif; ?>
+                </ul>
             </div>
         </div>
     </nav>
 </header>
+
+
+
 
 
 <style>
