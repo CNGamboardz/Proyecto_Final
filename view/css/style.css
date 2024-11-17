@@ -12,6 +12,13 @@
     background-color: #08A9BF;
 }
 
+.descripcion {
+    font-size: 0.6rem; /* 16px en rems (asumiendo que 1rem = 16px por defecto) */
+    text-align: center; /* Justifica el texto */
+    line-height: 1.5; /* Opcional: mejora la legibilidad ajustando el espaciado entre líneas */
+}
+
+
 .btn9 {
     width: 12.5rem;
     height: 3.125rem;
@@ -569,6 +576,99 @@ a.normal img {
 .paquetes1 td {
     padding: 1.5rem;
 }
+
+/* Estilo general para la tabla */
+.table.paquetes {
+    width: 50%;
+    height: 50%;
+    border-collapse: separate; /* Cambiado a "separate" para que funcione el border-spacing */
+    border-spacing: 40px; /* Espacio entre columnas y filas */
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+
+.table.paquetes .paquete-cell {
+    padding: 15px;
+    vertical-align: top; /* Alinea el contenido al tope */
+    width: 30%; /* Ajusta según el número de columnas deseadas */
+    border-bottom: 10px solid #288f9f; /* Solo el borde inferior */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    transform: scale(1); /* Tamaño base */
+    box-shadow: none; /* Sin sombra por defecto */
+}
+
+.table.paquetes .paquete-cell:hover {
+    transform: scale(1.1); /* Agranda la celda ligeramente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra para destacar */
+    animation: rgb-gradient 1.5s infinite; /* Activa la animación */
+}
+
+/* Definición de la animación */
+@keyframes rgb-gradient {
+    0% {
+        border-bottom-color: rgb(40, 143, 159); /* Azul inicial */
+    }
+    25% {
+        border-bottom-color: rgb(60, 180, 200); /* Azul más claro */
+    }
+    50% {
+        border-bottom-color: rgb(80, 120, 255); /* Azul brillante */
+    }
+    75% {
+        border-bottom-color: rgb(30, 100, 180); /* Azul más oscuro */
+    }
+    100% {
+        border-bottom-color: rgb(40, 143, 159); /* Vuelve al azul inicial */
+    }
+}
+
+
+
+/* Estilo para los enlaces */
+.table.paquetes a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.table.paquetes a:hover {
+    background-color: #f9f9f9;
+}
+
+/* Estilo para las imágenes */
+.table.paquetes .paquete-imagen {
+    width: 100%;
+    height: auto;
+    max-width: 250px; /* Ajusta según tus necesidades */
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el nombre del paquete */
+.table.paquetes .paquete-nombre {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Estilo para la descripción */
+.table.paquetes .descripcion {
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0 10px 0;
+}
+
+/* Estilo para el precio */
+.table.paquetes .pequeno {
+    font-size: 1em;
+    color: #000;
+    font-weight: bold;
+}
+
 
 /* Estilos responsivos */
 @media (max-width: 768px) {

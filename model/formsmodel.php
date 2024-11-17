@@ -1,7 +1,8 @@
 <?php
  
 Class FormsModel{
-    public function GuardarUsuario($nombres, $apellidos, $telefono, $correo, $contrasena){
+    public function GuardarUsuario($nombres, $apellidos, $telefono, $correo, $contrasena)
+    {
         include_once('database_connection.php');
         $cnn = new Conexion();
     
@@ -9,9 +10,21 @@ Class FormsModel{
         $nombres = strtoupper($nombres);
         $apellidos = strtoupper($apellidos);
     
+        // Verificar si el correo ya existe en la base de datos
+        $consultaCorreo = "SELECT COUNT(*) FROM usuario WHERE CorreoElectronico = :correo";
+        $verificarCorreo = $cnn->prepare($consultaCorreo);
+        $verificarCorreo->bindParam(':correo', $correo, PDO::PARAM_STR);
+        $verificarCorreo->execute();
+    
+        if ($verificarCorreo->fetchColumn() > 0) {
+            // Si el correo ya existe, retorna un error o falso
+            return "El correo ya está registrado.";
+        }
+    
         // Encriptar la contraseña antes de guardarla
         $contrasenaHash = password_hash($contrasena, PASSWORD_DEFAULT);
     
+        // Insertar los datos en la base de datos
         $consulta = "INSERT INTO usuario (NombreUsuario, Apellido, CorreoElectronico, NumeroTelefono, Contrasena)
                      VALUES (:nombres, :apellidos, :correo, :telefono, :contrasena)";
         $resultado = $cnn->prepare($consulta);
@@ -22,9 +35,9 @@ Class FormsModel{
         $resultado->bindParam(':contrasena', $contrasenaHash, PDO::PARAM_STR);
     
         if ($resultado->execute()) {
-            return true;
+            return true; // Registro exitoso
         } else {
-            return false;
+            return false; // Error al registrar
         }
     }    
     
@@ -45,6 +58,7 @@ Class FormsModel{
             return false;
         }
     }
+
     
 }
 ?>

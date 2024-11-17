@@ -1,15 +1,19 @@
 <?php
 
 require_once("model/formsmodel.php");
+require_once("model/catalogo.php");
 
 class FormsController {
     private $formsmodel;
+    private $catalogo;
     
     public function __construct() {
         $this->formsmodel = new formsmodel();
     }
 
     public static function paquetes() {
+        $catalogo = new Catalogo();
+        $paquetes=$catalogo->MostrarDatos(2);
         require_once('view/forms/paquetes.php');
     }
 
@@ -123,7 +127,15 @@ class FormsController {
         $formsmodel= new FormsModel();
 
         $resultado=$formsmodel->GuardarUsuario($nombre, $apellidos, $telefono, $correo, $contrasena);
-        header("location:".urlsite."index.php?u=login");
+        if ($resultado === true) {
+            header("location:".urlsite."index.php?u=login");
+
+        } elseif ($resultado === "El correo ya está registrado.") {
+        header("location:".urlsite."index.php?u=register");
+        } else {
+            echo "Error al registrar el usuario.";
+        }
+        
     }
     
     public static function validar() {
