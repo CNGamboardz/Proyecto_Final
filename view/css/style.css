@@ -28,6 +28,12 @@
     background-color: #08A9BF;
 }
 
+.btn9:hover {
+    background-color: #0056b3;
+}
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 
 .preferencia { 
@@ -210,17 +216,20 @@
     text-align: justify;
     position: relative; /* Necesario para usar "left" */
     left: 20%;
+
 }
 
 .rectangle11 {
-    background-color: #b9eff743;
+    background-color: #b9eff743; /* Fondo translúcido */
     padding: 0.625rem 1.25rem; /* Espaciado interno */
     width: 80%; /* Ajusta el ancho según sea necesario */
     box-sizing: border-box; /* Incluye el padding en el ancho total */
     position: relative; /* Necesario para usar "left" */
-    left: 11%; /* Mueve el rectángulo un poco hacia la izquierda */
-
+    left: 0; /* Reinicia cualquier desplazamiento */
+    margin: 0 auto; /* Centra horizontalmente */
 }
+
+
 
 
 .subrayado {
@@ -579,15 +588,13 @@ a.normal img {
 
 /* Estilo general para la tabla */
 .table.paquetes {
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 30%;
     border-collapse: separate; /* Cambiado a "separate" para que funcione el border-spacing */
     border-spacing: 40px; /* Espacio entre columnas y filas */
     text-align: center;
     margin: 20px 0;
 }
-
-
 
 .table.paquetes .paquete-cell {
     padding: 15px;
@@ -1421,7 +1428,7 @@ button {
     padding: 30px;                  
     background-color: #f9f9f9;      
     width: 550px; 
-   height: 600px;
+    height: 670px;
     border-radius: 20px;             
 } 
 
@@ -1461,12 +1468,20 @@ button {
     background-color: #08A9BF;
 }
 
+.btn1:hover {
+    background-color: #0056b3;
+}
+
 .btn2{
     width: 250px;
     border-radius: 30px;
     background-color: #289F50;
     color: white;
     font-size: 20px;
+}
+
+.btn2:hover {
+    background-color: #1b5909;
 }
 
 .tabla_contenido{

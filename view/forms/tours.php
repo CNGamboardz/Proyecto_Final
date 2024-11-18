@@ -30,30 +30,37 @@
 
     <br><br>
 
-        <table class="table paquetes">
-            <tr>
-                <td><a href="index.php?u=cascadas"><img src="./view/img/p1.png" class="img-fluid" alt="Paquete 1"></a></td>
-                <td><a href="index.php?u=cañon"><img src="./view/img/p2.png" class="img-fluid" alt="Paquete 2"></a></td>
-                <td><a href="index.php?u=simacotorras"><img src="./view/img/p3.png" class="img-fluid" alt="Paquete 3"></a></td>
-                <td><a href="index.php?u=zonarqueologica"><img src="./view/img/p4.png" class="img-fluid" alt="Paquete 4"></a></td>
-            </tr>
-            <tr>
-                <td><a href="index.php?u=palenque"><img src="./view/img/5.png" class="img-fluid" alt="Paquete 5"></a></td>
-                <td><a href="index.php?u=bonampak"><img src="./view/img/7.png" class="img-fluid" alt="Paquete 6"></a></td>
-                <td><a href="index.php?u=lagunasmontebello"><img src="./view/img/6.png" class="img-fluid" alt="Paquete 7"></a></td>
-                <td><a href="index.php?u=cascadaschiflon"><img src="./view/img/8.png" class="img-fluid" alt="Paquete 8"></a></td>
-            </tr>
-        </table>
-    
-    <br>
-    
-        <table class="table paquetes1">
-            <tr>
-                <td><a href="index.php?u=arcotete"><img src="./view/img/9.png" class="img-fluid" alt="Paquete 9"></a></td>
-                <td><a href="index.php?u=cascadaroberto"><img src="./view/img/10.png" class="img-fluid" alt="Paquete 10"></a></td>
-                <td><a href="index.php?u=arcocintalapa"><img src="./view/img/11.png" class="img-fluid" alt="Paquete 11"></a></td>
-            </tr>
-        </table>
+    <center>
+    <table class="table paquetes">
+        <?php 
+        $counter = 0; // Contador para las filas
+        foreach ($paquetes as $paquete): 
+            if ($counter % 3 == 0) { 
+                echo '<tr>'; // Inicia una nueva fila cada 3 elementos
+            }
+        ?>
+            <td class="paquete-cell">
+                <a href="<?php echo htmlspecialchars($paquete['url']); ?>">
+                    <img src="<?php echo $paquete['imagen']; ?>" alt="<?php echo htmlspecialchars($paquete['Nombre']); ?>" class="paquete-imagen">
+                    <h3 class="paquete-nombre"><?php echo htmlspecialchars($paquete['Nombre']); ?></h3>
+                    <p class="descripcion"><?php echo htmlspecialchars($paquete['Descripcion']); ?></p>
+                    <br>
+                    <p class="pequeno"><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></p>
+                </a>
+            </td>
+            <?php 
+            $counter++; 
+            if ($counter % 3 == 0) {
+                echo '</tr>'; // Cierra la fila después de 3 elementos
+            }
+        endforeach;
+        // Si el número de paquetes no es múltiplo de 3, cierra la última fila
+        if ($counter % 3 != 0) {
+            echo '</tr>';
+        }
+        ?>
+    </table>
+</center>
     
     <br><br><br><br><br><br><br>
 

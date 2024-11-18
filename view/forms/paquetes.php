@@ -25,9 +25,15 @@
         </p>
     </div>
 
-    <center><table class="table paquetes">
-    <tr>
-        <?php foreach ($paquetes as $paquete): ?>
+    <center>
+    <table class="table paquetes">
+        <?php 
+        $counter = 0; // Contador para las filas
+        foreach ($paquetes as $paquete): 
+            if ($counter % 3 == 0) { 
+                echo '<tr>'; // Inicia una nueva fila cada 3 elementos
+            }
+        ?>
             <td class="paquete-cell">
                 <a href="<?php echo htmlspecialchars($paquete['url']); ?>">
                     <img src="<?php echo $paquete['imagen']; ?>" alt="<?php echo htmlspecialchars($paquete['Nombre']); ?>" class="paquete-imagen">
@@ -37,9 +43,20 @@
                     <p class="pequeno"><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></p>
                 </a>
             </td>
-        <?php endforeach; ?>
-        </tr>
-     </table></center>
+            <?php 
+            $counter++; 
+            if ($counter % 3 == 0) {
+                echo '</tr>'; // Cierra la fila después de 3 elementos
+            }
+        endforeach;
+        // Si el número de paquetes no es múltiplo de 3, cierra la última fila
+        if ($counter % 3 != 0) {
+            echo '</tr>';
+        }
+        ?>
+    </table>
+</center>
+
         
 
     <br>

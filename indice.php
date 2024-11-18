@@ -59,36 +59,71 @@
     <h1>Los mejores Tours por Chiapas</h1>
     <br>
 
-    <table width="100%" class="tabla_tours">
-        <tr width=100%> 
-            <td width=33.33%><a href="index.php?u=cascadas"><img src="view/img/p1.png" class="img-fluid"></a></td>
-            <td width=33.33%><a href="index.php?u=cañon"><img src="view/img/p2.png" class="img-fluid"></a></td>
-            <td width=33.33%><a href="index.php?u=simacotorras"><img src="view/img/p3.png" alt="" class="img-fluid"></a></td>
-        </tr>
-        <tr width=50%>
-            <td colspan="3" class="boton-container">
-                <a href="index.php?u=tours" class="boton"><b>VER TODOS LOS TOURS</b></a>
+    <center>
+    <table class="table paquetes">
+        <?php 
+        $counter = 0; // Contador para las filas
+        foreach ($paquetes as $paquete): 
+            if ($counter >= 3) { 
+                break; // Detiene el bucle después de 3 elementos
+            }
+        ?>
+            <td class="paquete-cell">
+                <a href="<?php echo htmlspecialchars($paquete['url']); ?>">
+                    <img src="<?php echo $paquete['imagen']; ?>" alt="<?php echo htmlspecialchars($paquete['Nombre']); ?>" class="paquete-imagen">
+                    <h3 class="paquete-nombre"><?php echo htmlspecialchars($paquete['Nombre']); ?></h3>
+                    <p class="descripcion"><?php echo htmlspecialchars($paquete['Descripcion']); ?></p>
+                    <br>
+                    <p class="pequeno"><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></p>
+                </a>
             </td>
-        </tr>
+            <?php 
+            $counter++; 
+            if ($counter % 3 == 0) {
+                echo '</tr>'; // Cierra la fila después de 3 elementos
+            }
+        endforeach;
+        ?>
     </table>
+</center>
+
+<a href="index.php?u=tours" class="boton"><b>VER TODOS LOS TOURS</b></a>
+
     <br>
     <br>
     <h1>Los mejores Paquetes por Chiapas</h1>
     <br>
     
 
-    <table width="100%" class="tabla_tours">
-        <tr width=100%> 
-            <td width=33.33%><a href="index.php?u=arqueologiaselva"><img src="view/img/20.png" class="img-fluid"></a></td>
-            <td width=33.33%><a href="index.php?u=paraisoselva"><img src="view/img/19.png" alt="" class="img-fluid"></a></td>
-            <td width=33.33%><a href="index.php?u=esenciachiapaneca"><img src="view/img/13.png" alt="" class="img-fluid"></a></td>
-        </tr>
-        <tr width=50%>
-            <td colspan="3" class="boton-container">
-                <a href="index.php?u=paquetes" class="boton"><b>VER TODOS LOS PAQUETES</b></a>
+    <center>
+    <table class="table paquetes">
+        <?php 
+        $counter = 0; // Contador para las filas
+        foreach ($tours as $paquete): 
+            if ($counter >= 3) { 
+                break; // Detiene el bucle después de 3 elementos
+            }
+        ?>
+            <td class="paquete-cell">
+                <a href="<?php echo htmlspecialchars($paquete['url']); ?>">
+                    <img src="<?php echo $paquete['imagen']; ?>" alt="<?php echo htmlspecialchars($paquete['Nombre']); ?>" class="paquete-imagen">
+                    <h3 class="paquete-nombre"><?php echo htmlspecialchars($paquete['Nombre']); ?></h3>
+                    <p class="descripcion"><?php echo htmlspecialchars($paquete['Descripcion']); ?></p>
+                    <br>
+                    <p class="pequeno"><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></p>
+                </a>
             </td>
-        </tr>
+            <?php 
+            $counter++; 
+            if ($counter % 3 == 0) {
+                echo '</tr>'; // Cierra la fila después de 3 elementos
+            }
+        endforeach;
+        ?>
     </table>
+</center>
+
+<a href="index.php?u=paquetes" class="boton"><b>VER TODOS LOS PAQUETES</b></a>
 
     <br><br><br><br><br>
 

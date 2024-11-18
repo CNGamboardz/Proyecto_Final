@@ -68,24 +68,38 @@
     </table>
     <br><br><br>
         
-        <div class="rectangle11">
-            <br>
-            <center>
-                <p class="normalp">NOMBRE<b class="obligado" style="color: red;">*</b></p>
-                <input type="text" class="textbox2" name ="nombre_contacto" placeholder="">
-                <p class="normalp">CORREO ELECTRONICO<b class="obligado" style="color: red;">*</b></p>
-                <input type="text" class="textbox2" name ="correo_contacto" placeholder="">
-                <p class="normalp">MENSAJE<b class="obligado" style="color: red;">*</b></p>
-                <textarea class="textbox3" name="mensaje" placeholder="Introduce tu mensaje..." id="mensaje"></textarea>
-                <p class="pequeno2" id="word-count">0/180 palabras</p>
-                
-            </center>
+    <div class="rectangle11">
+    <form action="index.php?u=guardarComentario" method="POST">
+        <h2 style="text-align: center;">Contáctanos</h2>
+        <center>
+            <p class="normalp">NOMBRE COMPLETO<b class="obligado" style="color: red;">*</b></p>
+            <input type="text" class="textbox2" name="nombre_contacto" 
+                   value="<?= isset($_SESSION['Nombre']) ? htmlspecialchars($_SESSION['Nombre']) : '' ?>" 
+                   placeholder="Tu nombre completo" required>
 
-                <center><button class="btn9">
-                <center><p style="color: white;">ENVIAR MENSAJE</p></center>
-                </button></center>
-                <p class="preferencia"><b>Gracias por su preferencia</b></p>
-         </div>
+            <p class="normalp">CORREO ELECTRÓNICO<b class="obligado" style="color: red;">*</b></p>
+            <input type="email" class="textbox2" name="correo_contacto" 
+                   value="<?= isset($_SESSION['Correo']) ? htmlspecialchars($_SESSION['Correo']) : '' ?>" 
+                   placeholder="Tu correo electrónico" required>
+
+            <p class="normalp">MENSAJE<b class="obligado" style="color: red;">*</b></p>
+            <textarea class="textbox3" name="mensaje" 
+                      placeholder="Introduce tu mensaje..." 
+                      id="mensaje" required></textarea>
+
+            <p class="pequeno2" id="word-count">0/180 palabras</p>
+        </center>
+
+        <center>
+            <button type="submit" class="btn9">
+                <p style="color: white;">ENVIAR MENSAJE</p>
+            </button>
+        </center>
+        <p class="preferencia"><b>Gracias por su preferencia</b></p>
+    </form>
+</div>
+
+
         
 
     <br><br><br><br>
@@ -130,7 +144,7 @@
 
 <script>
     const textarea = document.getElementById('mensaje');
-   const wordCountDisplay = document.getElementById('word-count');
+    const wordCountDisplay = document.getElementById('word-count');
  
     textarea.addEventListener('input', () => {
         const words = textarea.value.split(/\s+/).filter(word => word.length > 0); // Divide en palabras y elimina vacíos
@@ -141,7 +155,17 @@
         }
 
         wordCountDisplay.textContent = `${words.length}/180 palabras`;
+
+        // Desactiva el campo de texto si se alcanza el límite
+        if (wordCount >= 180) {
+            wordCountDisplay.textContent = `¡Límite alcanzado!`;
+            textarea.addEventListener('keydown', preventTyping);
+            textarea.disabled = true;
+        } else {
+            textarea.disabled = false;
+        }
     });
 </script>
+
 
 </html>

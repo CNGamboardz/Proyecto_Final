@@ -69,8 +69,10 @@
                     <div class="recuadro">
                         <div style="margin-left: 40px;">
                             <h6>Inicio/Tour por Chiapas</h6>
-                            <h2>Arqueologia y Selvas</h2>
-                            <h5>$14,000.00</h5>
+                            <?php foreach ($paquetes as $paquete): ?>
+                            <h2><?php echo htmlspecialchars($paquete['Nombre']); ?></h2>
+                            <h5><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></h5>
+                            <?php endforeach; ?>
                             <h5>Por persona <br> Min. 2 personas 
                             <h5>Numero de Días: 8 dia / 7 noches</h5>
                             <br>

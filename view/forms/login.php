@@ -22,7 +22,6 @@
     </div>
 
     <br><br>
-
     <center>
         <h2 class="patrona">INICIAR SESIÓN</h2>
     </center>

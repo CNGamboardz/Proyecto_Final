@@ -31,13 +31,28 @@
                 <!-- Sección a la derecha -->
                 <ul class="navbar-nav align-items-end">
                     <?php if (isset($_SESSION['usuario_nombre'], $_SESSION['usuario_apellido'])): ?>
+
                         <li class="nav-item text-start" style="white-space: normal; text-align: center;">
-                            <span class="nav-link">
-                                <strong>BIENVENIDO:</strong><br>
-                                <?php echo htmlspecialchars($_SESSION['usuario_nombre'] . ' ' . $_SESSION['usuario_apellido']); ?>
-                                <br>
-                                <a class="nav-link21" href="index.php?u=logout">CERRAR SESIÓN</a>
-                            </span>
+                            
+                        <span class="nav-link">
+                        <?php
+                            // Verificar el rol basado en id_rango
+                            if ($_SESSION['id_rango'] == 1) {
+                                echo "<strong>BIENVENIDO ADMINISTRADOR:</strong><br>";
+                            } elseif ($_SESSION['id_rango'] == 2) {
+                                echo "<strong>BIENVENIDO CLIENTE:</strong><br>";
+                            }
+                        ?>
+                        <?php echo htmlspecialchars($_SESSION['usuario_nombre'] . ' ' . $_SESSION['usuario_apellido']); ?>
+                        <br>
+                        <a class="nav-link21" href="index.php?u=logout">CERRAR SESIÓN</a>
+                        <?php if ($_SESSION['id_rango'] == 1): ?>
+                            <!-- Mostrar solo si es Administrador -->
+                        <a class="nav-link21" href="index.php?u=register">REGISTRAR ADMINISTRADORES</a>
+                        <?php endif; ?>
+                    </span>
+
+
                         </li>
                     <?php else: ?>
                         <li class="nav-item">

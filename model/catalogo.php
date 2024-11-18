@@ -11,5 +11,18 @@
             $catalogo = $resultado->fetchAll(PDO::FETCH_ASSOC);
             return $catalogo;
     }
+
+    public function MostrarDatos2($id_catalogo){
+        include_once('database_connection.php');
+        $cnn = new Conexion();
+        $consulta = "SELECT * FROM catalogos WHERE id_catalogo = :id_catalogo";
+        $resultado = $cnn->prepare($consulta);
+        $resultado->bindParam(':id_catalogo', $id_catalogo, PDO::PARAM_STR);
+        $resultado->execute();
+
+        $catalogo = $resultado->fetchAll(PDO::FETCH_ASSOC);
+        return $catalogo;
 }
+
+    }
 ?>

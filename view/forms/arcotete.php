@@ -46,9 +46,10 @@
                 <td>
                     <div class="recuadro">
                         <div style="margin-left: 40px;">
-                            <h6>Inicio/Tour por Chiapas</h6>
-                            <h2>El Arcotete</h2>
-                            <h5>$600.00</h5>
+                        <?php foreach ($paquetes as $paquete): ?>
+                            <h2><?php echo htmlspecialchars($paquete['Nombre']); ?></h2>
+                            <h5><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></h5>
+                            <?php endforeach; ?>
                             <h5>Por persona <br> Min. 2 personas <br> Max. 10 personas</h5>
                             <h5>Duracion: 1 dia</h5>
                             <br>
