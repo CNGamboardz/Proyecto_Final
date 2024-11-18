@@ -265,7 +265,7 @@ class FormsController {
             $exito = $formsmodel->GuardarComentario($nombre, $correo, $mensaje, $usuario);
                 
             if ($exito) {
-                header("Location: index.php?u=login"); // Redirigir tras éxito
+                header("Location: index.php"); // Redirigir tras éxito
                 exit();
             } else {
                 echo "Error al guardar el comentario.";

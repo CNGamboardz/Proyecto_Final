@@ -83,7 +83,7 @@
                         <a href="editar_paquete.php?id=<?php echo $paquete['id_catalogo']; ?>" class="btn btn-warning"><b>EDITAR</b></a>
                         <br>
                         <a href="index.php?u=eliminardato&id=<?php echo $paquete['id_catalogo']; ?>" class="btn btn-danger" 
-                         onclick="return confirm('¿Estás seguro de que deseas eliminar este paquete?');"><b>ELIMINAR</b></a>
+                         onclick="return confirm('¿Estás seguro de que deseas eliminar este tour?');"><b>ELIMINAR</b></a>
                         </div>
                 <?php endif; ?>
             </td>
