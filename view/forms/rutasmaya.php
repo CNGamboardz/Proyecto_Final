@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,13 +44,13 @@
                     <div id="carouselExampleFade" class="carousel slide carousel-fade">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                            <img src="view/img/Bonampak.jpg" class="d-block w-100" alt="...">
+                                <img src="view/img/Bonampak.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                            <img src="view/img/Tonina.jpg" class="d-block w-100" alt="...">
+                                <img src="view/img/Tonina.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                            <img src="view/img/Palenque.jpg" class="d-block w-100" alt="...">
+                                <img src="view/img/Palenque.jpg" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -62,19 +63,19 @@
                         </button>
                     </div>
                 </td>
-    
+
                 <td>
                     <div class="recuadro">
                         <div style="margin-left: 40px;">
                             <h6>Inicio/Tour por Chiapas</h6>
                             <?php foreach ($paquetes as $paquete): ?>
-                            <h2><?php echo htmlspecialchars($paquete['Nombre']); ?></h2>
-                            <h5><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></h5>
+                                <h2><?php echo htmlspecialchars($paquete['Nombre']); ?></h2>
+                                <h5><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></h5>
                             <?php endforeach; ?>
-                            <h5>Por persona <br> Min. 2 personas 
-                            <h5>Numero de Días: 5 dia / 4 noches</h5>
-                            <br>
-                            <h5>Fecha a reservar</h5>
+                            <h5>Por persona <br> Min. 2 personas
+                                <h5>Numero de Días: 5 dia / 4 noches</h5>
+                                <br>
+                                <h5>Fecha a reservar</h5>
                         </div>
                         <div class="counter-container">
                             <button class="counter-button" onclick="decrease()">−</button>
@@ -103,10 +104,113 @@
             <tr>
                 <td>
                     <p class="letras">Descipción</p>
+                    <div class="textos">
+                        <img src="view/img/icono-mapa.png" width="70px"> Ubicación de salida: Tuxtla Gutiérrez Chiapas
+                        <br>
+                        <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 7:30 am
+                    </div>
+                    <div class="itinerario">
+                        <p class="letras">Itinerario</p>
+
+                        <h4 style="color: #336ca5;">Día 1</h4>
                         <p>
-                            <b>07:30 AM</b> - Recepción en el hotel de Tuxtla Gutiérrez
-                            El conductor experimentado te recogerá en tu hotel. Asegúrate de estar listo para salir a tiempo.
+                            <b>07:30 AM</b> - Recepción en el aeropuerto o tu hotel en Tuxtla Gutiérrez
+                            El conductor te dará la bienvenida y te explicará el itinerario del viaje.
                         </p>
+                        <p>
+                            <b>08:00 AM</b> - Salida hacia Palenque
+                            Durante el recorrido, disfruta de los paisajes de la selva chiapaneca.
+                        </p>
+                        <p>
+                            <b>01:00 PM</b> - Almuerzo (no incluido)
+                            Haz una parada para disfrutar de la comida local en ruta.
+                        </p>
+                        <p>
+                            <b>03:00 PM</b> - Registro en el hotel en Palenque
+                            Tiempo libre para descansar o explorar los alrededores del hotel.
+                        </p>
+                        <p>
+                            <b>07:00 PM</b> - Cena (por cuenta propia)
+                            Se recomienda probar especialidades locales como los tacos de cochito.
+                        </p>
+
+                        <h4 style="color: #336ca5;">Día 2</h4>
+                        <p>
+                            <b>07:00 AM</b> - Desayuno tradicional en el hotel
+                        </p>
+                        <p>
+                            <b>08:00 AM</b> - Visita guiada a la zona arqueológica de Palenque
+                            Explora las imponentes ruinas mayas con un guía especializado.
+                        </p>
+                        <p>
+                            <b>12:30 PM</b> - Almuerzo (no incluido)
+                        </p>
+                        <p>
+                            <b>02:00 PM</b> - Visita a las Cascadas de Misol-Ha
+                            Disfruta de la vista y refresca tus sentidos en este increíble lugar.
+                        </p>
+                        <p>
+                            <b>04:30 PM</b> - Regreso al hotel en Palenque
+                            Descanso y tiempo libre para disfrutar de las instalaciones del hotel.
+                        </p>
+
+                        <h4 style="color: #336ca5;">Día 3</h4>
+                        <p>
+                            <b>07:00 AM</b> - Desayuno tradicional en el hotel
+                        </p>
+                        <p>
+                            <b>08:00 AM</b> - Salida hacia Bonampak
+                            Viaja al corazón de la Selva Lacandona y aprende sobre esta zona arqueológica.
+                        </p>
+                        <p>
+                            <b>11:00 AM</b> - Llegada a Bonampak
+                            Recorre los murales y descubre el arte maya con un guía experto.
+                        </p>
+                        <p>
+                            <b>01:30 PM</b> - Almuerzo (no incluido)
+                            Prueba los platillos típicos en un restaurante local.
+                        </p>
+                        <p>
+                            <b>03:00 PM</b> - Regreso al hotel en Palenque
+                        </p>
+                        <p>
+                            <b>06:00 PM</b> - Llegada al hotel
+                            Tiempo libre para descansar.
+                        </p>
+
+                        <h4 style="color: #336ca5;">Día 4</h4>
+                        <p>
+                            <b>07:00 AM</b> - Desayuno tradicional en el hotel
+                        </p>
+                        <p>
+                            <b>08:00 AM</b> - Salida hacia Ocosingo
+                            Durante el trayecto, el conductor compartirá información sobre la región.
+                        </p>
+                        <p>
+                            <b>10:30 AM</b> - Llegada a la zona arqueológica de Toniná
+                            Explora esta impresionante estructura maya y sus impactantes vistas.
+                        </p>
+                        <p>
+                            <b>01:30 PM</b> - Almuerzo (no incluido)
+                        </p>
+                        <p>
+                            <b>03:00 PM</b> - Registro en el hotel en Ocosingo
+                            Tiempo libre para relajarte o recorrer los alrededores.
+                        </p>
+
+                        <h4 style="color: #336ca5;">Día 5</h4>
+                        <p>
+                            <b>07:00 AM</b> - Desayuno tradicional en el hotel
+                        </p>
+                        <p>
+                            <b>08:00 AM</b> - Regreso hacia Tuxtla Gutiérrez
+                            Disfruta del trayecto final por los paisajes chiapanecos.
+                        </p>
+                        <p>
+                            <b>01:00 PM</b> - Llegada al aeropuerto o punto de origen
+                            Fin del recorrido.
+                        </p>
+                    </div>
 
                 </td>
                 <td>
@@ -145,45 +249,92 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width="100%">
-            <tr>
-                <td width="15%">
-                    <br><br><br>
-                    <img src="./view/img/logo_chiapasoculto.png" class="img-fluid" alt="Logo Chiapas Oculto">
-                    <br><br>
-                </td>
-                <td width="22%">
-                    <center><h5>Servicio al Cliente</h5></center>
-                    <a href="index.php?u=contacto"><ul class="custom-bullets"><li>Contacto</li></ul></a>
-                    <a href="index.php?u=login"><ul class="custom-bullets"><li>Mi Cuenta</li></ul></a>
-                </td>
-                <td width="22%">
-                    <center><h5>Tours Destacados</h5></center>
-                    <a href="index.php?u=arcotete"><ul class="custom-bullets2"><li>El Arcote</li></ul></a>
-                    <a href="index.php?u=lagunasmontebello"><ul class="custom-bullets2"><li>Lagunas de Montebello</li></ul></a>
-                    <a href="index.php?u=palenque"><ul class="custom-bullets2"><li>Zona Arqueológica De Palenque</li></ul></a>
-                    <a href="index.php?u=zonarqueologica"><ul class="custom-bullets2"><li>Zona Arqueológica De Tonina</li></ul></a>
-                </td>
-                <td width="22%">
-                    <center><h5>Paquetes Destacados</h5></center>
-                    <a href="index.php?u=arqueologiaselva"><ul class="custom-bullets2"><li>Arqueología y Selva</li></ul></a>
-                    <a href="index.php?u=paraisoselva"><ul class="custom-bullets2"><li>Paraíso en la Selva</li></ul></a>
-                    <a href="index.php?u=expedicionchiapaneca"><ul class="custom-bullets2"><li>Expedición Chiapaneca</li></ul></a>
-                    <a href="index.php?u=rutasmchiapas"><ul class="custom-bullets2"><li>Rutas Mágicas de Chiapas</li></ul></a>
-                </td>
-                <td width="22%">
-                    <br><br><br>
-                    <a class="normal" href="https://www.google.com/maps/place/Salon+Gema/@16.7725603,-93.0872266,463m/data=!3m1!1e3!4m6!3m5!1s0x85ed275d3b624c83:0x4d25f42cb24d00ed!8m2!3d16.77325!4d-93.0885407!16s%2Fg%2F11gh0511bn?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D">
-                        <img src="./view/img/geolocalizacion.png" width="20%" alt="Icono de geolocalización">
-                        Ver Ubicación
-                    </a>
-                </td>
-            </tr>
-        </table>
+        <tr>
+            <td width="15%">
+                <br><br><br>
+                <img src="./view/img/logo_chiapasoculto.png" class="img-fluid" alt="Logo Chiapas Oculto">
+                <br><br>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Servicio al Cliente</h5>
+                </center>
+                <a href="index.php?u=contacto">
+                    <ul class="custom-bullets">
+                        <li>Contacto</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=login">
+                    <ul class="custom-bullets">
+                        <li>Mi Cuenta</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Tours Destacados</h5>
+                </center>
+                <a href="index.php?u=arcotete">
+                    <ul class="custom-bullets2">
+                        <li>El Arcote</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=lagunasmontebello">
+                    <ul class="custom-bullets2">
+                        <li>Lagunas de Montebello</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=palenque">
+                    <ul class="custom-bullets2">
+                        <li>Zona Arqueológica De Palenque</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=zonarqueologica">
+                    <ul class="custom-bullets2">
+                        <li>Zona Arqueológica De Tonina</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Paquetes Destacados</h5>
+                </center>
+                <a href="index.php?u=arqueologiaselva">
+                    <ul class="custom-bullets2">
+                        <li>Arqueología y Selva</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=paraisoselva">
+                    <ul class="custom-bullets2">
+                        <li>Paraíso en la Selva</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=expedicionchiapaneca">
+                    <ul class="custom-bullets2">
+                        <li>Expedición Chiapaneca</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=rutasmchiapas">
+                    <ul class="custom-bullets2">
+                        <li>Rutas Mágicas de Chiapas</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <br><br><br>
+                <a class="normal" href="https://www.google.com/maps/place/Salon+Gema/@16.7725603,-93.0872266,463m/data=!3m1!1e3!4m6!3m5!1s0x85ed275d3b624c83:0x4d25f42cb24d00ed!8m2!3d16.77325!4d-93.0885407!16s%2Fg%2F11gh0511bn?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D">
+                    <img src="./view/img/geolocalizacion.png" width="20%" alt="Icono de geolocalización">
+                    Ver Ubicación
+                </a>
+            </td>
+        </tr>
+    </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>
