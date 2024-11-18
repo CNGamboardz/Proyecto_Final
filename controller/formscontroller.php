@@ -156,6 +156,10 @@ class FormsController {
         require_once('view/forms/pago.php');
     }
 
+    public static function editar(){
+        require_once('view/forms/editar.php');
+    }
+
 
     public static function registrar() {
         session_start(); // Inicia la sesión si no se ha iniciado previamente
