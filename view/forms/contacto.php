@@ -91,9 +91,10 @@
         </center>
 
         <center>
-            <button type="submit" class="btn9">
-                <p style="color: white;">ENVIAR MENSAJE</p>
-            </button>
+        <button type="submit" class="btn9" onclick="return confirm('¿Estás seguro de enviar el mensaje?');" style="color: white;">
+        ENVIAR MENSAJE
+        </button>
+
         </center>
         <p class="preferencia"><b>Gracias por su preferencia</b></p>
     </form>
