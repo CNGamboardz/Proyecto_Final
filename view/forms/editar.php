@@ -25,22 +25,22 @@
         <center>
             <!-- ID_CATALOGO (deshabilitado) -->
             <p class="normalp">ID_CATALOGO<b class="obligado" style="color: red;">*</b></p>
-            <input type="text" class="textbox2" name="id" value="<?php echo htmlspecialchars($catalogo['id_catalogo']); ?>" readonly>
+            <input type="text" class="textbox2" name="id" value="<?php echo htmlspecialchars($paquete['id_catalogo']); ?>" readonly>
             <br>
             
             <!-- NOMBRE -->
             <p class="normalp">NOMBRE<b class="obligado" style="color: red;">*</b></p>
-            <input type="text" class="textbox2" name="nombre" value="<?php echo htmlspecialchars($catalogo['Nombre']); ?>" required>
+            <input type="text" class="textbox2" name="nombre" value="<?php echo htmlspecialchars($paquete['Nombre']); ?>" required>
             <br>
             
             <!-- DESCRIPCIÓN -->
             <p class="normalp">DESCRIPCIÓN<b class="obligado" style="color: red;">*</b></p>
-            <textarea class="textbox3" name="descripcion" required><?php echo htmlspecialchars($catalogo['Descripcion']); ?></textarea>
+            <textarea class="textbox3" name="descripcion" required><?php echo htmlspecialchars($paquete['Descripcion']); ?></textarea>
             <br>
             
             <!-- PRECIO -->
             <p class="normalp">PRECIO<b class="obligado" style="color: red;">*</b></p>
-            <input type="text" class="textbox2" name="precio" value="<?php echo htmlspecialchars($catalogo['Precio']); ?>" required>
+            <input type="text" class="textbox2" name="precio" value="<?php echo htmlspecialchars($paquete['Precio']); ?>" required>
         </center>
         <br>
         <center>
