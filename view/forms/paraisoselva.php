@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,13 +41,13 @@
         <table width="100%" class="tabla_tours">
             <tr>
                 <td>
-                <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                            <img src="view/img/Cascadaschiflon.jpg" class="d-block w-100" alt="...">
+                                <img src="view/img/Cascadaschiflon.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
-                            <img src="view/img/Lagunasmontebello.jpg" class="d-block w-100" alt="...">
+                                <img src="view/img/Lagunasmontebello.jpg" class="d-block w-100" alt="...">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -64,13 +65,13 @@
                         <div style="margin-left: 40px;">
                             <h6>Inicio/Tour por Chiapas</h6>
                             <?php foreach ($paquetes as $paquete): ?>
-                            <h2><?php echo htmlspecialchars($paquete['Nombre']); ?></h2>
-                            <h5><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></h5>
+                                <h2><?php echo htmlspecialchars($paquete['Nombre']); ?></h2>
+                                <h5><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></h5>
                             <?php endforeach; ?>
-                            <h5>Por persona <br> Min. 2 personas 
-                            <h5>Numero de Días: 4 dia / 3 noches</h5>
-                            <br>
-                            <h5>Fecha a reservar</h5>
+                            <h5>Por persona <br> Min. 2 personas
+                                <h5>Numero de Días: 4 dia / 3 noches</h5>
+                                <br>
+                                <h5>Fecha a reservar</h5>
                         </div>
                         <div class="counter-container">
                             <button class="counter-button" onclick="decrease()">−</button>
@@ -99,10 +100,101 @@
             <tr>
                 <td>
                     <p class="letras">Descipción</p>
+                    <div class="textos">
+                        <img src="view/img/icono-mapa.png" width="70px"> Ubicación de salida: Tuxtla Gutiérrez Chiapas
+                        <br>
+                        <img src="view/img/icono-reloj.png" width="70px"> Hora de salida: 7:30 am
+                    </div>
+                    <div class="itinerario">
+                        <p class="letras">Itinerario</p>
+
+                        <h4 style="color: #336ca5;">Día 1</h4>
                         <p>
-                            <b>07:30 AM</b> - Recepción en el hotel de Tuxtla Gutiérrez
-                            El conductor experimentado te recogerá en tu hotel. Asegúrate de estar listo para salir a tiempo.
+                            <b>07:30 AM</b> - Recepción en el aeropuerto o tu hotel en Tuxtla Gutiérrez
+                            El conductor te dará la bienvenida y confirmará los detalles del itinerario.
                         </p>
+                        <p>
+                            <b>08:00 AM</b> - Traslado a San Cristóbal de las Casas
+                            Disfruta del recorrido por los Altos de Chiapas con vistas panorámicas.
+                        </p>
+                        <p>
+                            <b>10:30 AM</b> - Registro en el hotel en San Cristóbal de las Casas
+                            Tiempo libre para descansar o explorar el centro histórico.
+                        </p>
+                        <p>
+                            <b>03:00 PM</b> - Tour por el centro histórico de San Cristóbal (opcional)
+                            Descubre el ambiente colonial y visita mercados y museos.
+                        </p>
+                        <p>
+                            <b>07:00 PM</b> - Cena (por cuenta propia)
+                            Recomendación: prueba el café chiapaneco y los tamales locales.
+                        </p>
+
+                        <h4 style="color: #336ca5;">Día 2</h4>
+                        <p>
+                            <b>07:00 AM</b> - Desayuno tradicional en el hotel
+                        </p>
+                        <p>
+                            <b>08:00 AM</b> - Salida hacia las Cascadas El Chiflón
+                            Durante el trayecto, el conductor compartirá información sobre los sitios visitados.
+                        </p>
+                        <p>
+                            <b>10:00 AM</b> - Llegada a las Cascadas El Chiflón
+                            Camina por los senderos naturales y admira la imponente "Velo de Novia".
+                        </p>
+                        <p>
+                            <b>01:00 PM</b> - Almuerzo (no incluido)
+                            Disfruta de la comida local en las áreas de descanso.
+                        </p>
+                        <p>
+                            <b>03:00 PM</b> - Regreso a San Cristóbal de las Casas
+                            Relájate durante el viaje de regreso.
+                        </p>
+                        <p>
+                            <b>06:00 PM</b> - Tiempo libre para pasear o descansar en el hotel
+                        </p>
+
+                        <h4 style="color: #336ca5;">Día 3</h4>
+                        <p>
+                            <b>07:00 AM</b> - Desayuno tradicional en el hotel
+                        </p>
+                        <p>
+                            <b>08:00 AM</b> - Salida hacia las Lagunas de Montebello
+                            Recorre un paisaje espectacular lleno de vegetación y lagos cristalinos.
+                        </p>
+                        <p>
+                            <b>10:30 AM</b> - Llegada a las Lagunas de Montebello
+                            Visita las lagunas más representativas, donde podrás tomar fotos y disfrutar del paisaje.
+                        </p>
+                        <p>
+                            <b>12:30 PM</b> - Almuerzo (no incluido)
+                            Prueba platillos tradicionales en los alrededores de las lagunas.
+                        </p>
+                        <p>
+                            <b>02:00 PM</b> - Continuación del recorrido por las lagunas
+                            Explora más sitios y aprende sobre la biodiversidad del lugar.
+                        </p>
+                        <p>
+                            <b>05:00 PM</b> - Regreso a San Cristóbal de las Casas
+                            Disfruta de la vista del paisaje chiapaneco al atardecer.
+                        </p>
+                        <p>
+                            <b>08:00 PM</b> - Llegada al hotel y tiempo libre
+                        </p>
+
+                        <h4 style="color: #336ca5;">Día 4</h4>
+                        <p>
+                            <b>07:00 AM</b> - Desayuno tradicional en el hotel
+                        </p>
+                        <p>
+                            <b>08:30 AM</b> - Tiempo libre para compras o explorar el mercado de artesanías
+                        </p>
+                        <p>
+                            <b>11:00 AM</b> - Traslado al aeropuerto o punto de origen en Tuxtla Gutiérrez
+                            Fin del recorrido.
+                        </p>
+                    </div>
+
 
                 </td>
                 <td>
@@ -139,45 +231,92 @@
             </tr>
         </table>
     </div>
-    
+
     <br><br><br><br>
     <table class="piepagina" width="100%">
-            <tr>
-                <td width="15%">
-                    <br><br><br>
-                    <img src="./view/img/logo_chiapasoculto.png" class="img-fluid" alt="Logo Chiapas Oculto">
-                    <br><br>
-                </td>
-                <td width="22%">
-                    <center><h5>Servicio al Cliente</h5></center>
-                    <a href="index.php?u=contacto"><ul class="custom-bullets"><li>Contacto</li></ul></a>
-                    <a href="index.php?u=login"><ul class="custom-bullets"><li>Mi Cuenta</li></ul></a>
-                </td>
-                <td width="22%">
-                    <center><h5>Tours Destacados</h5></center>
-                    <a href="index.php?u=arcotete"><ul class="custom-bullets2"><li>El Arcote</li></ul></a>
-                    <a href="index.php?u=lagunasmontebello"><ul class="custom-bullets2"><li>Lagunas de Montebello</li></ul></a>
-                    <a href="index.php?u=palenque"><ul class="custom-bullets2"><li>Zona Arqueológica De Palenque</li></ul></a>
-                    <a href="index.php?u=zonarqueologica"><ul class="custom-bullets2"><li>Zona Arqueológica De Tonina</li></ul></a>
-                </td>
-                <td width="22%">
-                    <center><h5>Paquetes Destacados</h5></center>
-                    <a href="index.php?u=arqueologiaselva"><ul class="custom-bullets2"><li>Arqueología y Selva</li></ul></a>
-                    <a href="index.php?u=paraisoselva"><ul class="custom-bullets2"><li>Paraíso en la Selva</li></ul></a>
-                    <a href="index.php?u=expedicionchiapaneca"><ul class="custom-bullets2"><li>Expedición Chiapaneca</li></ul></a>
-                    <a href="index.php?u=rutasmchiapas"><ul class="custom-bullets2"><li>Rutas Mágicas de Chiapas</li></ul></a>
-                </td>
-                <td width="22%">
-                    <br><br><br>
-                    <a class="normal" href="https://www.google.com/maps/place/Salon+Gema/@16.7725603,-93.0872266,463m/data=!3m1!1e3!4m6!3m5!1s0x85ed275d3b624c83:0x4d25f42cb24d00ed!8m2!3d16.77325!4d-93.0885407!16s%2Fg%2F11gh0511bn?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D">
-                        <img src="./view/img/geolocalizacion.png" width="20%" alt="Icono de geolocalización">
-                        Ver Ubicación
-                    </a>
-                </td>
-            </tr>
-        </table>
+        <tr>
+            <td width="15%">
+                <br><br><br>
+                <img src="./view/img/logo_chiapasoculto.png" class="img-fluid" alt="Logo Chiapas Oculto">
+                <br><br>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Servicio al Cliente</h5>
+                </center>
+                <a href="index.php?u=contacto">
+                    <ul class="custom-bullets">
+                        <li>Contacto</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=login">
+                    <ul class="custom-bullets">
+                        <li>Mi Cuenta</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Tours Destacados</h5>
+                </center>
+                <a href="index.php?u=arcotete">
+                    <ul class="custom-bullets2">
+                        <li>El Arcote</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=lagunasmontebello">
+                    <ul class="custom-bullets2">
+                        <li>Lagunas de Montebello</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=palenque">
+                    <ul class="custom-bullets2">
+                        <li>Zona Arqueológica De Palenque</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=zonarqueologica">
+                    <ul class="custom-bullets2">
+                        <li>Zona Arqueológica De Tonina</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Paquetes Destacados</h5>
+                </center>
+                <a href="index.php?u=arqueologiaselva">
+                    <ul class="custom-bullets2">
+                        <li>Arqueología y Selva</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=paraisoselva">
+                    <ul class="custom-bullets2">
+                        <li>Paraíso en la Selva</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=expedicionchiapaneca">
+                    <ul class="custom-bullets2">
+                        <li>Expedición Chiapaneca</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=rutasmchiapas">
+                    <ul class="custom-bullets2">
+                        <li>Rutas Mágicas de Chiapas</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <br><br><br>
+                <a class="normal" href="https://www.google.com/maps/place/Salon+Gema/@16.7725603,-93.0872266,463m/data=!3m1!1e3!4m6!3m5!1s0x85ed275d3b624c83:0x4d25f42cb24d00ed!8m2!3d16.77325!4d-93.0885407!16s%2Fg%2F11gh0511bn?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D">
+                    <img src="./view/img/geolocalizacion.png" width="20%" alt="Icono de geolocalización">
+                    Ver Ubicación
+                </a>
+            </td>
+        </tr>
+    </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
-    
+
 </body>
+
 </html>
