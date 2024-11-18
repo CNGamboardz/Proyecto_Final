@@ -168,5 +168,33 @@ Class FormsModel{
             return false;
         }
     }
+
+    public function editarcatalogo($id, $nombre, $descripcion, $precio){
+        include_once('database_connection.php');
+        $cnn = new Conexion();
+        $consulta = "UPDATE catalogos SET Nombre = :nombre, Descripcion = :descripcion, Precio = :precio WHERE id_catalogo = :id";
+        $stmt = $cnn->prepare($consulta);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':nombre', $nombre, PDO::PARAM_STR);
+        $stmt->bindParam(':descripcion', $descripcion, PDO::PARAM_STR);
+        $stmt->bindParam(':precio', $precio, PDO::PARAM_STR); // Considera cambiar a PDO::PARAM_INT si es un número
+        return $stmt->execute();
+    }
+    
+
+    public function ObtenerCatalogoPorId($id){
+        include_once('database_connection.php');
+        $cnn = new Conexion();
+        $consulta = "SELECT * FROM catalogos WHERE id_catalogo = :id";
+        $stmt = $cnn->prepare($consulta);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    
+        if ($stmt->execute()) {
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } else {
+            return null;
+        }
+    }    
+    
 }
 ?>

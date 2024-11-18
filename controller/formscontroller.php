@@ -157,6 +157,10 @@ class FormsController {
     }
 
     public static function editar(){
+        $catalogo = new Catalogo();
+        $paquetes=$catalogo->MostrarDatos(1);
+        $catalogo = new Catalogo();
+        $tours=$catalogo->MostrarDatos(2);
         require_once('view/forms/editar.php');
     }
 
@@ -290,6 +294,42 @@ class FormsController {
             echo "No se encontró el ID del paquete.";
         }
     }
+
+    public static function EditarCatalogo(){
+        $id = $_REQUEST['id']; // Asegúrate de que el campo tenga el nombre correcto
+        $nombre = $_REQUEST['nombre'];
+        $descripcion = $_REQUEST['descripcion'];
+        $precio = $_REQUEST['precio'];
+        
+        $formsmodel = new FormsModel();
+        $resultado = $formsmodel->editarcatalogo($id, $nombre, $descripcion, $precio);
+    
+        if ($resultado) {
+            header("Location: " . urlsite . "index.php"); // Redirige después de editar
+        } else {
+            echo "Error al actualizar el catálogo.";
+        }
+    }
+    
+    public static function MostrarEditarFormulario(){
+        if (!isset($_GET['id'])) {
+            echo "No se proporcionó un ID válido.";
+            exit;
+        }
+    
+        $id = $_GET['id'];
+        $formsmodel = new FormsModel();
+        $paquete = $formsmodel->ObtenerCatalogoPorId($id);
+    
+        if ($paquete) {
+            include 'index.php?u=editar'; // Asegúrate de que la ruta sea correcta
+        } else {
+            echo "No se encontró el catálogo con el ID proporcionado.";
+            exit;
+        }
+    }
+    
+    
     
 }
 ?>

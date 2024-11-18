@@ -229,6 +229,15 @@
     margin: 0 auto; /* Centra horizontalmente */
 }
 
+.rectangle12 {
+    background-color: #b9eff743; /* Fondo translúcido */
+    padding: 0.625rem 1.25rem; /* Espaciado interno */
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    position: relative; /* Necesario para usar "left" */
+    left: 0; /* Reinicia cualquier desplazamiento */
+    margin: 0 auto; /* Centra horizontalmente */
+}
 
 
 
