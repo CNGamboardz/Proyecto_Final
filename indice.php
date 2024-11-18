@@ -76,6 +76,16 @@
                     <br>
                     <p class="pequeno"><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></p>
                 </a>
+                <?php 
+                // Verificar si el usuario está logueado y tiene id_rango == 1
+                if (isset($_SESSION['id_rango']) && $_SESSION['id_rango'] == 1): ?>
+                    <div class="acciones">
+                        <a href="editar_paquete.php?id=<?php echo $paquete['id_catalogo']; ?>" class="btn btn-warning"><b>EDITAR</b></a>
+                        <br>
+                        <a href="index.php?u=eliminardato&id=<?php echo $paquete['id_catalogo']; ?>" class="btn btn-danger" 
+                         onclick="return confirm('¿Estás seguro de que deseas eliminar este tour?');"><b>ELIMINAR</b></a>
+                        </div>
+                <?php endif; ?>
             </td>
             <?php 
             $counter++; 
@@ -112,6 +122,16 @@
                     <br>
                     <p class="pequeno"><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></p>
                 </a>
+                <?php 
+                // Verificar si el usuario está logueado y tiene id_rango == 1
+                if (isset($_SESSION['id_rango']) && $_SESSION['id_rango'] == 1): ?>
+                    <div class="acciones">
+                        <a href="editar_paquete.php?id=<?php echo $paquete['id_catalogo']; ?>" class="btn btn-warning"><b>EDITAR</b></a>
+                        <br>
+                        <a href="index.php?u=eliminardato&id=<?php echo $paquete['id_catalogo']; ?>" class="btn btn-danger" 
+                         onclick="return confirm('¿Estás seguro de que deseas eliminar este paquete?');"><b>ELIMINAR</b></a>
+                        </div>
+                <?php endif; ?>
             </td>
             <?php 
             $counter++; 

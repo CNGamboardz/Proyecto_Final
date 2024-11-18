@@ -269,7 +269,7 @@ class FormsController {
             $exito = $formsmodel->GuardarComentario($nombre, $correo, $mensaje, $usuario);
                 
             if ($exito) {
-                header("Location: index.php?u=login"); // Redirigir tras éxito
+                header("Location: index.php"); // Redirigir tras éxito
                 exit();
             } else {
                 echo "Error al guardar el comentario.";
@@ -278,5 +278,18 @@ class FormsController {
             echo "Todos los campos son obligatorios.";
         }
     }
+
+    public static function eliminardato(){
+        if (isset($_GET['id'])) {
+            $paquete = $_GET['id']; // Ahora estamos tomando 'id' de la URL
+            $formsmodel = new FormsModel();
+            $formsmodel->EliminarDato($paquete);
+            header("location:".urlsite."index.php"); // Redirigir después de la eliminación
+            exit();
+        } else {
+            echo "No se encontró el ID del paquete.";
+        }
+    }
+    
 }
 ?>

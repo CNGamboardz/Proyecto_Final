@@ -153,6 +153,20 @@ Class FormsModel{
             error_log("Error al guardar el comentario: " . $e->getMessage());
             return false;
         }
-    } 
+    }
+    
+    public function EliminarDato($paquete){
+        include_once('database_connection.php');
+        $cnn = new Conexion();
+        $consulta = "DELETE FROM catalogos WHERE id_catalogo = :id_catalogo"; // Usamos un marcador de posición
+        $resultado = $cnn->prepare($consulta);
+        $resultado->bindParam(':id_catalogo', $paquete, PDO::PARAM_INT); // Vinculamos el parámetro
+    
+        if ($resultado->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 ?>
