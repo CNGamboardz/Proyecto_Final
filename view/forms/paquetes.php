@@ -29,7 +29,7 @@
                 // Verificar si el usuario está logueado y tiene id_rango == 1
                 if (isset($_SESSION['id_rango']) && $_SESSION['id_rango'] == 1): ?>
                  <center> <button type="submit" class="btn9">
-                <p style="color: white;"><a href="index.php?u=agregarproducto"> AGREGAR PRODUCTO </a></p>
+                <p style="color: white;"><a href="index.php?u=btnagregarproducto"> AGREGAR PRODUCTO </a></p>
               </button></center>     
         <?php endif; ?>
 
@@ -43,7 +43,7 @@
             }
         ?>
             <td class="paquete-cell">
-                <a href="<?php echo htmlspecialchars($paquete['url']); ?>">
+                <a href="<?php echo htmlspecialchars($paquete['urls']); ?>">
                     <img src="<?php echo $paquete['imagen']; ?>" alt="<?php echo htmlspecialchars($paquete['Nombre']); ?>" class="paquete-imagen">
                     <h3 class="paquete-nombre"><?php echo htmlspecialchars($paquete['Nombre']); ?></h3>
                     <p class="descripcion"><?php echo htmlspecialchars($paquete['Descripcion']); ?></p>

@@ -20,57 +20,49 @@
     </div>
 
     <div class="rectangle12">
-    <form action="index.php?u=editarcatalogo" method="POST">
+    <form action="index.php?u=AgregarProducto" method="POST">
         <h2 style="text-align: center;">AGREGAR PRODUCTO <img src="view/img/editar_logo.png" width="4%"></h2>
         <center>
-            <!-- ID_CATALOGO (deshabilitado) -->
-            <p class="normalp">ID_CATALOGO<b class="obligado" style="color: red;">*</b></p>
-            <input type="text" class="textbox2" name="id_catalago" value="<?php echo htmlspecialchars($id); ?>" readonly>
-            <br>
-
             <!-- NOMBRE -->
             <p class="normalp">NOMBRE<b class="obligado" style="color: red;">*</b></p>
-            <input type="text" class="textbox2" name="nombre" value="<?php echo htmlspecialchars($paquete['Nombre']); ?>" required>
+            <input type="text" class="textbox2" name="Nombre" value="" required>
             <br>
 
             <!-- DESCRIPCIÓN -->
             <p class="normalp">DESCRIPCIÓN<b class="obligado" style="color: red;">*</b></p>
-            <textarea class="textbox3" name="descripcion" required><?php echo htmlspecialchars($paquete['Descripcion']); ?></textarea>
+            <textarea class="textbox3" name="Descripcion" required></textarea>
             <br>
 
             <!-- PRECIO -->
             <p class="normalp">PRECIO<b class="obligado" style="color: red;">*</b></p>
-            <input type="text" class="textbox2" name="precio" value="<?php echo htmlspecialchars($paquete['Precio']); ?>" required>
+            <input type="text" class="textbox2" name="Precio" value="" required>
             <br>
 
             <!-- IMAGEN -->
             <p class="normalp">IMAGEN<b class="obligado" style="color: red;">*</b></p>
-            <input type="text" class="textbox2" name="imagen" value="<?php echo htmlspecialchars($paquete['imagen']); ?>" required>
+            <input type="text" class="textbox2" name="imagen" value="" required>
             <br>
 
 
             <!-- URL -->
             <p class="normalp">URL<b class="obligado" style="color: red;">*</b></p>
-            <input type="text" class="textbox2" name="url" value="<?php echo htmlspecialchars($paquete['url']); ?>" required>
+            <input type="text" class="textbox2" name="urls" value="" required>
             <br>
 
             <!--BOTON DE SELECCION -->
             <p class="normalp">CATEGORÍA<b class="obligado" style="color: red;">*</b></p>
-            <select class="textbox2" name="categoria" required>
+            <select class="textbox2" name="id_categoria" required>
                 <option value="" disabled selected>SELECCIONA UN OPCIÓN</option>
-                <option value="1" <?php echo ($paquete['categoria'] == "1") ? "selected" : ""; ?>>TOURS</option>
-                <option value="2" <?php echo ($paquete['categoria'] == "2") ? "selected" : ""; ?>>PAQUETES</option>
+                <option value="1"  >1</option>
+                <option value="2" >2</option>
             </select>
             <br>
-
-
-
-
+            
         </center>
         <br>
         <center>
             <button type="submit" class="btn9">
-                <p style="color: white;">AGREGAR PRODUCRO</p>
+                <p style="color: white;">AGREGAR PRODUCTO</p>
             </button>
         </center>
     </form>

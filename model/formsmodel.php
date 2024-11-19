@@ -196,5 +196,29 @@ Class FormsModel{
         }
     }
     
+    public function AgregarProducto($Nombre, $Descripcion, $Precio, $imagen, $url, $id_categoria) {
+        include_once('database_connection.php');
+        $cnn = new Conexion();
+    
+        $Nombre = strtoupper($Nombre);
+        $urls = $url; // Asegúrate de asignar $url a $urls
+    
+        $consulta = "INSERT INTO catalogos (Nombre, Descripcion, Precio, imagen, urls, id_categoria)
+                     VALUES (:Nombre, :Descripcion, :Precio, :imagen, :urls, :id_categoria)";
+        $resultado = $cnn->prepare($consulta);
+        $resultado->bindParam(':Nombre', $Nombre, PDO::PARAM_STR);
+        $resultado->bindParam(':Descripcion', $Descripcion, PDO::PARAM_STR);
+        $resultado->bindParam(':Precio', $Precio, PDO::PARAM_STR);
+        $resultado->bindParam(':imagen', $imagen, PDO::PARAM_STR);
+        $resultado->bindParam(':urls', $urls, PDO::PARAM_STR);
+        $resultado->bindParam(':id_categoria', $id_categoria, PDO::PARAM_STR);
+    
+        if ($resultado->execute()) {
+            return true; // Registro exitoso
+        } else {
+            return false; // Error al registrar
+        }
+    }
+    
 }
 ?>
