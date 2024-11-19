@@ -53,7 +53,7 @@
         <br>
         <center>
             <button type="submit" class="btn9">
-                <p style="color: white;">EDITAR CAMBIOS</p>
+                <p style="color: white;">GUARDAR CAMBIOS</p>
             </button>
         </center>
 

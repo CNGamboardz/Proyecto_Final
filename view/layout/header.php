@@ -27,6 +27,8 @@
                             <img src="view/img/Carritocompras.png" width="24" height="24" alt="Carrito"> CARRITO
                         </a>
                     </li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?u=compras">MIS COMPRAS</a></li>
+
                 </ul>
                 <!-- Sección a la derecha -->
                 <ul class="navbar-nav align-items-end">
