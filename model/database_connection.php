@@ -3,7 +3,7 @@
         private $hostBD='localhost';
         private $nombreBD='chiapas_oculto';
         private $usuarioBD='root';
-        private $passwordBD='root';
+        private $passwordBD='';
 
         public function __construct(){
             try {

@@ -354,5 +354,8 @@ class FormsController {
         require_once('view/forms/agregarproducto.php');
     }
     
+    public static function carritocompras(){
+        
+    }
 }
 ?>
