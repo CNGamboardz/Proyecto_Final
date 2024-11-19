@@ -40,7 +40,7 @@
             <h3><b><span class="subrayado">CARRITO</span> &rarr;   PAGAR  &rarr;   PEDIDO REALIZADO</b></h3>
         </center><br>
     </div>
-
+            
     <br>
     <div class="table-responsive">
     <center><table width=95%>

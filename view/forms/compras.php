@@ -20,6 +20,11 @@
     <div class="separador">
     </div>
 
+    <div class="rectangle">
+        <center><br><br>
+            <h2><b>COMPRAS</b></h2>
+        </center>
+    </div>
 
     <?php require_once("./view/layout/footer.php"); ?>
 </body>

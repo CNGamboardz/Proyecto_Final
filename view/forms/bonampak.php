@@ -62,9 +62,11 @@
                             <button class="counter-button" onclick="decrease()">−</button>
                             <span class="counter-value" id="counter">2</span>
                             <button class="counter-button" onclick="increase()">+</button>
+                            <form action="index.php?u=agregarProductoAlCarrito">
                             <button class="btn1">
                                 <p style="color: white;">AÑADIR AL CARRITO</p>
                             </button>
+                            </form>
                         </div>
                         <br>
                         <center>

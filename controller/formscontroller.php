@@ -1,11 +1,13 @@
 <?php
-
+require_once("model/carritomodel.php");
 require_once("model/formsmodel.php");
 require_once("model/catalogo.php");
+require_once("model/database_connection.php");
 
 class FormsController {
     private $formsmodel;
     private $catalogo;
+    private $carrito;
     
     public function __construct() {
         $this->formsmodel = new formsmodel();
@@ -383,8 +385,5 @@ class FormsController {
         require_once('view/forms/agregarproducto.php');
     }
     
-    public static function carritocompras(){
-        
-    }
 }
 ?>

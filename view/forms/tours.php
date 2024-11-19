@@ -49,7 +49,7 @@
             }
         ?>
             <td class="paquete-cell">
-                <a href="<?php echo htmlspecialchars($paquete['urls']); ?>">
+                   <a href="<?php echo htmlspecialchars($paquete['urls']); ?>&id=<?php echo $paquete['id_catalogo'];?>">
                     <img src="<?php echo $paquete['imagen']; ?>" alt="<?php echo htmlspecialchars($paquete['Nombre']); ?>" class="paquete-imagen">
                     <h3 class="paquete-nombre"><?php echo htmlspecialchars($paquete['Nombre']); ?></h3>
                     <p class="descripcion"><?php echo htmlspecialchars($paquete['Descripcion']); ?></p>
