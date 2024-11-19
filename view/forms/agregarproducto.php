@@ -45,20 +45,25 @@
 
             <!-- IMAGEN -->
             <p class="normalp">IMAGEN<b class="obligado" style="color: red;">*</b></p>
-            <textarea class="textbox3" name="descripcion" required><?php echo htmlspecialchars($paquete['Descripcion']); ?></textarea>
+            <input type="text" class="textbox2" name="imagen" value="<?php echo htmlspecialchars($paquete['imagen']); ?>" required>
             <br>
+
 
             <!-- URL -->
             <p class="normalp">URL<b class="obligado" style="color: red;">*</b></p>
-            <textarea class="textbox3" name="descripcion" required><?php echo htmlspecialchars($paquete['Descripcion']); ?></textarea>
+            <input type="text" class="textbox2" name="url" value="<?php echo htmlspecialchars($paquete['url']); ?>" required>
             <br>
 
             <!--BOTON DE SELECCION -->
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">TOURS</option>
-                <option value="2">PAQUETES</option>
+            <p class="normalp">CATEGORÍA<b class="obligado" style="color: red;">*</b></p>
+            <select class="textbox2" name="categoria" required>
+                <option value="" disabled selected>SELECCIONA UN OPCIÓN</option>
+                <option value="1" <?php echo ($paquete['categoria'] == "1") ? "selected" : ""; ?>>TOURS</option>
+                <option value="2" <?php echo ($paquete['categoria'] == "2") ? "selected" : ""; ?>>PAQUETES</option>
             </select>
+            <br>
+
+
 
 
         </center>
