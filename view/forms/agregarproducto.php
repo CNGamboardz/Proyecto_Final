@@ -1,11 +1,3 @@
-<!-- <?php
-    foreach ($paquete as $key => $value) {
-        foreach ($value as $valor) {
-            $id=$valor['id_catalogo'];
-        }
-    }
-?> -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <title>Editar Chiapas Oculto</title>
+    <title>Agregar Productos</title>
     <link rel="icon" href="/view/img/Icon_logo.png" type="image/x-icon">
 </head>
 
@@ -28,8 +20,8 @@
     </div>
 
     <div class="rectangle12">
-    <form action="index.php?u=EditarCatalogo&id=<?php echo $paquete['id_catalogo'];?>" method="POST">
-        <h2 style="text-align: center;">EDITAR <img src="view/img/editar_logo.png" width="4%"></h2>
+    <form action="index.php?u=editarcatalogo" method="POST">
+        <h2 style="text-align: center;">AGREGAR PRODUCTO <img src="view/img/editar_logo.png" width="4%"></h2>
         <center>
             <!-- ID_CATALOGO (deshabilitado) -->
             <p class="normalp">ID_CATALOGO<b class="obligado" style="color: red;">*</b></p>
@@ -49,16 +41,33 @@
             <!-- PRECIO -->
             <p class="normalp">PRECIO<b class="obligado" style="color: red;">*</b></p>
             <input type="text" class="textbox2" name="precio" value="<?php echo htmlspecialchars($paquete['Precio']); ?>" required>
+            <br>
+
+            <!-- IMAGEN -->
+            <p class="normalp">IMAGEN<b class="obligado" style="color: red;">*</b></p>
+            <textarea class="textbox3" name="descripcion" required><?php echo htmlspecialchars($paquete['Descripcion']); ?></textarea>
+            <br>
+
+            <!-- URL -->
+            <p class="normalp">URL<b class="obligado" style="color: red;">*</b></p>
+            <textarea class="textbox3" name="descripcion" required><?php echo htmlspecialchars($paquete['Descripcion']); ?></textarea>
+            <br>
+
+            <!--BOTON DE SELECCION -->
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">TOURS</option>
+                <option value="2">PAQUETES</option>
+            </select>
+
+
         </center>
         <br>
         <center>
             <button type="submit" class="btn9">
-                <p style="color: white;">GUARDAR CAMBIOS</p>
+                <p style="color: white;">AGREGAR PRODUCRO</p>
             </button>
         </center>
-
-
-        
     </form>
 </div>
     <br><br><br><br><br><br>
