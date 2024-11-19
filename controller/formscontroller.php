@@ -345,6 +345,10 @@ class FormsController {
             exit;
         }
     }
+
+    public static function agregarproducto(){
+        require_once('view/forms/agregarproducto.php');
+    }
     
 }
 ?>
