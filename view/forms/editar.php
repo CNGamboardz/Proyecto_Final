@@ -28,7 +28,7 @@
     </div>
 
     <div class="rectangle12">
-    <form action="index.php?u=editarcatalogo" method="POST">
+    <form action="index.php?u=EditarCatalogo&id=<?php echo $paquete['id_catalogo'];?>" method="POST">
         <h2 style="text-align: center;">EDITAR <img src="view/img/editar_logo.png" width="4%"></h2>
         <center>
             <!-- ID_CATALOGO (deshabilitado) -->
