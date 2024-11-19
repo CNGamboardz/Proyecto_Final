@@ -182,19 +182,19 @@ Class FormsModel{
     }
     
 
-    public function ObtenerCatalogoPorId($id){
+    public function ObtenerCatalogoPorId($id) {
         include_once('database_connection.php');
         $cnn = new Conexion();
-        $consulta = "SELECT * FROM catalogos WHERE id_catalogo = :id";
+        $consulta = "SELECT * FROM catalogos WHERE id_catalogo = :id"; 
         $stmt = $cnn->prepare($consulta);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     
         if ($stmt->execute()) {
-            return $stmt->fetch(PDO::FETCH_ASSOC);
+            return $stmt->fetch(PDO::FETCH_ASSOC); // Devuelve un único registro
         } else {
             return null;
         }
-    }    
+    }
     
 }
 ?>

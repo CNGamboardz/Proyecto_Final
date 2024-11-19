@@ -24,5 +24,16 @@
         return $catalogo;
 }
 
+public function MostrarDatos3(){
+    include_once('database_connection.php');
+    $cnn = new Conexion();
+    $consulta = "SELECT * FROM catalogos";
+    $resultado = $cnn->prepare($consulta);
+    $resultado->execute();
+
+    $catalogo = $resultado->fetchAll(PDO::FETCH_ASSOC);
+    return $catalogo;
+}
+
     }
 ?>

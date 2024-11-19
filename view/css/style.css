@@ -1489,6 +1489,24 @@ button {
     font-size: 20px;
 }
 
+.btn21{
+    width: 40%;
+    height: 30%;
+    border-radius: 30px;
+    background-color: #dd2121;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+.btn22{
+    width: 40%;
+    height: 30%;
+    border-radius: 30px;
+    background-color: #f5fd17;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
 .btn2:hover {
     background-color: #1b5909;
 }

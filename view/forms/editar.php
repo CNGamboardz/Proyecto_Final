@@ -1,3 +1,11 @@
+<!-- <?php
+    foreach ($paquete as $key => $value) {
+        foreach ($value as $valor) {
+            $id=$valor['id_catalogo'];
+        }
+    }
+?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,24 +28,24 @@
     </div>
 
     <div class="rectangle12">
-    <form action="index.php?u=editar" method="POST">
+    <form action="index.php?u=editarcatalogo" method="POST">
         <h2 style="text-align: center;">EDITAR <img src="view/img/editar_logo.png" width="4%"></h2>
         <center>
             <!-- ID_CATALOGO (deshabilitado) -->
             <p class="normalp">ID_CATALOGO<b class="obligado" style="color: red;">*</b></p>
-            <input type="text" class="textbox2" name="id" value="<?php echo htmlspecialchars($paquete['id_catalogo']); ?>" readonly>
+            <input type="text" class="textbox2" name="id_catalago" value="<?php echo htmlspecialchars($id); ?>" readonly>
             <br>
-            
+
             <!-- NOMBRE -->
             <p class="normalp">NOMBRE<b class="obligado" style="color: red;">*</b></p>
             <input type="text" class="textbox2" name="nombre" value="<?php echo htmlspecialchars($paquete['Nombre']); ?>" required>
             <br>
-            
+
             <!-- DESCRIPCIÓN -->
             <p class="normalp">DESCRIPCIÓN<b class="obligado" style="color: red;">*</b></p>
             <textarea class="textbox3" name="descripcion" required><?php echo htmlspecialchars($paquete['Descripcion']); ?></textarea>
             <br>
-            
+
             <!-- PRECIO -->
             <p class="normalp">PRECIO<b class="obligado" style="color: red;">*</b></p>
             <input type="text" class="textbox2" name="precio" value="<?php echo htmlspecialchars($paquete['Precio']); ?>" required>
@@ -45,12 +53,12 @@
         <br>
         <center>
             <button type="submit" class="btn9">
-                <p style="color: white;">HACER CAMBIOS</p>
+                <p style="color: white;">EDITAR CAMBIOS</p>
             </button>
         </center>
     </form>
 </div>
-
     <br><br><br><br><br><br>
     <?php require_once("./view/layout/footer.php"); ?>
 </body>
+</html>

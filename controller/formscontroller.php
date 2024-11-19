@@ -157,11 +157,24 @@ class FormsController {
     }
 
     public static function editar(){
-        $catalogo = new Catalogo();
-        $paquetes=$catalogo->MostrarDatos(1);
-        $catalogo = new Catalogo();
-        $tours=$catalogo->MostrarDatos(2);
-        require_once('view/forms/editar.php');
+        // $catalogo = new Catalogo();
+        // $paquetes=$catalogo->MostrarDatos3();
+        // require_once('view/forms/editar.php');
+        if (!isset($_GET['id'])) {
+            echo "No se proporcionó un ID válido.";
+            exit;
+        }
+        
+        $id = $_GET['id'];        
+        $formsmodel = new FormsModel();
+        $paquete = $formsmodel->ObtenerCatalogoPorId($id); // Obtén el único registro        
+        if ($paquete) {
+            // Pasa el único paquete a la vista
+            require_once 'view/forms/editar.php';
+        } else {
+            echo "No se encontró el catálogo con el ID proporcionado.";
+            exit;
+        }
     }
 
 
@@ -311,25 +324,27 @@ class FormsController {
         }
     }
     
-    public static function MostrarEditarFormulario(){
+    public static function MostrarEditarFormulario() {
         if (!isset($_GET['id'])) {
             echo "No se proporcionó un ID válido.";
             exit;
         }
-    
+        
         $id = $_GET['id'];
+        echo $id; // Obtén el ID desde la URL
+
         $formsmodel = new FormsModel();
-        $paquete = $formsmodel->ObtenerCatalogoPorId($id);
-    
+        $paquete = $formsmodel->ObtenerCatalogoPorId($id); // Obtén el único registro
+        var_dump($paquete);
+        
         if ($paquete) {
-            include 'index.php?u=editar'; // Asegúrate de que la ruta sea correcta
+            // Pasa el único paquete a la vista
+            require_once 'view/forms/editar.php';
         } else {
             echo "No se encontró el catálogo con el ID proporcionado.";
             exit;
         }
     }
-    
-    
     
 }
 ?>
