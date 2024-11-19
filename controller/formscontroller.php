@@ -17,6 +17,10 @@ class FormsController {
         require_once('view/forms/paquetes.php');
     }
 
+    public static function compras() {
+        require_once('view/forms/compras.php');
+    }
+
     public static function tours() {
         $catalogo = new Catalogo();
         $paquetes=$catalogo->MostrarDatos(1);
