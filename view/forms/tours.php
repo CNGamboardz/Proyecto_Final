@@ -29,6 +29,15 @@
     </div>
 
     <br><br>
+    
+    <?php 
+                // Verificar si el usuario está logueado y tiene id_rango == 1
+                if (isset($_SESSION['id_rango']) && $_SESSION['id_rango'] == 1): ?>
+                 <center> <button type="submit" class="btn9">
+                 <p style="color: white;">AGREGAR PRODUCTO</p>
+                 </button></center>                
+                 
+    <?php endif; ?>
 
     <center>
     <table class="table paquetes">
