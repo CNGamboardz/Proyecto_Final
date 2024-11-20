@@ -17,7 +17,7 @@ function agregarAlCarrito(id, nombre, precio, cantidad) {
 }
 
 // Listar productos del carrito
-function listarCarrito() { 
+function listarCarrito() {
     const datos = new URLSearchParams();
     datos.append('accion', 'listar');
 
@@ -25,81 +25,114 @@ function listarCarrito() {
         method: 'POST',
         body: datos,
     })
-    .then(response => response.json())
-    .then(data => {
-        const carritoDiv = document.getElementById('carrito_productos');
-        carritoDiv.innerHTML = ''; // Limpiar el carrito antes de mostrar los nuevos datos.
+        .then(response => response.json())
+        .then(data => {
+            const carritoDiv = document.getElementById('carrito_productos');
+            carritoDiv.innerHTML = ''; // Limpiar el carrito antes de mostrar los nuevos datos.
 
-        if (data.length > 0) {
-            data.forEach(item => {
-                const div = document.createElement('div');
-                div.classList.add('producto'); // Clase para cada producto.
+            if (data.length > 0) {
+                data.forEach(item => {
+                    const div = document.createElement('div');
+                    div.classList.add('producto'); // Clase para cada producto.
 
-                // Crear contenido HTML con estilo en línea
-                div.innerHTML = `
+                    // Crear contenido HTML dinámico
+                    div.innerHTML = `
                     <div class="producto-nombre" style="font-size: 18px; font-weight: bold; color: #333; padding: 5px;">${item.nombre}</div>
                     <div class="producto-precio" style="font-size: 16px; color: #4caf50; text-align: justify; padding: 5px;">$${item.precio.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
-                    
-                    <div class="producto-cantidad" style="font-size: 16px; color: #2196f3; text-align: center; padding: 5px; display: flex; align-items: center; justify-content: center;">
-                        <button class="restar-btn" style="padding: 5px 10px; background-color: #f44336; color: white; border: none; border-radius: 4px; margin-right: 10px;">-</button>
-                        <span id="cantidad-${item.id}" style="margin: 0 10px; font-size: 18px; font-weight: bold;">${item.cantidad}</span>
-                        <button class="sumar-btn" style="padding: 5px 10px; background-color: #4caf50; color: white; border: none; border-radius: 4px; margin-left: 10px;">+</button>
-                    </div>
+                        <div class="producto-cantidad">
+                            <button class="restar-btn">-</button>
+                            <span class="cantidad">${item.cantidad}</span>
+                            <button class="sumar-btn">+</button>
+                        </div>
+                         <div id="subtotal-${item.id}" class="producto-subtotal" style="font-size: 16px; color: #ff5722; text-align: justify; padding: 5px;">$${item.subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
+                        <button class="eliminar-btn">Eliminar</button>
+                    `;
 
-                    <div id="subtotal-${item.id}" class="producto-subtotal" style="font-size: 16px; color: #ff5722; text-align: justify; padding: 5px;">$${item.subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
-                `;
-
-                // Agregar eventos a los botones
-                const restarBtn = div.querySelector('.restar-btn');
-                const sumarBtn = div.querySelector('.sumar-btn');
-                const cantidadElement = div.querySelector(`#cantidad-${item.id}`);
-
-                // Evento para restar cantidad
-                restarBtn.addEventListener('click', () => {
-                    if (item.cantidad > 1) {
-                        item.cantidad--; // Decrementar la cantidad
-                        cantidadElement.textContent = item.cantidad;
-                        actualizarTotal(data); // Actualizar subtotales y total
-                    }
-                });
-
-                // Evento para sumar cantidad
-                sumarBtn.addEventListener('click', () => {
-                    item.cantidad++; // Incrementar la cantidad
-                    cantidadElement.textContent = item.cantidad;
-                    actualizarTotal(data); // Actualizar subtotales y total
-                });
-
-                // Aplicar un estilo dinámico
-                div.style.display = 'grid';
-                div.style.gridTemplateColumns = '7fr 0fr 2fr 3.5fr';
-                div.style.gap = '80px';
-                div.style.padding = '15px';
-                div.style.backgroundColor = '#ffffff';
-                div.style.borderRadius = '8px';
-                div.style.marginBottom = '15px';
-                div.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
-
-                // Efecto hover para los productos
-                div.addEventListener('mouseover', () => {
-                    div.style.backgroundColor = '#f1f1f1';
-                });
-
-                div.addEventListener('mouseout', () => {
+                    // Agregar estilos dinámicos
+                    div.style.display = 'grid';
+                    div.style.gridTemplateColumns = '3fr 1fr 2fr 1fr 1fr';
+                    div.style.gap = '10px';
+                    div.style.alignItems = 'center';
+                    div.style.padding = '10px';
                     div.style.backgroundColor = '#ffffff';
+                    div.style.borderRadius = '8px';
+                    div.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+                    div.style.transition = 'background-color 0.3s ease';
+
+                    // Efectos hover
+                    div.addEventListener('mouseover', () => {
+                        div.style.backgroundColor = '#f1f1f1';
+                    });
+    
+                    div.addEventListener('mouseout', () => {
+                        div.style.backgroundColor = '#ffffff';
+                    });
+
+                    // Agregar eventos a los botones
+                    const restarBtn = div.querySelector('.restar-btn');
+                    const sumarBtn = div.querySelector('.sumar-btn');
+                    const eliminarBtn = div.querySelector('.eliminar-btn');
+                    const cantidadElement = div.querySelector('.cantidad');
+                    const subtotalElement = div.querySelector('.producto-subtotal');
+
+                    // Restar cantidad
+                    restarBtn.addEventListener('click', () => {
+                        if (item.cantidad > 2) {
+                            item.cantidad--;
+                            cantidadElement.textContent = item.cantidad;
+                            item.subtotal = item.cantidad * item.precio;
+                            subtotalElement.textContent = `$${item.subtotal.toFixed(2)}`;
+                            actualizarTotal(data);
+                        }
+                    });
+
+                    // Sumar cantidad
+                    sumarBtn.addEventListener('click', () => {
+                        item.cantidad++;
+                        cantidadElement.textContent = item.cantidad;
+                        item.subtotal = item.cantidad * item.precio;
+                        subtotalElement.textContent = `$${item.subtotal.toFixed(2)}`;
+                        actualizarTotal(data);
+                    });
+
+                    // Eliminar producto
+// Eliminar producto
+                eliminarBtn.addEventListener('click', () => {
+                    const eliminarDatos = new URLSearchParams();
+                    eliminarDatos.append('accion', 'eliminar');
+                    eliminarDatos.append('id', item.id); // Asegúrate de que item.id sea correcto.
+
+                    fetch('cart.php', {
+                        method: 'POST',
+                        body: eliminarDatos,
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Error al eliminar el producto del carrito');
+                        }
+                        return response.text();
+                    })
+                    .then(() => listarCarrito())
+                    .catch(error => {
+                        console.error('Error al eliminar el producto:', error);
+                        alert('Hubo un problema al eliminar el producto. Inténtalo de nuevo.');
+                    });
                 });
 
-                carritoDiv.appendChild(div);
-            });
 
-            actualizarTotal(data); // Actualizar totales al cargar el carrito
-        } else {
-            carritoDiv.textContent = 'El carrito está vacío.';
-        }
-    });
+                    carritoDiv.appendChild(div);
+                });
+            } else {
+                carritoDiv.textContent = 'El carrito está vacío.';
+            }
+
+            actualizarTotal(data); // Actualizar totales
+        });
 }
 
-// Función para actualizar el subtotal y el total
+// buscar input por name 
+const btn_add = document.querySelectorAll('.btn_carrito');
+
 function actualizarTotal(data) {
     let total = 0;
 
@@ -134,6 +167,18 @@ function actualizarTotal(data) {
         total_acumulado.innerHTML = `<strong>Total:</strong> $${totalConIva.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     }
 }
+
+btn_add.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-id');
+        const formulario = document.getElementById(id);
+        const elementos = formulario.querySelectorAll('[name]');
+        const cantidad = formulario.querySelector('#counter');
+        const nombres = Array.from(elementos).map(elemento => elemento.value);
+        const [ precio, nombre ] = nombres;
+        agregarAlCarrito('id-'+id, nombre, precio, Number( cantidad.textContent ) );
+    });
+});
 
 // Cargar el carrito al inicio
 document.addEventListener('DOMContentLoaded', listarCarrito);
