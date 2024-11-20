@@ -17,7 +17,7 @@ function agregarAlCarrito(id, nombre, precio, cantidad) {
 }
 
 // Listar productos del carrito
-function listarCarrito() {
+function listarCarrito() { 
     const datos = new URLSearchParams();
     datos.append('accion', 'listar');
 
@@ -28,12 +28,67 @@ function listarCarrito() {
     .then(response => response.json())
     .then(data => {
         const carritoDiv = document.getElementById('carrito_productos');
-        carritoDiv.innerHTML = '';
+        carritoDiv.innerHTML = ''; // Limpiar el carrito antes de mostrar los nuevos datos.
 
         if (data.length > 0) {
             data.forEach(item => {
                 const div = document.createElement('div');
-                div.textContent = ` ${item.nombre}----------$${item.precio}----------${item.cantidad}----------$${item.subtotal}`;
+                div.classList.add('producto'); // Clase para cada producto.
+
+                // Crear contenido HTML con estilo en línea
+                div.innerHTML = `
+                    <div class="producto-nombre" style="font-size: 18px; font-weight: bold; color: #333; padding: 5px;">${item.nombre}</div>
+                    <div class="producto-precio" style="font-size: 16px; color: #4caf50; text-align: justify; padding: 5px;">$${item.precio.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
+                    
+                    <div class="producto-cantidad" style="font-size: 16px; color: #2196f3; text-align: center; padding: 5px;">
+                        <button class="restar-btn" style="padding: 5px; background-color: #f44336; color: white; border: none; border-radius: 4px;">-</button>
+                        <span id="cantidad-${item.id}" style="margin: 0 10px;">${item.cantidad}</span>
+                        <button class="sumar-btn" style="padding: 5px; background-color: #4caf50; color: white; border: none; border-radius: 4px;">+</button>
+                    </div>
+
+                    <div class="producto-subtotal" style="font-size: 16px; color: #ff5722; text-align: justify; padding: 5px;">$${item.subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
+                `;
+
+                // Agregar eventos a los botones
+                const restarBtn = div.querySelector('.restar-btn');
+                const sumarBtn = div.querySelector('.sumar-btn');
+                const cantidadElement = div.querySelector(`#cantidad-${item.id}`);
+
+                // Evento para restar cantidad
+                restarBtn.addEventListener('click', () => {
+                    if (item.cantidad > 1) {
+                        item.cantidad--; // Decrementar la cantidad
+                        cantidadElement.textContent = item.cantidad;
+                        actualizarSubtotal(item);
+                    }
+                });
+
+                // Evento para sumar cantidad
+                sumarBtn.addEventListener('click', () => {
+                    item.cantidad++; // Incrementar la cantidad
+                    cantidadElement.textContent = item.cantidad;
+                    actualizarSubtotal(item);
+                });
+
+                // Aplicar un estilo dinámico
+                div.style.display = 'grid';
+                div.style.gridTemplateColumns = '5fr 1.5fr 1fr 3fr';
+                div.style.gap = '80px';
+                div.style.padding = '15px';
+                div.style.backgroundColor = '#ffffff';
+                div.style.borderRadius = '8px';
+                div.style.marginBottom = '15px';
+                div.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+
+                // Efecto hover para los productos
+                div.addEventListener('mouseover', () => {
+                    div.style.backgroundColor = '#f1f1f1';
+                });
+
+                div.addEventListener('mouseout', () => {
+                    div.style.backgroundColor = '#ffffff';
+                });
+
                 carritoDiv.appendChild(div);
             });
         } else {
@@ -43,6 +98,17 @@ function listarCarrito() {
 
     actualizarTotal();
 }
+
+// Función para actualizar el subtotal después de modificar la cantidad
+function actualizarSubtotal(item) {
+    item.subtotal = item.precio * item.cantidad;
+    const subtotalElement = document.querySelector(`#subtotal-${item.id}`);
+    if (subtotalElement) {
+        subtotalElement.textContent = `$${item.subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    }
+}
+
+
 // buscar input por name 
 const btn_add = document.querySelectorAll('.btn_carrito');
 
