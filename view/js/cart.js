@@ -46,8 +46,7 @@ function listarCarrito() {
                         <button class="sumar-btn" style="padding: 5px 10px; background-color: #4caf50; color: white; border: none; border-radius: 4px; margin-left: 10px;">+</button>
                     </div>
 
-
-                    <div class="producto-subtotal" style="font-size: 16px; color: #ff5722; text-align: justify; padding: 5px;">$${item.subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
+                    <div id="subtotal-${item.id}" class="producto-subtotal" style="font-size: 16px; color: #ff5722; text-align: justify; padding: 5px;">$${item.subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
                 `;
 
                 // Agregar eventos a los botones
@@ -60,7 +59,7 @@ function listarCarrito() {
                     if (item.cantidad > 1) {
                         item.cantidad--; // Decrementar la cantidad
                         cantidadElement.textContent = item.cantidad;
-                        actualizarSubtotal(item);
+                        actualizarTotal(data); // Actualizar subtotales y total
                     }
                 });
 
@@ -68,7 +67,7 @@ function listarCarrito() {
                 sumarBtn.addEventListener('click', () => {
                     item.cantidad++; // Incrementar la cantidad
                     cantidadElement.textContent = item.cantidad;
-                    actualizarSubtotal(item);
+                    actualizarTotal(data); // Actualizar subtotales y total
                 });
 
                 // Aplicar un estilo dinámico
@@ -92,72 +91,49 @@ function listarCarrito() {
 
                 carritoDiv.appendChild(div);
             });
+
+            actualizarTotal(data); // Actualizar totales al cargar el carrito
         } else {
             carritoDiv.textContent = 'El carrito está vacío.';
         }
     });
-
-    actualizarTotal();
 }
 
-// Función para actualizar el subtotal después de modificar la cantidad
-function actualizarSubtotal(item) {
-    item.subtotal = item.precio * item.cantidad;
-    const subtotalElement = document.querySelector(`#subtotal-${item.id}`);
-    if (subtotalElement) {
-        subtotalElement.textContent = `$${item.subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-    }
-}
+// Función para actualizar el subtotal y el total
+function actualizarTotal(data) {
+    let total = 0;
 
-// buscar input por name 
-const btn_add = document.querySelectorAll('.btn_carrito');
+    data.forEach(item => {
+        // Calcular el subtotal
+        const subtotal = item.precio * item.cantidad;
+        total += subtotal;
 
-function actualizarTotal() {
-    const datos = new URLSearchParams();
-    datos.append('accion', 'listar');
-
-    fetch('cart.php', {
-        method: 'POST',
-        body: datos,
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.length > 0) {
-            let subtotal = 0;
-            data.forEach(item => {
-                subtotal += item.subtotal;
-            });
-
-            const subtotal_acumulado = document.getElementById('subtotal_acumulado');
-            const iva = document.getElementById('iva');
-            const total_acumulado = document.getElementById('total_acumulado');
-            
-            // Formatear los valores con coma y 2 decimales
-            const subtotalFormateado = subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-            const ivaFormateado = (subtotal * 0.16).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-            const totalFormateado = (subtotal * 1.16).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-            
-
-
-            // Actualizar los valores con el formato adecuado
-            subtotal_acumulado.appendChild(document.createTextNode(`$${subtotalFormateado}`));
-            iva.appendChild(document.createTextNode(`$${ivaFormateado}`));
-            total_acumulado.appendChild(document.createTextNode(`$${totalFormateado}`));
+        // Actualizar el subtotal en el HTML
+        const subtotalElement = document.querySelector(`#subtotal-${item.id}`);
+        if (subtotalElement) {
+            subtotalElement.textContent = `$${subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
         }
     });
-}
 
-btn_add.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const id = btn.getAttribute('data-id');
-        const formulario = document.getElementById(id);
-        const elementos = formulario.querySelectorAll('[name]');
-        const cantidad = formulario.querySelector('#counter');
-        const nombres = Array.from(elementos).map(elemento => elemento.value);
-        const [ precio, nombre ] = nombres;
-        agregarAlCarrito('id-'+id, nombre, precio, Number( cantidad.textContent ) );
-    });
-});
+    // Calcular IVA y total
+    const iva = total * 0.16;
+    const totalConIva = total + iva;
+
+    // Actualizar los valores en la sección "total de carrito"
+    const subtotalAcumuladoElement = document.getElementById('subtotal_acumulado');
+    const ivaElement = document.getElementById('iva');
+    const totalAcumuladoElement = document.getElementById('total_acumulado');
+
+    if (subtotalAcumuladoElement) {
+        subtotalAcumuladoElement.textContent = `$${total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    }
+    if (ivaElement) {
+        ivaElement.textContent = `$${iva.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    }
+    if (totalAcumuladoElement) {
+        totalAcumuladoElement.textContent = `$${totalConIva.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    }
+}
 
 // Cargar el carrito al inicio
 document.addEventListener('DOMContentLoaded', listarCarrito);
