@@ -11,7 +11,7 @@
 
     <title>Cascadas de Agua Azul</title>
     <link rel="icon" href="/view/img/Icon_logo.png" type="image/x-icon">
-
+    </script>
 </head>
 
 <body>
@@ -30,25 +30,29 @@
                 <td>
                     <div class="recuadro">
                         <div style="margin-left: 40px;">
+                            <form id="cascada">
                             <h6>Inicio/Tour por Chiapas</h6>
                             <?php foreach ($paquetes as $paquete): ?>
-                            <h2><?php echo htmlspecialchars($paquete['Nombre']); ?></h2>
-                            <h5><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></h5>
-                            <input type="hidden" id="precio" value="<?php echo htmlspecialchars($paquete['Precio']); ?>">
-                            <?php endforeach; ?>
-                            <h5>Por persona <br> Min. 2 personas <br> Max. 10 personas</h5>
+                                <h2><?php echo htmlspecialchars($paquete['Nombre']); ?></h2>
+                                <h5><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></h5>
+                                <input type="hidden" id="precio" name="precio" value="<?php echo htmlspecialchars($paquete['Precio']); ?>">
+                                <input type="hidden" id="nombre" name="nombre" value="<?php echo htmlspecialchars($paquete['Nombre']); ?>">
+                                <?php endforeach; ?>
+                                <h5>Por persona <br> Min. 2 personas <br> Max. 10 personas</h5>
                             <h5>Duracion: 1 dia</h5>
                             <br>
                             <h5>Fecha a reservar</h5>
-                        </div>
-                        <div class="counter-container">
-                            <button class="counter-button" onclick="decrease()">−</button>
-                            <span class="counter-value" id="counter">2</span>
-                            <button class="counter-button" onclick="increase()">+</button>
-                            <form action="index.php?u=agregarProductoAlCarrito">
-                            <button class="btn1">
-                                <p style="color: white;">AÑADIR AL CARRITO</p>
-                            </button>
+
+                            <div class="counter-container">
+                                <button type="button" class="counter-button" onclick="decrease()">−</button>
+                                <span class="counter-value" id="counter">2</span>
+                                <button type="button" class="counter-button" onclick="increase()">+</button>
+                                <!-- <form action="index.php?u=agregarProductoAlCarrito"> -->
+                                    <button type="button" class="btn_carrito" data-id="cascada">
+                                        <p style="color: white;">AÑADIR AL CARRITO</p>
+                                    </button>
+                                <!-- </form> -->
+                            </div>
                             </form>
                         </div>
 
@@ -189,6 +193,7 @@
 
         </table>
     </div>
+    <script src="view/js/cart.js"></script>
 
     <br><br><br><br>
     <table class="piepagina" width="100%">
@@ -228,6 +233,7 @@
         </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
+    
 </body>
 
 </html>

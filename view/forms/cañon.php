@@ -29,12 +29,14 @@
                 </td>
                 <td>
                     <div class="recuadro">
+                    <form id="canion">
                         <div style="margin-left: 40px;">
                         <h6>Inicio/Tour por Chiapas</h6>
                             <?php foreach ($paquetes as $paquete): ?>
                             <h2><?php echo htmlspecialchars($paquete['Nombre']); ?></h2>
                             <h5><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></h5>
-                            <input type="hidden" id="precio" value="<?php echo htmlspecialchars($paquete['Precio']); ?>">
+                            <input type="hidden" id="precio" name="precio" value="<?php echo htmlspecialchars($paquete['Precio']); ?>">
+                            <input type="hidden" id="nombre" name="nombre" value="<?php echo htmlspecialchars($paquete['Nombre']); ?>">
                             <?php endforeach; ?>
                             <h5>Por persona <br> Min. 2 personas <br> Max. 10 personas</h5>
                             <h5>Duracion: 1 dia</h5>
@@ -42,15 +44,17 @@
                             <h5>Fecha a reservar</h5>
                         </div>
                         <div class="counter-container">
-                            <button class="counter-button" onclick="decrease()">−</button>
+                            <button type="button" class="counter-button" onclick="decrease()">−</button>
                             <span class="counter-value" id="counter">2</span>
-                            <button class="counter-button" onclick="increase()">+</button>
+                            <button type="button" class="counter-button" onclick="increase()">+</button>
                             <form action="index.php?u=agregarProductoAlCarrito">
-                            <button class="btn1">
+                            <button type="button" class="btn_carrito" data-id="canion">
                                 <p style="color: white;">AÑADIR AL CARRITO</p>
                             </button>
                             </form>
                         </div>
+                    </form>
+                    
 
                         <script>
                         // Obtener el precio del paquete (guardado en el input oculto)
@@ -213,6 +217,7 @@
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
 
+    <script src="view/js/cart.js"></script>
 </body>
 
 </html>
