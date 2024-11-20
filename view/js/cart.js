@@ -108,11 +108,10 @@ function actualizarSubtotal(item) {
     }
 }
 
-
 // buscar input por name 
 const btn_add = document.querySelectorAll('.btn_carrito');
 
-function actualizarTotal( ){
+function actualizarTotal() {
     const datos = new URLSearchParams();
     datos.append('accion', 'listar');
 
@@ -122,7 +121,6 @@ function actualizarTotal( ){
     })
     .then(response => response.json())
     .then(data => {
-        
         if (data.length > 0) {
             let subtotal = 0;
             data.forEach(item => {
@@ -133,11 +131,18 @@ function actualizarTotal( ){
             const iva = document.getElementById('iva');
             const total_acumulado = document.getElementById('total_acumulado');
             
-            subtotal_acumulado.appendChild(document.createTextNode(`$${subtotal}`));
-            iva.appendChild(document.createTextNode(`$${subtotal*0.16}`));
-            total_acumulado.appendChild(document.createTextNode(`$${ Math.round(subtotal*1.16,2) } `));
-        }
+            // Formatear los valores con coma y 2 decimales
+            const subtotalFormateado = subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            const ivaFormateado = (subtotal * 0.16).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            const totalFormateado = (subtotal * 1.16).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            
 
+
+            // Actualizar los valores con el formato adecuado
+            subtotal_acumulado.appendChild(document.createTextNode(`$${subtotalFormateado}`));
+            iva.appendChild(document.createTextNode(`$${ivaFormateado}`));
+            total_acumulado.appendChild(document.createTextNode(`$${totalFormateado}`));
+        }
     });
 }
 
