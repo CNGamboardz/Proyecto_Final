@@ -40,11 +40,12 @@ function listarCarrito() {
                     <div class="producto-nombre" style="font-size: 18px; font-weight: bold; color: #333; padding: 5px;">${item.nombre}</div>
                     <div class="producto-precio" style="font-size: 16px; color: #4caf50; text-align: justify; padding: 5px;">$${item.precio.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
                     
-                    <div class="producto-cantidad" style="font-size: 16px; color: #2196f3; text-align: center; padding: 5px;">
-                        <button class="restar-btn" style="padding: 5px; background-color: #f44336; color: white; border: none; border-radius: 4px;">-</button>
-                        <span id="cantidad-${item.id}" style="margin: 0 10px;">${item.cantidad}</span>
-                        <button class="sumar-btn" style="padding: 5px; background-color: #4caf50; color: white; border: none; border-radius: 4px;">+</button>
+                    <div class="producto-cantidad" style="font-size: 16px; color: #2196f3; text-align: center; padding: 5px; display: flex; align-items: center; justify-content: center;">
+                        <button class="restar-btn" style="padding: 5px 10px; background-color: #f44336; color: white; border: none; border-radius: 4px; margin-right: 10px;">-</button>
+                        <span id="cantidad-${item.id}" style="margin: 0 10px; font-size: 18px; font-weight: bold;">${item.cantidad}</span>
+                        <button class="sumar-btn" style="padding: 5px 10px; background-color: #4caf50; color: white; border: none; border-radius: 4px; margin-left: 10px;">+</button>
                     </div>
+
 
                     <div class="producto-subtotal" style="font-size: 16px; color: #ff5722; text-align: justify; padding: 5px;">$${item.subtotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
                 `;
@@ -72,7 +73,7 @@ function listarCarrito() {
 
                 // Aplicar un estilo dinámico
                 div.style.display = 'grid';
-                div.style.gridTemplateColumns = '5fr 1.5fr 1fr 3fr';
+                div.style.gridTemplateColumns = '7fr 0fr 2fr 3.5fr';
                 div.style.gap = '80px';
                 div.style.padding = '15px';
                 div.style.backgroundColor = '#ffffff';
