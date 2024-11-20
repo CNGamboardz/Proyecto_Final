@@ -1,4 +1,5 @@
 <?php
+echo "hola";
 require_once("config.php");
 require_once("controller/formscontroller.php");
 require_once("controller/indexcontroller.php");
