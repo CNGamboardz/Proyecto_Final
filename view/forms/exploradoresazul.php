@@ -33,6 +33,8 @@
 </script>
 
 <body>
+<script src="view/js/cart.js"></script>
+
     <?php require_once("./view/layout/header.php"); ?>
     <br><br>
 

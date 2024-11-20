@@ -96,11 +96,13 @@ function listarCarrito() {
                     });
 
                     // Eliminar producto
-// Eliminar producto
-                eliminarBtn.addEventListener('click', () => {
+                    eliminarBtn.addEventListener('click', () => {
                     const eliminarDatos = new URLSearchParams();
                     eliminarDatos.append('accion', 'eliminar');
                     eliminarDatos.append('id', item.id); // Asegúrate de que item.id sea correcto.
+                    eliminarDatos.append('nombre', item.nombre);
+                    eliminarDatos.append('cantidad', item.cantidad);
+                    eliminarDatos.append('precio', item.precio);
 
                     fetch('cart.php', {
                         method: 'POST',
