@@ -120,18 +120,18 @@ function actualizarTotal(data) {
     const totalConIva = total + iva;
 
     // Actualizar los valores en la sección "total de carrito"
-    const subtotalAcumuladoElement = document.getElementById('subtotal_acumulado');
+    const subtotal_acumulado = document.getElementById('subtotal_acumulado');
     const ivaElement = document.getElementById('iva');
-    const totalAcumuladoElement = document.getElementById('total_acumulado');
+    const total_acumulado = document.getElementById('total_acumulado');
 
-    if (subtotalAcumuladoElement) {
-        subtotalAcumuladoElement.textContent = `$${total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    if (subtotal_acumulado) {
+        subtotal_acumulado.innerHTML = `<strong>Subtotal:</strong> $${total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     }
     if (ivaElement) {
-        ivaElement.textContent = `$${iva.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+        ivaElement.innerHTML = `<strong>IVA (16%):</strong> $${iva.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     }
-    if (totalAcumuladoElement) {
-        totalAcumuladoElement.textContent = `$${totalConIva.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    if (total_acumulado) {
+        total_acumulado.innerHTML = `<strong>Total:</strong> $${totalConIva.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     }
 }
 
