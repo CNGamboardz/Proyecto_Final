@@ -51,69 +51,72 @@
                 </td>
                 <td>
                     <div class="recuadro">
-                    <form id="arco">
-                        <div style="margin-left: 40px;">
-                            <h6>Inicio/Tour por Chiapas</h6>
-                            <?php foreach ($paquetes as $paquete): ?>
-                            <h2><?php echo htmlspecialchars($paquete['Nombre']); ?></h2>
-                            <h5><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></h5>
-                            <input type="hidden" id="precio" name="precio" value="<?php echo htmlspecialchars($paquete['Precio']); ?>">
-                            <input type="hidden" id="nombre" name="nombre" value="<?php echo htmlspecialchars($paquete['Nombre']); ?>">
-                            <?php endforeach; ?>
-                            <h5>Por persona <br> Min. 2 personas <br> Max. 10 personas</h5>
-                            <h5>Duracion: 1 dia</h5>
-                            <br>
-                            <h5>Fecha a reservar</h5>
-                        </div>
-                        <div class="counter-container">
-                        <button type="button" class="counter-button" onclick="decrease()">−</button>
-                        <span class="counter-value" id="counter">2</span>
-                        <button type="button" class="counter-button" onclick="increase()">+</button>
-                        <form action="index.php?u=agregarProductoAlCarrito">
-                        <button type="button" class="btn_carrito" data-id="arco">
-                                <p style="color: white;">AÑADIR AL CARRITO</p>
-                        </button>
+                        <form id="arcocintalapa">
+                            <div style="margin-left: 40px;">
+                                <h6>Inicio/Tour por Chiapas</h6>
+                                <?php foreach ($paquetes as $paquete): ?>
+                                    <h2><?php echo htmlspecialchars($paquete['Nombre']); ?></h2>
+                                    <h5><b>$<?php echo number_format($paquete['Precio'], 2); ?></b></h5>
+                                    <input type="hidden" id="precio" name="precio" value="<?php echo htmlspecialchars($paquete['Precio']); ?>">
+                                    <input type="hidden" id="nombre" name="nombre" value="<?php echo htmlspecialchars($paquete['Nombre']); ?>">
+                                <?php endforeach; ?>
+                                <h5>Por persona <br> Min. 2 personas <br> Max. 10 personas</h5>
+                                <h5>Duracion: 1 dia</h5>
+                                <br>
+                                <h5>Fecha a reservar</h5>
+                            </div>
+                            <div class="counter-container">
+                                <button type="button" class="counter-button" onclick="decrease()">−</button>
+                                <span class="counter-value" id="counter">2</span>
+                                <button type="button" class="counter-button" onclick="increase()">+</button>
+                                <form action="index.php?u=agregarProductoAlCarrito">
+                                    <button type="button" class="btn_carrito" data-id="arco">
+                                        <p style="color: white;">AÑADIR AL CARRITO</p>
+                                    </button>
+                                </form>
+                            </div>
                         </form>
-                        </div>
-                    </form>
 
                         <script>
-                        // Obtener el precio del paquete (guardado en el input oculto)
-                        const precioUnitario = parseFloat(document.getElementById('precio').value);
-                        let count = 2;  // Valor inicial del contador
+                            // Obtener el precio del paquete (guardado en el input oculto)
+                            const precioUnitario = parseFloat(document.getElementById('precio').value);
+                            let count = 2; // Valor inicial del contador
 
-                        // Función para aumentar la cantidad
-                        function increase() {
-                            if (count < 10) {  // Limita el máximo a 10
-                                count++;
-                                document.getElementById('counter').innerText = count;
-                                updatePrice();  // Actualiza el precio total
+                            // Función para aumentar la cantidad
+                            function increase() {
+                                if (count < 10) { // Limita el máximo a 10
+                                    count++;
+                                    document.getElementById('counter').innerText = count;
+                                    updatePrice(); // Actualiza el precio total
+                                }
                             }
-                        }
 
-                        // Función para disminuir la cantidad
-                        function decrease() {
-                            if (count > 2) {  // Limita el mínimo a 2
-                                count--;
-                                document.getElementById('counter').innerText = count;
-                                updatePrice();  // Actualiza el precio total
+                            // Función para disminuir la cantidad
+                            function decrease() {
+                                if (count > 2) { // Limita el mínimo a 2
+                                    count--;
+                                    document.getElementById('counter').innerText = count;
+                                    updatePrice(); // Actualiza el precio total
+                                }
                             }
-                        }
 
-                        // Actualiza el precio total según la cantidad
-                        function updatePrice() {
-                            const totalPrice = precioUnitario * count;
-                            document.getElementById('totalPrice').innerText = formatNumber(totalPrice); // Muestra el precio con comas
-                        }
+                            // Actualiza el precio total según la cantidad
+                            function updatePrice() {
+                                const totalPrice = precioUnitario * count;
+                                document.getElementById('totalPrice').innerText = formatNumber(totalPrice); // Muestra el precio con comas
+                            }
 
-                        // Función para formatear el número con comas
-                        function formatNumber(number) {
-                            return number.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-                        }
+                            // Función para formatear el número con comas
+                            function formatNumber(number) {
+                                return number.toLocaleString('en-US', {
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2
+                                });
+                            }
 
-                        // Llamar a la función para mostrar el precio inicial al cargar la página
-                        updatePrice();
-                    </script>
+                            // Llamar a la función para mostrar el precio inicial al cargar la página
+                            updatePrice();
+                        </script>
                         <br>
                         <center>
                             <button class="btn2">
@@ -204,40 +207,86 @@
 
     <br><br><br><br>
     <table class="piepagina" width="100%">
-            <tr>
-                <td width="15%">
-                    <br><br><br>
-                    <img src="./view/img/logo_chiapasoculto.png" class="img-fluid" alt="Logo Chiapas Oculto">
-                    <br><br>
-                </td>
-                <td width="22%">
-                    <center><h5>Servicio al Cliente</h5></center>
-                    <a href="index.php?u=contacto"><ul class="custom-bullets"><li>Contacto</li></ul></a>
-                    <a href="index.php?u=login"><ul class="custom-bullets"><li>Mi Cuenta</li></ul></a>
-                </td>
-                <td width="22%">
-                    <center><h5>Tours Destacados</h5></center>
-                    <a href="index.php?u=arcotete"><ul class="custom-bullets2"><li>El Arcote</li></ul></a>
-                    <a href="index.php?u=lagunasmontebello"><ul class="custom-bullets2"><li>Lagunas de Montebello</li></ul></a>
-                    <a href="index.php?u=palenque"><ul class="custom-bullets2"><li>Zona Arqueológica De Palenque</li></ul></a>
-                    <a href="index.php?u=zonarqueologica"><ul class="custom-bullets2"><li>Zona Arqueológica De Tonina</li></ul></a>
-                </td>
-                <td width="22%">
-                    <center><h5>Paquetes Destacados</h5></center>
-                    <a href="index.php?u=arqueologiaselva"><ul class="custom-bullets2"><li>Arqueología y Selva</li></ul></a>
-                    <a href="index.php?u=paraisoselva"><ul class="custom-bullets2"><li>Paraíso en la Selva</li></ul></a>
-                    <a href="index.php?u=expedicionchiapaneca"><ul class="custom-bullets2"><li>Expedición Chiapaneca</li></ul></a>
-                    <a href="index.php?u=rutasmchiapas"><ul class="custom-bullets2"><li>Rutas Mágicas de Chiapas</li></ul></a>
-                </td>
-                <td width="22%">
-                    <br><br><br>
-                    <a class="normal" href="https://www.google.com/maps/place/Salon+Gema/@16.7725603,-93.0872266,463m/data=!3m1!1e3!4m6!3m5!1s0x85ed275d3b624c83:0x4d25f42cb24d00ed!8m2!3d16.77325!4d-93.0885407!16s%2Fg%2F11gh0511bn?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D">
-                        <img src="./view/img/geolocalizacion.png" width="20%" alt="Icono de geolocalización">
-                        Ver Ubicación
-                    </a>
-                </td>
-            </tr>
-        </table>
+        <tr>
+            <td width="15%">
+                <br><br><br>
+                <img src="./view/img/logo_chiapasoculto.png" class="img-fluid" alt="Logo Chiapas Oculto">
+                <br><br>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Servicio al Cliente</h5>
+                </center>
+                <a href="index.php?u=contacto">
+                    <ul class="custom-bullets">
+                        <li>Contacto</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=login">
+                    <ul class="custom-bullets">
+                        <li>Mi Cuenta</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Tours Destacados</h5>
+                </center>
+                <a href="index.php?u=arcotete">
+                    <ul class="custom-bullets2">
+                        <li>El Arcote</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=lagunasmontebello">
+                    <ul class="custom-bullets2">
+                        <li>Lagunas de Montebello</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=palenque">
+                    <ul class="custom-bullets2">
+                        <li>Zona Arqueológica De Palenque</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=zonarqueologica">
+                    <ul class="custom-bullets2">
+                        <li>Zona Arqueológica De Tonina</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <center>
+                    <h5>Paquetes Destacados</h5>
+                </center>
+                <a href="index.php?u=arqueologiaselva">
+                    <ul class="custom-bullets2">
+                        <li>Arqueología y Selva</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=paraisoselva">
+                    <ul class="custom-bullets2">
+                        <li>Paraíso en la Selva</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=expedicionchiapaneca">
+                    <ul class="custom-bullets2">
+                        <li>Expedición Chiapaneca</li>
+                    </ul>
+                </a>
+                <a href="index.php?u=rutasmchiapas">
+                    <ul class="custom-bullets2">
+                        <li>Rutas Mágicas de Chiapas</li>
+                    </ul>
+                </a>
+            </td>
+            <td width="22%">
+                <br><br><br>
+                <a class="normal" href="https://www.google.com/maps/place/Salon+Gema/@16.7725603,-93.0872266,463m/data=!3m1!1e3!4m6!3m5!1s0x85ed275d3b624c83:0x4d25f42cb24d00ed!8m2!3d16.77325!4d-93.0885407!16s%2Fg%2F11gh0511bn?authuser=0&entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D">
+                    <img src="./view/img/geolocalizacion.png" width="20%" alt="Icono de geolocalización">
+                    Ver Ubicación
+                </a>
+            </td>
+        </tr>
+    </table>
     <br><br>
     <?php require_once("./view/layout/footer.php"); ?>
     <script src="view/js/cart.js"></script>
