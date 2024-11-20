@@ -70,7 +70,7 @@
                                 <span class="counter-value" id="counter">2</span>
                                 <button type="button" class="counter-button" onclick="increase()">+</button>
                                 <form action="index.php?u=agregarProductoAlCarrito">
-                                    <button type="button" class="btn_carrito" data-id="arco">
+                                    <button type="button" class="btn_carrito" data-id="arcocintalapa">
                                         <p style="color: white;">AÑADIR AL CARRITO</p>
                                     </button>
                                 </form>
