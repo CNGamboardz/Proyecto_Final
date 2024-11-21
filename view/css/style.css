@@ -32,6 +32,20 @@
     background-color: #0056b3;
 }
 
+.btn_carrito{
+    width: 12.5rem;
+    height: 3.125rem;
+    margin-left: 0; 
+    text-align: center;
+    border-radius: 1.875rem;
+    background-color: #08A9BF;
+}
+
+.btn_carrito:hover{
+    background-color: #0056b3;
+}
+
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
@@ -1440,6 +1454,15 @@ button {
     height: 670px;
     border-radius: 20px;             
 } 
+
+.recuadro12{
+    border: 5px solid #86c5cdc0;         
+    padding: 30px;                  
+    background-color: #f9f9f9;      
+    width: 600px; 
+    height: 670px;
+    border-radius: 20px;             
+}
 
  .counter-container {
     display: flex;

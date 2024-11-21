@@ -28,7 +28,7 @@
                     <img src="view/img/Cascadas.jpg" alt="" class="img-fluid" width="845px" height="525px">
                 </td>
                 <td>
-                    <div class="recuadro">
+                    <div class="recuadro12">
                         <div style="margin-left: 40px;">
                             <form id="cascada">
                             <h6>Inicio/Tour por Chiapas</h6>
