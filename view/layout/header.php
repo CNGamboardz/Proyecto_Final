@@ -44,6 +44,9 @@
                             } elseif ($_SESSION['id_rango'] == 2) {
                                 echo "<strong>BIENVENIDO CLIENTE:</strong><br>";
                             }
+                            elseif ($_SESSION['id_rango'] == 3) {
+                                echo "<strong>BIENVENIDO OPERADORA:</strong><br>";
+                            }
                         ?>
                         <?php echo htmlspecialchars($_SESSION['usuario_nombre'] . ' ' . $_SESSION['usuario_apellido']); ?>
                         <br>
@@ -52,6 +55,7 @@
                             <!-- Mostrar solo si es Administrador -->
                         <a class="nav-link21" href="index.php?u=register">REGISTRAR ADMINISTRADORES</a>
                         <?php endif; ?>
+                        
                     </span>
 
 
