@@ -45,4 +45,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 }
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['accion'] === 'eliminar') {
+    $id = $_POST['id'];
+
+    foreach ($_SESSION['carrito'] as $index => $item) {
+        if ($item['id'] == $id) {
+            unset($_SESSION['carrito'][$index]);
+            $_SESSION['carrito'] = array_values($_SESSION['carrito']); // Reindexar
+            break;
+        }
+    }
+
+    echo json_encode(['status' => 'ok']);
+    exit;
+}
+
 ?>

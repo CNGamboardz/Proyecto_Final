@@ -184,3 +184,28 @@ btn_add.forEach(btn => {
 
 // Cargar el carrito al inicio
 document.addEventListener('DOMContentLoaded', listarCarrito);
+
+function eliminarDelCarrito(idProducto) {
+    fetch('cart.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: `accion=eliminar&id=${idProducto}`
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'ok') {
+            const fila = document.getElementById(`producto_${idProducto}`);
+            if (fila) {
+                fila.remove();
+            }
+            console.log('Producto eliminado');
+        } else {
+            console.error('Error al eliminar');
+        }
+    })
+    .catch(error => {
+        console.error('Error de red:', error);
+    });
+}

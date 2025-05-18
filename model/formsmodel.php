@@ -123,6 +123,36 @@ Class FormsModel{
         }
         return false; // Retorna false si no se encuentra el usuario o no es válido
     }
+
+    public function ValidarOperadora($correo, $contrasena) {
+        session_start(); // Mantener la sesión activa
+        include_once('database_connection.php');
+        $cnn = new Conexion();
+
+        // Cambiamos la tabla a operadoras y usamos sus campos
+        $consulta = "SELECT * FROM operadoras WHERE correoelectronico = :correo";
+        $resultado = $cnn->prepare($consulta);
+        $resultado->bindParam(':correo', $correo, PDO::PARAM_STR);
+        $resultado->execute();
+
+        $operadora = $resultado->fetch(PDO::FETCH_ASSOC);
+
+        if ($operadora) {
+            // Validamos si la contraseña está encriptada (bcrypt tiene longitud > 60 por seguridad)
+            if (password_verify($contrasena, $operadora['contrasena'])) {
+                $_SESSION['ID_operadora'] = $operadora['id_operadora']; // Usamos su ID
+
+                // Asignamos el rol fijo para operadoras
+                $operadora['rol'] = 'OPERADORA';
+
+                return $operadora; // Retorna los datos de la operadora
+            }
+        }
+
+        return false; // Si no existe o la contraseña no coincide
+    }
+
+
     
     public function GuardarComentario($nombre_contacto, $correo_contacto, $mensaje, $usuario) {
         include_once('database_connection.php');
