@@ -42,13 +42,25 @@ class catalogo
 public function MostrarPaquetesPorOperadora($id_operadoras)
 {
     $cnn = new Conexion(); // esto YA es un objeto PDO
-    $query = "SELECT * FROM catalogos WHERE id_operadoras = :id_operadoras";
+    $query = "SELECT * FROM catalogos WHERE id_operadoras = :id_operadoras AND id_categoria = 2";
     $stmt = $cnn->prepare($query); // ✅ aquí usas $cnn, NO $pdo
     $stmt->bindParam(':id_operadoras', $id_operadoras, PDO::PARAM_INT);
     $stmt->execute();
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+
+public function MostrarToursPorOperadora($id_operadoras)
+{
+    $cnn = new Conexion();
+    $query = "SELECT * FROM catalogos WHERE id_operadoras = :id_operadoras AND id_categoria = 1";
+    $stmt = $cnn->prepare($query);
+    $stmt->bindParam(':id_operadoras', $id_operadoras, PDO::PARAM_INT);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
 
 
 }

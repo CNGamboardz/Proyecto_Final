@@ -36,12 +36,23 @@ class FormsController
         require_once('view/forms/compras.php');
     }
 
-    public static function tours()
-    {
-        $catalogo = new Catalogo();
-        $paquetes = $catalogo->MostrarDatos(1);
-        require_once('view/forms/tours.php');
+public static function tours()
+{
+    $catalogo = new Catalogo();
+
+    if (isset($_SESSION['id_rango']) && $_SESSION['id_rango'] == 3) {
+        // Operadora: ver solo sus propios TOURS (id_categoria = 1)
+        $id_operadora = $_SESSION['ID_operadora'];
+        $paquetes = $catalogo->MostrarToursPorOperadora($id_operadora); // ✅ corregido
+    } else {
+        // Cliente o admin: ver todos los TOURS
+        $paquetes=$catalogo->MostrarDatos(1);
     }
+
+    require_once('view/forms/tours.php');
+}
+
+
 
     public static function contacto()
     {
