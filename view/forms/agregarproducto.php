@@ -29,34 +29,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    // Recoger datos del formulario
-    $nombre = $_POST['Nombre'];
-    $descripcion = $_POST['Descripcion'];
-    $precio = $_POST['Precio'];
-    $categoria = $_POST['id_categoria'];
-    $id_operadora = 0;  // Puedes cambiarlo luego si es necesario
+            session_start(); // Asegúrate de iniciar la sesión
 
-    // Insertar en la base de datos si la imagen se subió bien
-    if ($imagenSubida) {
-        try {
-            $sql = "INSERT INTO catalogos (Nombre, Descripcion, Precio, imagen, id_categoria, id_operadora)
-                    VALUES (:nombre, :descripcion, :precio, :imagen, :id_categoria, :id_operadora)";
+            // Verificar si la sesión contiene ID de operadora
+            if (!isset($_SESSION['ID_operadora'])) {
+                echo "<div class='alert alert-danger'>No se ha iniciado sesión correctamente.</div>";
+                exit;
+            }
 
-            $stmt = $conexion->prepare($sql);
-            $stmt->bindParam(':nombre', $nombre);
-            $stmt->bindParam(':descripcion', $descripcion);
-            $stmt->bindParam(':precio', $precio);
-            $stmt->bindParam(':imagen', $rutaImagen);  // Aquí se guarda la ruta de la imagen en "urls"
-            $stmt->bindParam(':id_categoria', $categoria);
-            $stmt->bindParam(':id_operadora', $id_operadora);
+            // Recoger datos del formulario
+            $nombre = $_POST['Nombre'];
+            $descripcion = $_POST['Descripcion'];
+            $precio = $_POST['Precio'];
+            $categoria = $_POST['id_categoria'];
+            $id_operadoras = $_SESSION['ID_operadora']; // ← Usamos el ID desde la sesión
 
-            $stmt->execute();
+            // Insertar en la base de datos si la imagen se subió bien
+            if ($imagenSubida) {
+                try {
+                    $sql = "INSERT INTO catalogos (Nombre, Descripcion, Precio, imagen, id_categoria, id_operadoras)
+                            VALUES (:nombre, :descripcion, :precio, :imagen, :id_categoria, :id_operadoras)";
 
-            echo "<div class='alert alert-success'>Producto agregado correctamente al catálogo.</div>";
-        } catch (PDOException $e) {
-            echo "<div class='alert alert-danger'>Error al insertar en la base de datos: " . $e->getMessage() . "</div>";
-        }
-    }
+                    $stmt = $conexion->prepare($sql);
+                    $stmt->bindParam(':nombre', $nombre);
+                    $stmt->bindParam(':descripcion', $descripcion);
+                    $stmt->bindParam(':precio', $precio);
+                    $stmt->bindParam(':imagen', $rutaImagen); // Si guardas la ruta en 'imagen', está bien
+                    $stmt->bindParam(':id_categoria', $categoria);
+                    $stmt->bindParam(':id_operadoras', $id_operadoras);
+
+                    $stmt->execute();
+
+                    echo "<div class='alert alert-success'>Producto agregado correctamente al catálogo.</div>";
+                } catch (PDOException $e) {
+                    echo "<div class='alert alert-danger'>Error al insertar en la base de datos: " . $e->getMessage() . "</div>";
+                }
+            }
+
 }
 ?>
 

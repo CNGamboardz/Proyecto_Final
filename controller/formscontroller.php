@@ -215,33 +215,35 @@ class FormsController {
         }
     }
 
-    public static function AgregarProducto() {
-        // Validar si se reciben los datos del formulario
-        if (isset($_POST['Nombre'], $_POST['Descripcion'], $_POST['Precio'], $_POST['imagen'], $_POST['urls'], $_POST['id_categoria'])) {
-            // Obtener los valores del formulario
-            $Nombre = $_POST['Nombre'];
-            $Descripcion = $_POST['Descripcion'];
-            $Precio = $_POST['Precio'];
-            $imagen = $_POST['imagen'];
-            $urls = $_POST['urls'];
-            $id_categoria = $_POST['id_categoria'];
-    
-            // Llamar al modelo para agregar el producto
-            $formsmodel = new FormsModel();
-            $resultado = $formsmodel->AgregarProducto($Nombre, $Descripcion, $Precio, $imagen, $urls, $id_categoria);
-    
-            // Verificar si la operación fue exitosa
-            if ($resultado) {
-                // Redirigir al usuario después del éxito
-                header("Location: " . urlsite . "index.php");
-                exit; // Asegurarse de que no se ejecute código adicional
-            } else {
-                echo "Error al registrar el producto.";
-            }
+public static function AgregarProducto() {
+    session_start();
+
+    if (
+        isset($_POST['Nombre'], $_POST['Descripcion'], $_POST['Precio'], $_POST['imagen'], $_POST['urls'], $_POST['id_categoria']) &&
+        isset($_SESSION['ID_operadora']) // ¡Debe estar definida esta sesión!
+    ) {
+        $Nombre = $_POST['Nombre'];
+        $Descripcion = $_POST['Descripcion'];
+        $Precio = $_POST['Precio'];
+        $imagen = $_POST['imagen'];
+        $urls = $_POST['urls'];
+        $id_categoria = $_POST['id_categoria'];
+        $id_operadoras = $_SESSION['ID_operadora']; // El nombre de la variable puede seguir así
+
+        $formsmodel = new FormsModel();
+        $resultado = $formsmodel->AgregarProducto($Nombre, $Descripcion, $Precio, $imagen, $urls, $id_categoria, $id_operadoras);
+
+        if ($resultado) {
+            header("Location: " . urlsite . "index.php");
+            exit;
         } else {
-            echo "Faltan datos para agregar el producto.";
+            echo "Error al registrar el producto.";
         }
+    } else {
+        echo "Faltan datos o no hay sesión de operadora.";
     }
+}
+
     
     
 public static function validar() {
