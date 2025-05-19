@@ -35,7 +35,7 @@
 
                 <?php 
                 // Verificar si el usuario está logueado y tiene id_rango == 1
-                if (isset($_SESSION['id_rango']) && $_SESSION['id_rango'] == 3): ?>
+                if (isset($_SESSION['id_rango']) && $_SESSION['id_rango'] == 1): ?>
                  <center> <button type="submit" class="btn9">
                 <p style="color: white;"><a href="index.php?u=btnagregarproducto"> AGREGAR PRODUCTO </a></p>
               </button></center>     
@@ -62,6 +62,17 @@
                 <?php 
                 // Verificar si el usuario está logueado y tiene id_rango == 1
                 if (isset($_SESSION['id_rango']) && $_SESSION['id_rango'] == 1): ?>
+                    <div class="acciones">
+                        <a href="index.php?u=editar&id=<?php echo $paquete['id_catalogo']; ?>" class="btn22"><b>EDITAR</b></a>
+                        <br>
+                        <a href="index.php?u=eliminardato&id=<?php echo $paquete['id_catalogo']; ?>" class="btn21" 
+                         onclick="return confirm('¿Estás seguro de que deseas eliminar este paquete?');"><b>ELIMINAR</b></a>
+                        </div>
+                <?php endif; ?>
+
+                                <?php 
+                // Verificar si el usuario está logueado y tiene id_rango == 1
+                if (isset($_SESSION['id_rango']) && $_SESSION['id_rango'] == 3): ?>
                     <div class="acciones">
                         <a href="index.php?u=editar&id=<?php echo $paquete['id_catalogo']; ?>" class="btn22"><b>EDITAR</b></a>
                         <br>
