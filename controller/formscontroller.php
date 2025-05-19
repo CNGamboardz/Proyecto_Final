@@ -244,30 +244,46 @@ class FormsController {
     }
     
     
-    public static function validar() {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['correo'], $_POST['contrasena'])) {
-            $correo = $_POST['correo'];
-            $contrasena = $_POST['contrasena'];
-            
-            // Cargar el modelo
-            $formsmodel = new FormsModel();
-            $formsmodel = $formsmodel->ValidarUsuario($correo, $contrasena);
-            
-            if ($formsmodel) {
-                // Iniciar sesión y almacenar los datos en la sesión
-                session_start();
-                $_SESSION['usuario_nombre'] = $formsmodel['NombreUsuario'];
-                $_SESSION['usuario_apellido'] = $formsmodel['Apellido'];
-                $_SESSION['id_rango'] = $formsmodel['id_rango'];  // Guardamos el rango del usuario
-                
-                header('Location: index.php'); // Redirigimos al inicio o a la página deseada
+public static function validar() {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['correo'], $_POST['contrasena'])) {
+        $correo = $_POST['correo'];
+        $contrasena = $_POST['contrasena'];
+
+        // Cargar el modelo
+        $formsmodel = new FormsModel();
+
+        // Primero intentamos validar como usuario (admin o cliente)
+        $usuario = $formsmodel->ValidarUsuario($correo, $contrasena);
+
+        session_start();
+
+        if ($usuario) {
+            // Guardar en sesión como usuario
+            $_SESSION['usuario_nombre'] = $usuario['NombreUsuario'];
+            $_SESSION['usuario_apellido'] = $usuario['Apellido'];
+            $_SESSION['id_rango'] = $usuario['id_rango'];
+
+            header('Location: index.php');
+            exit;
+        } else {
+            // Si no es usuario, intentamos validar como operadora
+            $operadora = $formsmodel->ValidarOperadora($correo, $contrasena);
+
+            if ($operadora) {
+                // Guardar en sesión como operadora
+                $_SESSION['usuario_nombre'] = $operadora['nombredeoperadoras'];
+                $_SESSION['id_rango'] = $operadora['id_rango']; // Esto ya debe venir como 3
+                $_SESSION['ID_operadora'] = $operadora['id_operadoras'];
+
+                header('Location: index.php');
                 exit;
             } else {
-                // Si no se encuentra el usuario o la contraseña es incorrecta
+                // Si no es usuario ni operadora
                 echo "Correo o contraseña incorrectos.";
             }
         }
     }
+}
 
     public static function logout() {
         session_start();

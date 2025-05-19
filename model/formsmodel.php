@@ -124,33 +124,47 @@ Class FormsModel{
         return false; // Retorna false si no se encuentra el usuario o no es válido
     }
 
-    public function ValidarOperadora($correo, $contrasena) {
-        session_start(); // Mantener la sesión activa
-        include_once('database_connection.php');
-        $cnn = new Conexion();
+public function ValidarOperadora($correo, $contrasena) {
+    session_start(); // Asegúrate de iniciar sesión
+    include_once('database_connection.php');
+    $cnn = new Conexion();
+    
+    $consulta = "SELECT * FROM operadoras WHERE correoelectronico = :correo";
+    $resultado = $cnn->prepare($consulta);
+    $resultado->bindParam(':correo', $correo, PDO::PARAM_STR);
+    $resultado->execute();
 
-        // Cambiamos la tabla a operadoras y usamos sus campos
-        $consulta = "SELECT * FROM operadoras WHERE correoelectronico = :correo";
-        $resultado = $cnn->prepare($consulta);
-        $resultado->bindParam(':correo', $correo, PDO::PARAM_STR);
-        $resultado->execute();
+    $operadora = $resultado->fetch(PDO::FETCH_ASSOC);
 
-        $operadora = $resultado->fetch(PDO::FETCH_ASSOC);
-
-        if ($operadora) {
-            // Validamos si la contraseña está encriptada (bcrypt tiene longitud > 60 por seguridad)
+    if ($operadora) {
+        // Validar contraseña encriptada (password_hash)
+        if (strlen($operadora['contrasena']) === 60) {
             if (password_verify($contrasena, $operadora['contrasena'])) {
-                $_SESSION['ID_operadora'] = $operadora['id_operadora']; // Usamos su ID
-
-                // Asignamos el rol fijo para operadoras
+                // Guardar en sesión
+                $_SESSION['ID_operadora'] = $operadora['id_operadoras'];
+                $_SESSION['usuario_nombre'] = $operadora['nombredeoperadoras'];
+                $_SESSION['id_rango'] = 3;
                 $operadora['rol'] = 'OPERADORA';
 
-                return $operadora; // Retorna los datos de la operadora
+                return $operadora;
+            }
+        } else {
+            // Contraseña sin encriptar (no recomendable, pero se incluye por compatibilidad)
+            if ($contrasena === $operadora['contrasena']) {
+                // Guardar en sesión
+                $_SESSION['ID_operadora'] = $operadora['id_operadoras'];
+                $_SESSION['usuario_nombre'] = $operadora['nombredeoperadoras'];
+                $_SESSION['id_rango'] = 3;
+                $operadora['rol'] = 'OPERADOR';
+
+                return $operadora;
             }
         }
-
-        return false; // Si no existe o la contraseña no coincide
     }
+
+    return false; // Si no coincide o no existe
+}
+
 
 
     

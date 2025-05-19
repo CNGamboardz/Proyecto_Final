@@ -28,37 +28,36 @@
                         </a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="index.php?u=compras">MIS COMPRAS</a></li>
-
                 </ul>
-                <!-- Sección a la derecha -->
+
+                <!-- Sección de sesión -->
                 <ul class="navbar-nav align-items-end">
-                    <?php if (isset($_SESSION['usuario_nombre'], $_SESSION['usuario_apellido'])): ?>
-
+                    <?php if (isset($_SESSION['usuario_nombre'])): ?>
                         <li class="nav-item text-start" style="white-space: normal; text-align: center;">
-                            
-                        <span class="nav-link">
-                        <?php
-                            // Verificar el rol basado en id_rango
-                            if ($_SESSION['id_rango'] == 1) {
-                                echo "<strong>BIENVENIDO ADMINISTRADOR:</strong><br>";
-                            } elseif ($_SESSION['id_rango'] == 2) {
-                                echo "<strong>BIENVENIDO CLIENTE:</strong><br>";
-                            }
-                            elseif ($_SESSION['id_rango'] == 3) {
-                                echo "<strong>BIENVENIDO OPERADORA:</strong><br>";
-                            }
-                        ?>
-                        <?php echo htmlspecialchars($_SESSION['usuario_nombre'] . ' ' . $_SESSION['usuario_apellido']); ?>
-                        <br>
-                        <a class="nav-link21" href="index.php?u=logout">CERRAR SESIÓN</a>
-                        <?php if ($_SESSION['id_rango'] == 1): ?>
-                            <!-- Mostrar solo si es Administrador -->
-                        <a class="nav-link21" href="index.php?u=register">REGISTRAR ADMINISTRADORES</a>
-                        <?php endif; ?>
-                        
-                    </span>
+                            <span class="nav-link">
+                                <?php
+                                // Mostrar mensaje según el rol
+                                if ($_SESSION['id_rango'] == 1) {
+                                    echo "<strong>BIENVENIDO ADMINISTRADOR:</strong><br>";
+                                } elseif ($_SESSION['id_rango'] == 2) {
+                                    echo "<strong>BIENVENIDO CLIENTE:</strong><br>";
+                                } elseif ($_SESSION['id_rango'] == 3) {
+                                    echo "<strong>BIENVENIDO OPERADORA:</strong><br>";
+                                }
 
+                                // Mostrar el nombre (y apellido solo si existe)
+                                echo htmlspecialchars($_SESSION['usuario_nombre']);
+                                if (isset($_SESSION['usuario_apellido'])) {
+                                    echo ' ' . htmlspecialchars($_SESSION['usuario_apellido']);
+                                }
+                                ?>
+                                <br>
+                                <a class="nav-link21" href="index.php?u=logout">CERRAR SESIÓN</a>
 
+                                <?php if ($_SESSION['id_rango'] == 1): ?>
+                                    <a class="nav-link21" href="index.php?u=register">REGISTRAR ADMINISTRADORES</a>
+                                <?php endif; ?>
+                            </span>
                         </li>
                     <?php else: ?>
                         <li class="nav-item">
@@ -72,6 +71,7 @@
         </div>
     </nav>
 </header>
+
 
 
 
